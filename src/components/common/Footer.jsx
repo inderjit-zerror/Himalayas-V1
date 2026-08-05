@@ -1,9 +1,14 @@
-import React from 'react'
+import React from "react";
+import ChooseYourPath from "../home/Chooseyourpath";
+import SiteFooter from "../home/Sitefooter";
 
 const Footer = () => {
   return (
-    <div>Footer</div>
-  )
-}
+    <>
+      <ChooseYourPath />
+      <SiteFooter />
+    </>
+  );
+};
 
-export default Footer
+export default Footer;

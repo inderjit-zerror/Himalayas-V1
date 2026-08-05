@@ -39,7 +39,7 @@ const CIRCUITS = [
   },
 ];
 
-export default function HimalayanCircuitsCarousel() {
+export default function HimalayanCircuitsCarousel2() {
   const trackRef = useRef(null);
   const cardRefs = useRef([]);
   const [canScrollPrev, setCanScrollPrev] = useState(false);
@@ -89,13 +89,18 @@ export default function HimalayanCircuitsCarousel() {
         {/* Header row */}
         <div className="mb-10 flex flex-col justify-between gap-8 md:flex-row md:items-start">
           <h2 className="text-4xl font-medium uppercase leading-tight tracking-tight text-neutral-900 md:text-[2.6rem]">
-          Beyond the  <br /> Himalayas
-           
-            
+            Himalayan
+            <br />
+            Circuits
           </h2>
 
           <p className="max-w-xl text-[15px] leading-relaxed text-neutral-700">
-           Journeys that Reveal a Different Side of India. From desert kingdoms and tropical coastlines to ancient cities and wildlife-rich forests, these journeys celebrate the remarkable diversity of the Indian subcontinent.
+            <span className="font-semibold text-neutral-900">
+              Every Journey Begins with a Different Dream.{" "}
+            </span>
+            Some seek legendary mountain roads. Others are drawn to remote
+            landscapes, living cultures or the joy of travelling slowly
+            through extraordinary places.
           </p>
         </div>
 
@@ -170,7 +175,7 @@ export default function HimalayanCircuitsCarousel() {
         </div>
 
         {/* Footer row */}
-         <div className="mt-14 flex flex-col items-start justify-between gap-6 md:flex-row md:items-center">
+        <div className="mt-14 flex flex-col items-start justify-between gap-6 md:flex-row md:items-center">
           <p className="text-xs  tracking-wide text-neutral-500">
             [ Est. 1994 ]
           </p>

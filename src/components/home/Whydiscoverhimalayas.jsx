@@ -152,7 +152,7 @@ export default function WhyDiscoverHimalayas() {
   return (
     <section
       ref={sectionRef}
-      className="w-full bg-white px-6 py-16 md:px-12 md:py-20 lg:px-10"
+      className="w-full bg-white px-6  py-16 md:px-12 md:py-20 lg:px-10"
     >
       <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-20">
         {/* Left column */}
@@ -169,6 +169,7 @@ export default function WhyDiscoverHimalayas() {
             they decide. If your question isn&apos;t here, let&apos;s
             talk&hellip;
           </p>
+          <a href="/faq">
           <button
             type="button"
             className="flex items-center gap-2  bg-neutral-900 px-6 py-3 text-xs font-semibold uppercase tracking-wide text-white transition-colors hover:bg-neutral-700"
@@ -185,6 +186,7 @@ export default function WhyDiscoverHimalayas() {
               />
             </svg>
           </button>
+          </a>
         </div>
 
         {/* Right column: accordion */}
