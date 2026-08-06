@@ -79,22 +79,19 @@ function AccordionItem({ item, isOpen, onToggle }) {
         className="flex w-full items-center justify-between gap-6 text-left"
       >
         <span
-          className={`text-base font-semibold transition-colors md:text-lg ${
-            isOpen ? "text-red-600" : "text-neutral-800"
-          }`}
+          className={`heading-sm transition-colors ${isOpen ? "text-red-600" : "text-neutral-800"
+            }`}
         >
           {item.question}
         </span>
         <span
-          className={`flex h-6 w-6 flex-none items-center justify-center transition-colors ${
-            isOpen ? "text-red-600" : "text-neutral-500"
-          }`}
+          className={`flex h-6 w-6 flex-none items-center justify-center transition-colors ${isOpen ? "text-red-600" : "text-neutral-500"
+            }`}
         >
           <svg
             viewBox="0 0 24 24"
-            className={`h-4 w-4 fill-none stroke-current stroke-[2.5] transition-transform duration-300 ${
-              isOpen ? "rotate-180" : "rotate-0"
-            }`}
+            className={`h-4 w-4 fill-none stroke-current stroke-[2.5] transition-transform duration-300 ${isOpen ? "rotate-180" : "rotate-0"
+              }`}
           >
             <path d="M6 9l6 6 6-6" strokeLinecap="round" strokeLinejoin="round" />
           </svg>
@@ -102,7 +99,7 @@ function AccordionItem({ item, isOpen, onToggle }) {
       </button>
 
       <div ref={answerRef} className="overflow-hidden" style={{ height: 0, opacity: 0 }}>
-        <p className="pt-4 pr-10 text-sm leading-relaxed text-neutral-500 md:text-base">
+        <p className="pt-4 pr-10 body-base text-neutral-500">
           {item.answer}
         </p>
       </div>
@@ -157,35 +154,35 @@ export default function WhyDiscoverHimalayas() {
       <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-20">
         {/* Left column */}
         <div ref={leftRef}>
-          <p className="mb-6 text-xs font-medium uppercase tracking-[0.2em] text-neutral-400">
+          <p className="mb-6 eyebrow-text text-neutral-400">
             [ Why Discover Himalayas ]
           </p>
-          <h2 className="mb-6 max-w-md text-2xl leading-2xl text-neutral-800 md:text-3xl">
+          <h2 className="mb-6 max-w-xl h-secondary heading-lg text-neutral-800">
             Before we start planning your journey, there&apos;s one question
             worth asking&hellip; are we the right people to take you there?
           </h2>
-          <p className="mb-8 max-w-md text-sm leading-sm text-neutral-500 md:text-base">
+          <p className="mb-8 max-w-xl body-base text-neutral-500">
             Here are some of the questions travellers usually ask us before
             they decide. If your question isn&apos;t here, let&apos;s
             talk&hellip;
           </p>
           <a href="/faq">
-          <button
-            type="button"
-            className="flex items-center gap-2  bg-neutral-900 px-6 py-3 text-xs font-semibold uppercase tracking-wide text-white transition-colors hover:bg-neutral-700"
-          >
-            View All FAQs
-            <svg
-              viewBox="0 0 24 24"
-              className="h-4 w-4 fill-none stroke-current stroke-2"
+            <button
+              type="button"
+              className="flex items-center gap-2 bg-neutral-900 px-6 py-3 btn-text text-white transition-colors hover:bg-neutral-700"
             >
-              <path
-                d="M9 6l6 6-6 6"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
-          </button>
+              View All FAQs
+              <svg
+                viewBox="0 0 24 24"
+                className="h-4 w-4 fill-none stroke-current stroke-2"
+              >
+                <path
+                  d="M9 6l6 6-6 6"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </button>
           </a>
         </div>
 

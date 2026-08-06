@@ -62,17 +62,17 @@ export default function StorySection() {
       ref={sectionRef}
       className="w-full bg-white min-h-svh px-6 py-24 md:px-10 flex flex-col justify-between md:py-20"
     >
-      <div className="mx-auto grid  grid-cols-1 gap-12  md:grid-cols-2 md:gap-16">
+      <div className="mx-auto grid grid-cols-1 gap-12 md:grid-cols-2 md:gap-16 items-center">
         {/* Left: big headline */}
-        <h2 className="text-[17vw] font-black uppercase leading-[0.92] tracking-tight text-neutral-900 md:text-[3.4rem] lg:text-[5.75rem]">
+        <h2 className="h-primary text-neutral-900">
           The best journeys are shaped over time
         </h2>
 
         {/* Right: lead line + word-reveal paragraph */}
-        <div className="flex justify-end items-center md:pt-2">
+        <div className="flex justify-end ml-auto items-center md:pt-2">
           <p
             ref={paraRef}
-            className="max-w-md text-[1rem] leading-relaxed text-neutral-800"
+            className="max-w-md p-large text-neutral-800"
           >
             <span className="font-semibold text-neutral-900">
               {LEAD_LINE}{" "}
@@ -83,19 +83,19 @@ export default function StorySection() {
       </div>
 
       {/* Bottom row: est. date, quote, CTA */}
-      <div className="mx-auto mt-24 flex  w-full flex-col items-start justify-between gap-6 border-t border-neutral-200 pt-8 md:flex-row md:items-center md:gap-4">
-        <span className="text-xs font-semibold tracking-widest text-neutral-500">
+      <div className="mx-auto mt-24 flex w-full flex-col items-start justify-between gap-6 border-t border-neutral-200 pt-8 md:flex-row md:items-center md:gap-4">
+        <span className="p-small uppercase tracking-[0.12em] font-medium text-neutral-500">
           [ EST. 1994 ]
         </span>
 
-        <p className="text-xs uppercase tracking-wide text-neutral-500 md:text-center">
+        <p className="p-small font-medium text-neutral-500 md:text-center">
           &ldquo;Every journey begins with curiosity. Over time, curiosity
           becomes experience.&rdquo;
         </p>
 
         <a
           href="/journeys"
-          className="inline-flex items-center gap-2 bg-neutral-900 px-6 py-3 text-xs font-semibold uppercase tracking-widest text-white transition-colors hover:bg-neutral-700"
+          className="inline-flex items-center gap-2 bg-neutral-900 px-6 py-3 btn-text text-white transition-colors hover:bg-neutral-700"
         >
           Explore Journeys
           <span aria-hidden="true">&rsaquo;</span>

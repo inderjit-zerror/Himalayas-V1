@@ -15,16 +15,16 @@ import { createPageMetadata } from "@/lib/seo";
 const HomePage = () => {
   return (
     <>
-    <Hero />
-    <StorySection />
-    <Video/>
-    <OurStory />
-    <CuratedItineraries/>
-    <HimalayanCircuitsCarousel />
-    <HimalayanCircuitsCarousel2 />
-    <PeopleBehindJourneys />
-    <JourneysRemembered />
-    <WhyDiscoverHimalayas />
+      <Hero />
+      <StorySection />
+      <Video />
+      <OurStory />
+      <CuratedItineraries />
+      <HimalayanCircuitsCarousel />
+      <HimalayanCircuitsCarousel2 />
+      <PeopleBehindJourneys />
+      <JourneysRemembered />
+      <WhyDiscoverHimalayas />
 
 
     </>

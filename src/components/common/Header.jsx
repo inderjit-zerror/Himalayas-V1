@@ -96,7 +96,7 @@ export default function Header() {
         </Link>
 
         {/* Center links */}
-        <ul className="hidden lg:flex items-center gap-8 text-[13px] font-medium tracking-wide text-neutral-800">
+        <ul className="hidden lg:flex items-center gap-8 btn-text text-neutral-800">
           {NAV_LINKS.map((link) => (
             <li key={link.href}>
               <Link
@@ -112,7 +112,7 @@ export default function Header() {
         {/* Menu button */}
         <button
           type="button"
-          className="flex items-center gap-2 text-[13px] font-semibold tracking-widest text-neutral-900"
+          className="flex items-center gap-2 btn-text text-neutral-900"
           aria-label="Open menu"
         >
           MENU

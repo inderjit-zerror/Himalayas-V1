@@ -84,17 +84,17 @@ export default function HimalayanCircuitsCarousel2() {
   };
 
   return (
-    <section className="w-full bg-white px-6 py-24 md:px-10">
-      <div className="mx-auto ">
+    <section className="w-full bg-white px-4 py-16 sm:py-24 md:px-10">
+      <div className="mx-auto w-full">
         {/* Header row */}
-        <div className="mb-10 flex flex-col justify-between gap-8 md:flex-row md:items-start">
-          <h2 className="text-4xl font-medium uppercase leading-tight tracking-tight text-neutral-900 md:text-[2.6rem]">
+        <div className="mb-10 flex flex-col justify-between gap-6 sm:gap-8 md:flex-row md:items-start">
+          <h2 className="heading-lg h-primary text-neutral-900 uppercase">
             Himalayan
             <br />
             Circuits
           </h2>
 
-          <p className="max-w-xl text-[15px] leading-relaxed text-neutral-700">
+          <p className="max-w-xl body-base text-neutral-700">
             <span className="font-semibold text-neutral-900">
               Every Journey Begins with a Different Dream.{" "}
             </span>
@@ -145,14 +145,14 @@ export default function HimalayanCircuitsCarousel2() {
         {/* Carousel track */}
         <div
           ref={trackRef}
-          className="flex gap-6 overflow-x-auto scroll-smooth pb-2 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+          className="flex gap-4 sm:gap-6 overflow-x-auto scroll-smooth pb-4 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
           style={{ scrollSnapType: "x mandatory" }}
         >
           {CIRCUITS.map((circuit, i) => (
             <article
               key={i}
               ref={(el) => (cardRefs.current[i] = el)}
-              className="w-[72%] flex-none sm:w-[46%] lg:w-[31%]"
+              className="w-[85%] flex-none sm:w-[46%] lg:w-[31%]"
               style={{ scrollSnapAlign: "start" }}
             >
               <div className="aspect-[5/3] w-full overflow-hidden bg-neutral-100">
@@ -164,10 +164,10 @@ export default function HimalayanCircuitsCarousel2() {
                   loading="lazy"
                 />
               </div>
-              <h3 className="mt-4 text-sm font-bold uppercase tracking-wide text-neutral-900">
+              <h3 className="mt-4 heading-sm text-neutral-900 uppercase">
                 {circuit.title}
               </h3>
-              <p className="mt-1 text-[13px] leading-relaxed text-neutral-600">
+              <p className="mt-1 body-sm text-neutral-600">
                 {circuit.description}
               </p>
             </article>
@@ -175,16 +175,16 @@ export default function HimalayanCircuitsCarousel2() {
         </div>
 
         {/* Footer row */}
-        <div className="mt-14 flex flex-col items-start justify-between gap-6 md:flex-row md:items-center">
-          <p className="text-xs  tracking-wide text-neutral-500">
+        <div className="mt-10 sm:mt-14 flex flex-col items-start justify-between gap-6 md:flex-row md:items-center">
+          <p className="caption-text text-neutral-500">
             [ Est. 1994 ]
           </p>
-          <p className="text-xs  tracking-wide text-neutral-500">
-            “Every region has its own landscape, its own rhythm and its own stories” 
+          <p className="caption-text text-neutral-500 text-center md:text-left normal-case">
+            “Every region has its own landscape, its own rhythm and its own stories”
           </p>
           <a
             href="/destinations"
-            className="inline-flex items-center gap-2 bg-neutral-900 px-6 py-3 text-xs font-semibold uppercase tracking-widest text-white transition-colors hover:bg-neutral-700"
+            className="inline-flex w-full sm:w-auto justify-center items-center gap-2 bg-neutral-900 px-6 py-4 sm:py-3 btn-text text-white transition-colors hover:bg-neutral-700"
           >
             Explore Destinations
             <span aria-hidden="true">&rsaquo;</span>
