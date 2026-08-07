@@ -60,7 +60,7 @@ export default function StorySection() {
   return (
     <section
       ref={sectionRef}
-      className="w-full bg-white min-h-svh px-6 py-24 md:px-10 flex flex-col justify-between md:py-20"
+      className="w-full bg-white h-fit px-6 py-24 md:px-10 flex flex-col justify-between md:py-20"
     >
       <div className="mx-auto grid grid-cols-1 gap-12 md:grid-cols-2 md:gap-16 items-center">
         {/* Left: big headline */}

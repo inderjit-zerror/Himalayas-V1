@@ -73,16 +73,16 @@ export default function OurStoryHero() {
           }
 
           // Background: slow parallax drift tied to the full 200vh scroll
-          gsap.to(bgRef.current, {
-            yPercent: 14,
-            ease: "none",
-            scrollTrigger: {
-              trigger: sectionRef.current,
-              start: "top top",
-              end: "bottom bottom",
-              scrub: true,
-            },
-          });
+          // gsap.to(bgRef.current, {
+          //   yPercent: 14,
+          //   ease: "none",
+          //   scrollTrigger: {
+          //     trigger: sectionRef.current,
+          //     start: "top top",
+          //     end: "bottom bottom",
+          //     scrub: true,
+          //   },
+          // });
 
           // Master reveal timeline, scrubbed across the pinned duration
           const tl = gsap.timeline({

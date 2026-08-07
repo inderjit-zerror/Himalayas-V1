@@ -204,7 +204,7 @@ export default function TeamSection() {
       {/* Bottom bar */}
       <div
         ref={footerRef}
-        className="mx-auto mt-[3.5rem] flex max-w-[80rem] flex-col items-center gap-y-[1.5rem] border-t border-neutral-200 pt-[1.75rem] text-center sm:flex-row sm:justify-between sm:gap-y-0 sm:text-left"
+        className="mx-auto mt-[3.5rem] flex flex-col items-center gap-y-[1.5rem] border-t border-neutral-200 pt-[1.75rem] text-center sm:flex-row sm:justify-between sm:gap-y-0 sm:text-left"
       >
         <p className="caption-text text-neutral-400">
           [ Est. 1994 ]

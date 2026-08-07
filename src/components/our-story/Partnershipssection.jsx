@@ -85,7 +85,7 @@ export default function PartnershipsSection() {
       className="w-full bg-white px-10 py-[8vh]"
       aria-label="Partnerships"
     >
-      <div className="mx-auto  grid max-w-[80rem] grid-cols-1 items-center gap-y-[3rem] lg:grid-cols-2 lg:gap-x-[4rem]">
+      <div className="mx-auto  grid  grid-cols-1 items-center gap-y-[3rem] lg:grid-cols-2 lg:gap-x-[4rem]">
         {/* Text column */}
         <div className="max-w-[30rem]">
           <div className="overflow-hidden">
@@ -135,7 +135,7 @@ export default function PartnershipsSection() {
         </div>
 
         {/* Polaroid photo column */}
-        <div className="flex justify-center lg:justify-end">
+        <div className="flex justify-center lg:justify-end pr-[5vw]">
           <div
             ref={polaroidRef}
             className="inline-block w-[min(26rem,80vw)] rounded-[0.125rem] bg-[#fbfaf7] p-[0.75rem] pb-[2.5rem] shadow-[0_0.25rem_0.75rem_rgba(0,0,0,0.12),0_1.5rem_3rem_rgba(0,0,0,0.14)]"
