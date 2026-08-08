@@ -145,7 +145,7 @@ export default function PartnershipsSection() {
               /images/uwe-balser-nakeela.jpg — placed in /public/images
             */}
             <img
-              src="https://images.unsplash.com/photo-1604482311771-f9148b32a8c2?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              src="/img/19.jpg"
               alt="Uwe Balser standing beside the Himank Nakeela pass marker at 15,547 ft"
               className="block aspect-[4/5] h-auto w-full object-cover"
             />

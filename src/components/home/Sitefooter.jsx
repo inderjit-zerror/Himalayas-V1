@@ -237,10 +237,10 @@ export default function SiteFooter() {
       className="relative min-h-[80vh] overflow-hidden px-4 sm:px-6 flex flex-col justify-end pt-32 pb-10 text-white md:px-16 lg:px-10"
     >
       <div
-        className="absolute inset-0 bg-cover bg-center"
+        className="absolute inset-0 bg-cover bg-top"
         style={{
           backgroundImage:
-            "url('https://images.unsplash.com/photo-1454496522488-7a8e488e8606?q=80&w=1176&auto=format&fit=crop')",
+            "url('/img/15.jpg')",
         }}
         aria-hidden="true"
       />

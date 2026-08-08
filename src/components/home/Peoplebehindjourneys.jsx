@@ -204,13 +204,13 @@ export default function PeopleBehindJourneys() {
         <div className="flex flex-col gap-12 sm:gap-16 lg:flex-row lg:items-start lg:justify-between">
           <div className="flex w-full justify-center lg:w-1/2 lg:justify-start pt-6 sm:pt-0">
             <div
-              className="pbj-polaroid w-full max-w-[280px] sm:max-w-[400px] lg:max-w-[500px] -rotate-3 bg-[#fdfdfc] p-3 pb-16 sm:p-4 sm:pb-20 shadow-[0_10px_40px_-15px_rgba(0,0,0,0.15)] border border-neutral-100"
+              className="pbj-polaroid w-full max-w-[280px] sm:max-w-[400px] lg:max-w-[500px] h-[70vh] -rotate-3 bg-[#fdfdfc] p-3 pb-16 sm:p-4 sm:pb-20 shadow-[0_10px_40px_-15px_rgba(0,0,0,0.15)] border border-neutral-100"
               style={{ transformOrigin: "center" }}
             >
               <img
-                src="https://images.unsplash.com/photo-1644945581764-66b9e8ed4893?q=80&w=687&auto=format&fit=crop"
+                src="/img/9.jpg"
                 alt="Vinod and Nadia"
-                className="h-full w-full object-cover"
+                className="h-full w-full object-cover "
                 draggable={false}
               />
             </div>

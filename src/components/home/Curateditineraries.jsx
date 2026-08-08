@@ -169,11 +169,11 @@ if (typeof window !== "undefined") {
 }
 
 const IMAGES = [
-  "https://images.unsplash.com/photo-1637009800201-101d788999eb?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  "https://images.unsplash.com/photo-1766852254215-ec02eeec50fa?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  "https://images.unsplash.com/photo-1758468205216-ca17e22848bc?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDEwfHx8ZW58MHx8fHx8",
-  "https://images.unsplash.com/photo-1630693145761-2d357b684fda?q=80&w=1632&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  "https://images.unsplash.com/photo-1780584523955-ced3f93e573b?q=80&w=1632&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  "/img/1.jpg",
+  "/img/3.jpg",
+  "/img/5.jpg",
+  "/img/6.jpg",
+  "/img/7.jpg",
 ];
 
 export default function CuratedItineraries() {

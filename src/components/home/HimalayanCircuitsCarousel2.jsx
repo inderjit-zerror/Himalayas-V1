@@ -11,31 +11,31 @@ const CIRCUITS = [
     title: "Hidden Monasteries",
     description:
       "A retreat into silent ancient stone sanctuaries and spiritual chants.",
-    image: "https://images.unsplash.com/photo-1780584523947-14ebc50723c7?q=80&w=1632&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    image: "/img/6.jpg",
   },
   {
     title: "The Sacred Passes",
     description:
       "High-altitude motorcycle passes and timeless geological lines.",
-    image: "https://images.unsplash.com/photo-1780584523960-30c59e847629?q=80&w=1632&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    image: "/img/7.jpg",
   },
   {
     title: "The Sacred Passes",
     description:
       "High-altitude motorcycle passes and timeless geological lines.",
-    image: "https://images.unsplash.com/photo-1647143351654-d8c9c2f26e1b?q=80&w=1528&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    image: "/img/8.jpg",
   },
   {
     title: "Living Cultures",
     description:
       "Villages, prayer flags and the rhythms of everyday mountain life.",
-    image: "https://images.unsplash.com/photo-1544735716-87fa59a45b4e?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    image: "/img/1.jpg",
   },
   {
     title: "Remote Valleys",
     description:
       "Wide, silent landscapes carved by rivers and centuries of wind.",
-    image: "https://images.unsplash.com/photo-1600700753517-07561297dc34?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    image: "/img/3.jpg",
   },
 ];
 
