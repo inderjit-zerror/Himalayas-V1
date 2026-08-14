@@ -102,7 +102,7 @@ export default function FAQContactSection() {
   );
 
   return (
-    <section className="w-full bg-white text-black py-12 px-6 md:px-12 lg:px-10 font-sans pt-[20vh]">
+    <section className="w-full bg-white text-black py-12 px-6 md:px-12 lg:px-10   pt-[20vh]">
       <div className=" mx-auto">
         
         {/* Header Title Section */}

@@ -33,7 +33,7 @@ export default function ImageSlider({
   };
 
   return (
-    <section className="w-full  mx-auto  px-10 py-20 font-sans">
+    <section className="w-full  mx-auto  px-10 py-20  ">
       {/* Top Bar - Fixed Header Content */}
       <div className="flex flex-col md:flex-row justify-between items-start md:items-start gap-4 mb-6">
         

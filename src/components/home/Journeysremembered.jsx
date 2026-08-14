@@ -458,9 +458,9 @@ export default function JourneysRemembered() {
                 </span>
               </button>
 
-              <h3 className="mb-1 heading-sm text-neutral-900">
+              <h5 className="mb-1 heading-sm text-neutral-900">
                 &quot;{story.title}&quot;
-              </h3>
+              </h5>
               <p className="body-base font-semibold text-neutral-900">
                 {story.author}
               </p>

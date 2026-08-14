@@ -91,7 +91,7 @@
 
 //           {/* Right: Heading + Bios + CTA */}
 //           <div className="flex w-full flex-col lg:w-1/2 lg:pl-10 xl:pl-0">
-//             <h2 className="pbj-heading mb-12 font-sans text-[48px] font-black uppercase leading-[1.05] tracking-wide text-neutral-900 sm:text-[56px] lg:text-[64px]">
+//             <h2 className="pbj-heading mb-12   text-[48px] font-black uppercase leading-[1.05] tracking-wide text-neutral-900 sm:text-[56px] lg:text-[64px]">
 //               The people
 //               <br />
 //               behind the
@@ -196,7 +196,7 @@ export default function PeopleBehindJourneys() {
       ref={sectionRef}
       className="w-full bg-white px-4 py-16 sm:px-10 lg:px-20 lg:py-28 overflow-hidden"
     >
-      <div className="mx-auto max-w-[1200px]">
+      <div className="mx-auto ">
         <p className="pbj-eyebrow eyebrow-text mb-10 sm:mb-12 text-neutral-400">
           // This is Us
         </p>
@@ -228,9 +228,9 @@ export default function PeopleBehindJourneys() {
             <div className="max-w-lg space-y-6 sm:space-y-8">
               {TEAM.map((member) => (
                 <div key={member.name} className="pbj-bio">
-                  <h3 className="mb-1 heading-md text-neutral-900">
+                  <h5 className="mb-1 heading-md text-neutral-900">
                     {member.name}
-                  </h3>
+                  </h5>
                   <p className="body-base text-neutral-600">
                     <span className="font-bold text-[#e14032]">
                       {member.tag}

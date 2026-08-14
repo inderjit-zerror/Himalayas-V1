@@ -83,7 +83,7 @@
 
 //         {/* Heading + copy row */}
 //         <div className="grid grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-8">
-//           <h2 className="ost-heading col-span-12 font-sans text-[52px] font-extrabold uppercase leading-[0.95] tracking-tight text-neutral-900 sm:text-[64px] lg:col-span-7 lg:text-[72px]">
+//           <h2 className="ost-heading col-span-12   text-[52px] font-extrabold uppercase leading-[0.95] tracking-tight text-neutral-900 sm:text-[64px] lg:col-span-7 lg:text-[72px]">
 //             More than
 //             <br />a journey
 //           </h2>
@@ -120,7 +120,7 @@
 //               </span>
 //               <span
 //                 ref={(el) => (statRefs.current[i] = el)}
-//                 className="font-sans text-5xl font-extrabold tabular-nums text-neutral-900 sm:text-6xl"
+//                 className="  text-5xl font-extrabold tabular-nums text-neutral-900 sm:text-6xl"
 //               >
 //                 0
 //               </span>
@@ -261,12 +261,12 @@ export default function OurStory() {
               <span className="mb-2 sm:mb-4 p-small uppercase tracking-[0.12em] font-medium text-neutral-400">
                 {stat.label.toUpperCase()}
               </span>
-              <span
+              <h2
                 ref={(el) => (statRefs.current[i] = el)}
                 className="h-primary tabular-nums text-neutral-900"
               >
                 0
-              </span>
+              </h2>
             </div>
           ))}
         </div>

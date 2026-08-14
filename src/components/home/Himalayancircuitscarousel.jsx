@@ -337,9 +337,9 @@ export default function HimalayanCircuitsCarousel() {
                   loading="lazy"
                 />
               </div>
-              <h3 className="mt-4 heading-sm text-neutral-900 uppercase">
+              <h5 className="mt-4 heading-sm text-neutral-900 uppercase">
                 {circuit.title}
-              </h3>
+              </h5>
               <p className="mt-1 body-sm text-neutral-600">
                 {circuit.description}
               </p>

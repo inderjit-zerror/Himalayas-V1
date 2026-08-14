@@ -78,12 +78,12 @@ function AccordionItem({ item, isOpen, onToggle }) {
         aria-expanded={isOpen}
         className="flex w-full items-center justify-between gap-6 text-left"
       >
-        <span
+        <h5
           className={`heading-sm transition-colors ${isOpen ? "text-red-600" : "text-neutral-800"
             }`}
         >
           {item.question}
-        </span>
+        </h5>
         <span
           className={`flex h-6 w-6 flex-none items-center justify-center transition-colors ${isOpen ? "text-red-600" : "text-neutral-500"
             }`}
@@ -157,10 +157,10 @@ export default function WhyDiscoverHimalayas() {
           <p className="mb-6 eyebrow-text text-neutral-400">
             [ Why Discover Himalayas ]
           </p>
-          <h2 className="mb-6 max-w-xl h-secondary heading-lg text-neutral-800">
+          <h3 className="mb-6 max-w-xl h-secondary heading-lg text-neutral-800">
             Before we start planning your journey, there&apos;s one question
             worth asking&hellip; are we the right people to take you there?
-          </h2>
+          </h3>
           <p className="mb-8 max-w-xl body-base text-neutral-500">
             Here are some of the questions travellers usually ask us before
             they decide. If your question isn&apos;t here, let&apos;s

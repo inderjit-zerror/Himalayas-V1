@@ -296,9 +296,9 @@ export default function ChooseYourPath() {
   return (
     <section className="bg-white px-4 border-t border-[#292929]/40 py-10 sm:py-14 md:px-16 lg:px-10">
       <div className="mx-auto w-full">
-        <h2 className="heading-lg  h-secondary text-neutral-900 uppercase">
+        <h3 className="heading-lg  h-secondary text-neutral-900 uppercase">
           CHOOSE YOUR PATH
-        </h2>
+        </h3>
         <p className="mt-3 max-w-xl body-base text-neutral-600">
           Whether you&apos;re joining a scheduled expedition or planning a
           tailor-made adventure, we&apos;ll help you choose the right route,

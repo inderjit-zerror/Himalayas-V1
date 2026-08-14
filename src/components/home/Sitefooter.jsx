@@ -249,7 +249,7 @@ export default function SiteFooter() {
       <div className="relative z-10 mx-auto w-full ">
         {FLORUP.map((col) => (
           <div key={col.title} className="footer-reveal mb-10">
-            <h3 className="mb-3 sm:mb-2 heading-sm font-semibold">{col.title}</h3>
+            <h5 className="mb-3 sm:mb-2 heading-sm font-semibold">{col.title}</h5>
             <ul className="space-y-2 sm:space-y-0">
               {col.links.map((link) => (
                 <li key={link} className="flex items-center gap-2">
@@ -269,7 +269,7 @@ export default function SiteFooter() {
         <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4">
           {FOOTER_COLUMNS.map((col) => (
             <div key={col.title} className="footer-reveal">
-              <h3 className="mb-3 sm:mb-2 heading-sm font-semibold">{col.title}</h3>
+              <h5 className="mb-3 sm:mb-2 heading-sm font-semibold">{col.title}</h5>
               <ul className="space-y-2 sm:space-y-0">
                 {col.links.map((link) => (
                   <li key={link} className="flex items-center gap-2">
@@ -287,9 +287,9 @@ export default function SiteFooter() {
           ))}
 
           <div className="footer-reveal sm:col-span-2 lg:col-span-1 mt-6 sm:mt-0">
-            <h3 className="heading-sm font-semibold leading-snug">
+            <h5 className="heading-sm font-semibold leading-snug">
               Stay Connected with Discover Himalayas
-            </h3>
+            </h5>
             <p className="mt-3 body-sm leading-relaxed text-white/80">
               Stories from across the Himalayas and the Indian subcontinent, new
               journeys and expedition updates&mdash;shared occasionally, never

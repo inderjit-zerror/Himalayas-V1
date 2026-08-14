@@ -65,7 +65,7 @@ export default function ExploreFurtherSection() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="w-full bg-white text-black py-16 px-6 md:px-12 lg:px-16 font-sans">
+    <section ref={sectionRef} className="w-full bg-white text-black py-16 px-6 md:px-12 lg:px-16  ">
       <div className=" mx-auto">
         
         {/* Header Section */}

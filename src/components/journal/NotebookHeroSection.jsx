@@ -49,7 +49,7 @@ export default function NotebookHeroSection() {
   return (
     <section 
       ref={containerRef} 
-      className="relative w-full min-h-[200vh] bg-stone-900 text-stone-900 overflow-hidden font-sans flex flex-col justify-between p-6 md:p-12 lg:p-16"
+      className="relative w-full min-h-[200vh] bg-stone-900 text-stone-900 overflow-hidden   flex flex-col justify-between p-6 md:p-12 lg:p-16"
     >
       {/* Background Image Container */}
       <div className="absolute inset-0 z-0">

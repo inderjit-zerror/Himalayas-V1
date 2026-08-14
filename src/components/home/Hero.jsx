@@ -100,9 +100,9 @@ export default function Hero() {
       </div>
 
       <div className="relative z-10 w-full pb-10 sm:pb-12 text-center px-4">
-        <h1 className="btn-text text-white drop-shadow-md max-w-4xl mx-auto leading-relaxed">
+        <h5 className="btn-text text-white drop-shadow-md max-w-4xl mx-auto leading-relaxed">
           Creating Motorcycle and Overland Journeys Across the Himalayas and the Indian Subcontinent
-        </h1>
+        </h5>
       </div>
     </section>
   );

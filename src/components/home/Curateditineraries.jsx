@@ -91,7 +91,7 @@
 //               [ DESTINATIONS ]
 //             </p>
 
-//             <h2 className="ci-heading mb-8 font-sans text-[52px] font-extrabold uppercase leading-[0.95] tracking-tight text-neutral-900 sm:text-[64px] lg:text-[56px] xl:text-[64px]">
+//             <h2 className="ci-heading mb-8   text-[52px] font-extrabold uppercase leading-[0.95] tracking-tight text-neutral-900 sm:text-[64px] lg:text-[56px] xl:text-[64px]">
 //               Curated
 //               <br />
 //               itineraries
@@ -230,7 +230,7 @@ export default function CuratedItineraries() {
         ref={stickyRef}
         className="sticky top-0 flex min-h-[100dvh] w-full items-center overflow-hidden px-4 py-20 sm:px-10 lg:px-10"
       >
-        <div className="mx-auto w-full max-w-7xl grid grid-cols-1 items-center gap-10 lg:grid-cols-12 lg:gap-16">
+        <div className="mx-auto w-full  grid grid-cols-1 items-center gap-10 lg:grid-cols-12 lg:gap-16">
           <div className="col-span-12 lg:col-span-5">
             <p className="ci-eyebrow eyebrow-text mb-4 text-neutral-400 lg:mb-6">
               [ DESTINATIONS ]
