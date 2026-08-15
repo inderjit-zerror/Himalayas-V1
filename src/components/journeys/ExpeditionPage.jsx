@@ -37,7 +37,7 @@ export default function ExpeditionPage() {
     ];
 
     return (
-        <div className="min-h-screen bg-white text-black   selection:bg-gray-800 selection:text-white pt-[10vh] px-10">
+        <div className="min-h-screen bg-white text-black   selection:bg-gray-800 selection:text-white pt-[10vh] max-sm:pb-10 px-5 sm:px-10">
             {/* Navigation Header */}
             <header className="w-full pt-10 px-6 md:px-12 flex justify-center lg:justify-center z-20 relative">
                 <div className="flex flex-col md:flex-row shadow-sm">
@@ -84,13 +84,13 @@ export default function ExpeditionPage() {
             // LADAKH
                     </div>
 
-                    <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-[105px] font-black uppercase leading-[0.9] tracking-tighter mb-10 text-black">
+                    <h2 className="text-5xl sm:text-6xl md:text-7xl lg:text-[105px]  uppercase leading-[0.9] tracking-tighter mb-10 text-black">
                         TO THE<br />
                         HIGHEST ROAD<br />
                         ON EARTH
-                    </h1>
+                    </h2>
 
-                    <p className="text-lg md:text-[22px] text-[#222222] leading-[1.6] max-w-[38rem]">
+                    <p className="text-lg md:text-[22px]  leading-[1.6] max-w-[38rem]">
                         Ladakh is Discover Himalayas' signature high-altitude expedition. An extraordinary Royal Enfield journey through the world's highest motorable passes, ancient Buddhist kingdoms and the vast high-altitude landscapes of Ladakh.
                     </p>
                 </div>
@@ -98,7 +98,7 @@ export default function ExpeditionPage() {
                 {/* Right Column: At A Glance Sidebar */}
                 <div className="lg:col-span-4 lg:pl-10 mt-8 lg:mt-24">
                     <div className="mb-8">
-                        <h3 className="text-base font-bold tracking-[0.15em] uppercase text-black">
+                        <h3 className=" uppercase ">
                             AT A GLANCE
                         </h3>
                         <div className="h-[2px] bg-black w-[150px] mt-4"></div>
@@ -107,12 +107,12 @@ export default function ExpeditionPage() {
                     <div className="space-y-1">
                         {glanceData.map((item, index) => (
                             <div key={index} className="text-[17px] leading-relaxed">
-                                <span className="font-bold text-[#555555] block">
+                                <h5 className="font-bold  block">
                                     {item.label}
-                                </span>
-                                <span className="font-medium text-[#777777] block mb-1">
+                                </h5>
+                                <p className=" mb-3 mt-2">
                                     {item.value}
-                                </span>
+                                </p>
                             </div>
                         ))}
                     </div>

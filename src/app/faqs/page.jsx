@@ -106,13 +106,13 @@ export default function FAQContactSection() {
       <div className=" mx-auto">
         
         {/* Header Title Section */}
-        <div className="mb-10 max-w-3xl">
+        <div className="mb-20 max-w-3xl">
           <p className="text-xs font-bold tracking-wider text-black uppercase mb-3">
             // FREQUENTLY ASKED QUESTIONS
           </p>
-          <h2 className="text-xl md:text-2xl font-black text-black tracking-tight mb-2 h-secondary">
+          <h3 className="text-xl md:text-2xl font-black text-black tracking-tight mb-2 h-secondary">
             Three decades of questions. Three decades of answers.
-          </h2>
+          </h3>
           <p className="text-xs md:text-sm text-gray-700 leading-relaxed">
             From first-time riders to seasoned overlanders, we've answered thousands of questions before journeys began. These are the ones that come up most often.
           </p>
@@ -127,7 +127,7 @@ export default function FAQContactSection() {
             {/* Search Input */}
             <div className="relative border-b border-dashed border-gray-400 pb-2 mb-2 flex items-center justify-between">
               <div className="flex items-center w-full gap-2">
-                <span className="text-xs font-semibold text-gray-800">Search:</span>
+                <p className="text-xs font-semibold text-gray-800">Search:</p>
                 <input
                   type="text"
                   value={searchQuery}
@@ -162,8 +162,8 @@ export default function FAQContactSection() {
                       : 'text-gray-600 hover:text-black'
                   }`}
                 >
-                  <span>{category}</span>
-                  <span className="text-gray-400 text-[10px]">&gt;</span>
+                  <p>{category}</p>
+                  <p className="text-gray-400 text-[10px]">&gt;</p>
                 </button>
               ))}
             </nav>
@@ -186,7 +186,7 @@ export default function FAQContactSection() {
                           : 'bg-[#e0e0e0] text-gray-800 hover:bg-gray-300'
                       }`}
                     >
-                      <span>{faq.question}</span>
+                      <p>{faq.question}</p>
 
                       {/* Bottom-left triangular fold/notch effect */}
                       <div
@@ -212,9 +212,9 @@ export default function FAQContactSection() {
                     ref={(el) => (contentRefs.current[index] = el)}
                     className="overflow-hidden h-0 opacity-0"
                   >
-                    <div className="pt-4 pb-2 px-1 text-[11px] leading-relaxed text-gray-700">
+                    <p className="pt-4 pb-2 px-1 text-[11px] leading-relaxed text-gray-700">
                       {faq.answer}
-                    </div>
+                    </p>
                   </div>
                 </div>
               );
@@ -223,7 +223,7 @@ export default function FAQContactSection() {
 
           {/* Column 3: Contact Form (4 Cols) */}
           <div className="lg:col-span-4 flex flex-col pt-1 pl-0 lg:pl-4">
-            <p className="text-[11px] text-gray-700 mb-2">
+            <p className=" mb-2">
               If your questions are not listed write to us
             </p>
             <h3 className="text-base font-bold text-black mb-4 h-secondary">Contact us</h3>
@@ -231,9 +231,9 @@ export default function FAQContactSection() {
             <form onSubmit={(e) => e.preventDefault()} className="flex flex-col gap-3">
               {/* First and Last Name */}
               <div className="flex flex-col gap-1">
-                <label className="text-[10px] font-semibold text-gray-700">
+                <p className="text-[10px] font-semibold text-gray-700">
                   First and Last Name*
-                </label>
+                </p>
                 <input
                   type="text"
                   defaultValue="Christopher Montgomery"
@@ -243,9 +243,9 @@ export default function FAQContactSection() {
 
               {/* Email Address */}
               <div className="flex flex-col gap-1">
-                <label className="text-[10px] font-semibold text-gray-700">
+                <p className="text-[10px] font-semibold text-gray-700">
                   Email address*
-                </label>
+                </p>
                 <input
                   type="email"
                   defaultValue="inquiry@discoverhimalayas.com"
@@ -255,9 +255,9 @@ export default function FAQContactSection() {
 
               {/* Telephone */}
               <div className="flex flex-col gap-1">
-                <label className="text-[10px] font-semibold text-gray-700">
+                <p className="text-[10px] font-semibold text-gray-700">
                   Telephone*
-                </label>
+                </p>
                 <div className="flex gap-2">
                   <select className="border border-gray-400 p-1.5 text-xs text-gray-800 bg-white focus:outline-none focus:border-black w-20">
                     <option>+132</option>
@@ -273,9 +273,9 @@ export default function FAQContactSection() {
 
               {/* Subject Dropdown */}
               <div className="flex flex-col gap-1">
-                <label className="text-[10px] font-semibold text-gray-700">
+                <p className="text-[10px] font-semibold text-gray-700">
                   Subject*
-                </label>
+                </p>
                 <select className="w-full border border-gray-400 p-1.5 text-xs text-gray-700 bg-white focus:outline-none focus:border-black">
                   <option>Select the subject of your request</option>
                   <option>Booking Inquiry</option>
@@ -285,9 +285,9 @@ export default function FAQContactSection() {
 
               {/* Text / Message Box */}
               <div className="flex flex-col gap-1">
-                <label className="text-[10px] font-semibold text-gray-700">
+                <p className="text-[10px] font-semibold text-gray-700">
                   Text*
-                </label>
+                </p>
                 <textarea
                   rows={4}
                   className="w-full border border-gray-400 p-1.5 text-xs text-gray-800 focus:outline-none focus:border-black resize-none"

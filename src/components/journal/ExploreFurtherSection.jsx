@@ -70,10 +70,10 @@ export default function ExploreFurtherSection() {
         
         {/* Header Section */}
         <div className="flex flex-col md:flex-row justify-between items-start md:items-start mb-12 gap-4">
-          <h2 className="text-xl md:text-2xl font-extrabold tracking-tight text-black uppercase">
+          <h2 className=" uppercase">
             Ready to explore further?
           </h2>
-          <p className="text-gray-700 text-sm max-w-xs leading-relaxed">
+          <p className="">
             If this journey resonated with you, here are a few more places to continue exploring.
           </p>
         </div>
@@ -95,23 +95,23 @@ export default function ExploreFurtherSection() {
                 />
               </div>
 
-              {/* Tag */}
-              <span className="text-xs text-gray-700 font-medium mb-3">
+              {/* Tag
+              <p className="text-xs text-gray-700 font-medium mb-3">
                 [ {item.category} ]
-              </span>
+              </p> */}
 
               {/* Title */}
-              <h3 className="text-base font-bold text-black leading-snug mb-2 group-hover:underline underline-offset-2">
+              <h5 className="text-base font-bold text-black leading-snug mb-2 group-hover:underline underline-offset-2">
                 {item.title}
-              </h3>
+              </h5>
 
               {/* Description */}
-              <p className="text-xs text-gray-600 leading-relaxed mb-6 flex-grow">
+              <p className="mt-3">
                 {item.description}
               </p>
 
               {/* Call to Action */}
-              <div className="flex items-center gap-1.5 text-xs font-bold text-black mt-auto">
+              <div className="flex items-center gap-1.5 text-xs font-bold text-black mt-5">
                 <span className="inline-block transition-transform duration-300 group-hover:translate-x-1">
                   &rarr;
                 </span>

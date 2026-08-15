@@ -124,7 +124,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import Link from "next/link";
+import { Link } from "next-view-transitions";
 import Image from "next/image";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -135,7 +135,6 @@ gsap.registerPlugin(ScrollTrigger);
 const NAV_LINKS = [
   { label: "OUR STORY", href: "/our-story" },
   { label: "JOURNEYS", href: "/journeys" },
-  { label: "DESTINATIONS", href: "/destinations" },
   { label: "FAQS", href: "/faqs" },
   { label: "JOURNAL", href: "/journal" },
 ];
@@ -143,10 +142,10 @@ const NAV_LINKS = [
 // Links shown inside the full-screen menu overlay
 const MENU_LINKS = [
   { label: "Home", href: "/" },
-  { label: "About", href: "/about" },
-  { label: "Journeys", href: "/journeys", active: true },
-  { label: "Journals", href: "/journal" },
-  { label: "FAQs", href: "/faqs" },
+  { label: "OUR STORY", href: "/our-story" },
+  { label: "JOURNEYS", href: "/journeys" },
+  { label: "FAQS", href: "/faqs" },
+  { label: "JOURNAL", href: "/journal" },
 ];
 
 const MENU_IMAGES = [
@@ -418,9 +417,8 @@ function FullScreenMenu({ isOpen, onClose }) {
                   <Link
                     href={link.href}
                     onClick={onClose}
-                    className={`block border-b border-neutral-200 py-2.5 text-2xl transition-colors hover:text-neutral-400 sm:py-3 sm:text-3xl md:text-4xl ${
-                      link.active ? "font-semibold text-neutral-900" : "font-normal text-neutral-800"
-                    }`}
+                    className={`block border-b border-neutral-200 py-2.5 text-2xl transition-colors hover:text-neutral-400 sm:py-3 sm:text-3xl md:text-4xl ${link.active ? "font-semibold text-neutral-900" : "font-normal text-neutral-800"
+                      }`}
                   >
                     {link.label}
                   </Link>
@@ -494,12 +492,12 @@ function LinkList({ title, items }) {
       </h3>
       <ul className="mt-3 flex flex-col gap-2">
         {items.map((item) => (
-          <li key={item} className="flex items-start gap-2 text-sm text-neutral-700">
+          <p key={item} className="flex items-start gap-2 text-sm text-neutral-700">
             <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-neutral-500" />
             <Link href="#" className="hover:text-neutral-400">
               {item}
             </Link>
-          </li>
+          </p>
         ))}
       </ul>
     </div>

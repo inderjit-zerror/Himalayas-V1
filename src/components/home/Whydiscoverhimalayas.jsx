@@ -99,7 +99,7 @@ function AccordionItem({ item, isOpen, onToggle }) {
       </button>
 
       <div ref={answerRef} className="overflow-hidden" style={{ height: 0, opacity: 0 }}>
-        <p className="pt-4 pr-10 body-base text-neutral-500">
+        <p className="pt-4 pr-10 ">
           {item.answer}
         </p>
       </div>
@@ -161,7 +161,7 @@ export default function WhyDiscoverHimalayas() {
             Before we start planning your journey, there&apos;s one question
             worth asking&hellip; are we the right people to take you there?
           </h3>
-          <p className="mb-8 max-w-xl body-base text-neutral-500">
+          <p className="mb-8 max-w-xl ">
             Here are some of the questions travellers usually ask us before
             they decide. If your question isn&apos;t here, let&apos;s
             talk&hellip;

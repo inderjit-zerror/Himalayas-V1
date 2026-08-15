@@ -22,7 +22,7 @@ export default function RidersSection() {
   return (
     <section
       ref={sectionRef}
-      className="w-full bg-white px-10 py-[8vh]"
+      className="w-full bg-white px-5 sm:px-10 py-[8vh]"
       aria-label="Our riders"
     >
       <div className="mx-auto grid w-full grid-cols-1 items-center gap-y-[3.5rem] lg:grid-cols-2 lg:gap-x-[4rem]">
@@ -46,7 +46,7 @@ export default function RidersSection() {
         <div className="max-w-[30rem]">
           <h2
             ref={headlineRef}
-            className="heading-xl text-neutral-900 h-primary"
+            className="heading-xl text-neutral-900 "
           >
             <span className="block overflow-hidden">
               <span className="inline-block">OUR</span>
@@ -58,7 +58,7 @@ export default function RidersSection() {
 
           <p
             ref={paraRef}
-            className="mt-[1.75rem] body-base text-neutral-600"
+            className="mt-[1.75rem] "
           >
             From experienced riders to first-time visitors, our travellers
             come from around the world to explore the Himalayas and the
@@ -84,7 +84,7 @@ export default function RidersSection() {
 
           <p
             ref={quoteRef}
-            className="mt-[2rem] body-lead font-bold italic text-neutral-800"
+            className="mt-[2rem] "
           >
             "Optate ditatem idenimp orionsed eosandem et volut omnimincto
             beraturem. Xerum is eum asi ulpa dolut rectur aspeditam".

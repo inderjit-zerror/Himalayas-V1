@@ -4,7 +4,7 @@ import HeroNavbar from './Heronavbar'
 const JournalHero = () => {
   return (
     <>
-      <HeroNavbar/>
+      <HeroNavbar />
     </>
   )
 }

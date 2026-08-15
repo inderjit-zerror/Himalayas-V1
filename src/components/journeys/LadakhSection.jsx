@@ -8,11 +8,11 @@ export default function LadakhSection() {
           
           {/* Section 1: Why Ride Ladakh? */}
           <div className="space-y-4">
-            <h2 className="text-3xl md:text-4xl font-extrabold text-black tracking-tight">
+            <h2 className=" ">
               Why Ride Ladakh?
             </h2>
-            <div className="space-y-3 leading-relaxed text-neutral-700 text-base md:text-lg">
-              <p className="font-bold text-black">
+            <div className="space-y-3 leading-relaxed text-base md:text-lg">
+              <p className=" ">
                 Ladakh is Discover Himalayas' signature high-altitude expedition.
               </p>
               <p>
@@ -30,7 +30,7 @@ export default function LadakhSection() {
             <h2 className="text-3xl md:text-4xl font-extrabold text-black tracking-tight">
               The Route
             </h2>
-            <p className="leading-relaxed text-neutral-700 text-base md:text-lg">
+            <p className="leading-relaxed ">
               Beginning in Leh, the route gradually climbs through Ladakh's valleys and
               mountain passes before reaching Nubra, Pangong, Hanle and the
               Changthang Plateau. Carefully paced for acclimatisation, it culminates at
@@ -46,28 +46,28 @@ export default function LadakhSection() {
           
           {/* Card 1: Journey Highlights */}
           <div className="border border-neutral-600 bg-white">
-            <div className="bg-[#333333] py-2 px-4 text-center">
-              <h3 className="text-xs font-semibold uppercase tracking-wider text-white">
+            <div className="bg-[#333333] py-6 px-4 text-center">
+              <h4 className="text-xs font-semibold uppercase tracking-wider text-white">
                 Journey Highlights
-              </h3>
+              </h4>
             </div>
             <div className="p-6">
               <ul className="list-disc list-inside space-y-2 text-neutral-700 text-sm md:text-base leading-snug">
-                <li>12 High Mountain Passes</li>
-                <li>3 High-Altitude Himalayan Lakes</li>
-                <li>Ancient Buddhist Monasteries</li>
-                <li>The Changpa Nomadic Plateau</li>
-                <li>The Indus &amp; Nubra Valleys</li>
+                <p>12 High Mountain Passes</p>
+                <p>3 High-Altitude Himalayan Lakes</p>
+                <p>Ancient Buddhist Monasteries</p>
+                <p>The Changpa Nomadic Plateau</p>
+                <p>The Indus &amp; Nubra Valleys</p>
               </ul>
             </div>
           </div>
 
           {/* Card 2: Is This Journey For You? */}
           <div className="border border-neutral-600 bg-white">
-            <div className="bg-[#dcdcdc] py-2 px-4 text-center border-b border-neutral-400">
-              <h3 className="text-xs font-semibold uppercase tracking-wider text-neutral-700">
+            <div className="bg-[#dcdcdc] py-6 px-4 text-center border-b border-neutral-400">
+              <h4 className="text-xs font-semibold uppercase tracking-wider text-neutral-700">
                 Is This Journey For You?
-              </h3>
+              </h4>
             </div>
             <div className="p-6">
               <p className="text-neutral-700 text-sm md:text-base leading-relaxed">

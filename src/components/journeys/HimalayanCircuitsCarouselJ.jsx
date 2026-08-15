@@ -88,14 +88,14 @@ export default function HimalayanCircuitsCarouselJ() {
       <div className="mx-auto w-full">
         {/* Header row */}
         <div className="mb-10 flex flex-col justify-between gap-6 sm:gap-8 md:flex-row md:items-start">
-          <h2 className="heading-lg h-secondary text-neutral-900 uppercase">
+          <h2 className="uppercase">
            Stories from Ladakh
           </h2>
 
-          <p className="max-w-xl body-base text-neutral-700">
-            <span className="font-semibold text-neutral-900">
+          <p className="max-w-xl ">
+            
               Every Journey Begins with a Different Dream.{" "}
-            </span>
+            
             Some seek legendary mountain roads. Others are drawn to remote
             landscapes, living cultures or the joy of travelling slowly
             through extraordinary places.
@@ -162,10 +162,10 @@ export default function HimalayanCircuitsCarouselJ() {
                   loading="lazy"
                 />
               </div>
-              <h3 className="mt-4 heading-sm text-neutral-900 uppercase">
+              <h5 className="mt-4 uppercase">
                 {circuit.title}
-              </h3>
-              <p className="mt-1 body-sm text-neutral-600">
+              </h5>
+              <p className="mt-1 ">
                 {circuit.description}
               </p>
             </article>

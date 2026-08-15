@@ -3,6 +3,7 @@
 import Header from "@/components/common/Header";
 import Footer from "@/components/common/Footer";
 import LenisScroll from "@/components/common/LenisScroll";
+import GlobalTextAnimation from "@/components/common/GlobalTextAnimation";
 import { usePathname } from "next/navigation";
 import { useEffect } from "react";
 
@@ -41,6 +42,7 @@ export default function SiteLayout({ children }) {
         <footer>
           <Footer />
         </footer>
+        <GlobalTextAnimation />
       </LenisScroll>
     </ViewTransitions>
 

@@ -275,7 +275,7 @@ export default function HimalayanCircuitsCarousel() {
             Beyond the <br className="hidden sm:block" /> Himalayas
           </h2>
 
-          <p className="max-w-xl body-base text-neutral-700">
+          <p className="max-w-xl ">
             Journeys that Reveal a Different Side of India. From desert kingdoms and tropical coastlines to ancient cities and wildlife-rich forests, these journeys celebrate the remarkable diversity of the Indian subcontinent.
           </p>
         </div>
@@ -340,7 +340,7 @@ export default function HimalayanCircuitsCarousel() {
               <h5 className="mt-4 heading-sm text-neutral-900 uppercase">
                 {circuit.title}
               </h5>
-              <p className="mt-1 body-sm text-neutral-600">
+              <p className="mt-1  ">
                 {circuit.description}
               </p>
             </article>
@@ -348,10 +348,10 @@ export default function HimalayanCircuitsCarousel() {
         </div>
 
         <div className="mt-10 sm:mt-14 flex flex-col items-start justify-between gap-6 md:flex-row md:items-center">
-          <p className="caption-text text-neutral-500">
+          <p className="">
             [ Est. 1994 ]
           </p>
-          <p className="caption-text text-neutral-500 text-center md:text-left normal-case">
+          <p className="  md:text-left normal-case">
             “Every region has its own landscape, its own rhythm and its own stories”
           </p>
           <a

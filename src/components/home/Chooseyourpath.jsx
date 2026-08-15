@@ -299,7 +299,7 @@ export default function ChooseYourPath() {
         <h3 className="heading-lg  h-secondary text-neutral-900 uppercase">
           CHOOSE YOUR PATH
         </h3>
-        <p className="mt-3 max-w-xl body-base text-neutral-600">
+        <p className="mt-3 max-w-xl ">
           Whether you&apos;re joining a scheduled expedition or planning a
           tailor-made adventure, we&apos;ll help you choose the right route,
           season and experience.

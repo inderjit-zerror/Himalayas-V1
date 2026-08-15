@@ -242,7 +242,7 @@ export default function CuratedItineraries() {
               itineraries
             </h2>
 
-            <p className="ci-copy body-base mb-8 max-w-md text-neutral-500 lg:mb-10">
+            <p className=" mb-8 max-w-md lg:mb-10">
               From the high-altitude deserts of Ladakh and the timeless
               villages of Spiti to the mountain kingdoms of Nepal and
               Bhutan, the dawn-lit landscapes of Arunachal Pradesh, the

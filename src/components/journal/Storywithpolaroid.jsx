@@ -104,13 +104,13 @@ export default function StoryWithPolaroid() {
       {/* ---------------------------------------------------------- */}
       {/* LEFT: body copy                                             */}
       {/* ---------------------------------------------------------- */}
-      <div className="space-y-6 text-[15px] leading-relaxed text-neutral-700 sm:text-base">
+      <div className="space-y-6 text-[15px] leading-relaxed  sm:text-base">
         {PARAGRAPHS.map((p, i) => (
-          <p key={i} className="story-paragraph">
+          <p key={i} className="">
             {p.lead && (
-              <span className="font-semibold text-neutral-900">
+              <h2 className="mb-5">
                 {p.lead}{" "}
-              </span>
+              </h2>
             )}
             {p.rest}
           </p>

@@ -13,7 +13,7 @@ const page = () => {
       <JournalHero />
       <NotebookHero />
       <StoryWithPolaroid />
-      <QuoteBanner/>
+      <QuoteBanner />
       <FieldNotesGrid />
       <FilmstripGallery />
       <ExploreFurtherSection />

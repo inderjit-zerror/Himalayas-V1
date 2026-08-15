@@ -236,12 +236,12 @@ export default function OurStory() {
           </h2>
 
           <div className="ost-copy col-span-12 flex items-center lg:col-span-5">
-            <p className="p-base text-neutral-500">
-              <span className="font-semibold text-neutral-900">
+            <p className="">
+              
                 For over three decades, we&apos;ve explored the Himalayas,
                 returning season after season to the places, people and
                 stories that continue to shape every journey we create,
-              </span>{" "}
+              
               sharing not only remarkable landscapes but the stories,
               cultures and friendships that make these mountains
               unforgettable. Before we introduced travellers to the
@@ -258,9 +258,9 @@ export default function OurStory() {
               key={stat.label}
               className={`flex flex-col items-center py-8 text-center sm:py-0`}
             >
-              <span className="mb-2 sm:mb-4 p-small uppercase tracking-[0.12em] font-medium text-neutral-400">
+              <p className="mb-2 sm:mb-4  uppercase ">
                 {stat.label.toUpperCase()}
-              </span>
+              </p>
               <h2
                 ref={(el) => (statRefs.current[i] = el)}
                 className="h-primary tabular-nums text-neutral-900"
@@ -274,9 +274,9 @@ export default function OurStory() {
         <div className="border-t border-neutral-200" />
 
         <div className="flex flex-col items-center justify-between gap-6 pt-8 sm:pt-10 sm:flex-row">
-          <p className="p-small uppercase tracking-[0.12em] font-medium text-neutral-400">[ Est. 1994 ]</p>
+          <p className=" uppercase  ">[ Est. 1994 ]</p>
 
-          <p className="text-center p-small font-medium text-neutral-500">
+          <p className="text-center p-small ">
             &ldquo;The mountains were home before Discover Himalayas
             existed&rdquo;{" "}
             <span className="font-semibold italic text-neutral-800">

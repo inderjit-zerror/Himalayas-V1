@@ -50,7 +50,7 @@ export default function HimalayanCircuitsCarousel2() {
     if (!track) return;
     setCanScrollPrev(track.scrollLeft > 8);
     setCanScrollNext(
-      track.scrollLeft + track.clientWidth < track.scrollWidth - 8
+      track.scrollLeft + track.clientWidth < track.scrollWidth - 8,
     );
   }, []);
 
@@ -94,13 +94,11 @@ export default function HimalayanCircuitsCarousel2() {
             Circuits
           </h2>
 
-          <p className="max-w-xl body-base text-neutral-700">
-            <span className="font-semibold text-neutral-900">
-              Every Journey Begins with a Different Dream.{" "}
-            </span>
-            Some seek legendary mountain roads. Others are drawn to remote
-            landscapes, living cultures or the joy of travelling slowly
-            through extraordinary places.
+          <p className="max-w-xl ">
+            Every Journey Begins with a Different Dream. Some seek legendary
+            mountain roads. Others are drawn to remote landscapes, living
+            cultures or the joy of travelling slowly through extraordinary
+            places.
           </p>
         </div>
 
@@ -167,7 +165,7 @@ export default function HimalayanCircuitsCarousel2() {
               <h5 className="mt-4 heading-sm text-neutral-900 uppercase">
                 {circuit.title}
               </h5>
-              <p className="mt-1 body-sm text-neutral-600">
+              <p className="mt-1 ">
                 {circuit.description}
               </p>
             </article>
@@ -176,11 +174,10 @@ export default function HimalayanCircuitsCarousel2() {
 
         {/* Footer row */}
         <div className="mt-10 sm:mt-14 flex flex-col items-start justify-between gap-6 md:flex-row md:items-center">
-          <p className="caption-text text-neutral-500">
-            [ Est. 1994 ]
-          </p>
-          <p className="caption-text text-neutral-500 text-center md:text-left normal-case">
-            “Every region has its own landscape, its own rhythm and its own stories”
+          <p className="">[ Est. 1994 ]</p>
+          <p className=" text-center md:text-left normal-case">
+            “Every region has its own landscape, its own rhythm and its own
+            stories”
           </p>
           <a
             href="/destinations"

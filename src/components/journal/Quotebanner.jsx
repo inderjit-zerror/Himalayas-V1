@@ -110,17 +110,17 @@ export default function QuoteBanner() {
         <TornEdge fill="#ffffff" />
 
         <div className="relative z-10 mx-auto max-w-4xl px-6 text-center">
-          <p className="font-[900] uppercase leading-[1.15] tracking-tight text-neutral-900 text-2xl sm:text-3xl md:text-4xl">
+          <h4 className="font-[900] uppercase leading-[1.15] tracking-tight text-neutral-900 text-2xl sm:text-3xl md:text-4xl">
             {QUOTE_LINES.map((line, i) => (
               <span key={i} className="quote-line block">
                 {line}
               </span>
             ))}
-          </p>
+          </h4>
 
-          <p className="quote-attribution mt-6 text-sm font-bold uppercase tracking-[0.2em] text-neutral-800">
+          <h5 className="quote-attribution mt-6 text-sm font-bold uppercase tracking-[0.2em] text-neutral-800">
             {ATTRIBUTION}
-          </p>
+          </h5>
 
           {/* hand-drawn flourish under the attribution */}
           <svg

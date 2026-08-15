@@ -84,11 +84,11 @@ export default function StorySection() {
 
       {/* Bottom row: est. date, quote, CTA */}
       <div className="mx-auto mt-24 flex w-full flex-col items-start justify-between gap-6 border-t border-neutral-200 pt-8 md:flex-row md:items-center md:gap-4">
-        <span className="p-small uppercase tracking-[0.12em] font-medium text-neutral-500">
+        <p className="">
           [ EST. 1994 ]
-        </span>
+        </p>
 
-        <p className="p-small font-medium text-neutral-500 md:text-center">
+        <p className="  md:text-center">
           &ldquo;Every journey begins with curiosity. Over time, curiosity
           becomes experience.&rdquo;
         </p>

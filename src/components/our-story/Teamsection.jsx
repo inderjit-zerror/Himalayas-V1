@@ -137,7 +137,7 @@ export default function TeamSection() {
   return (
     <section
       ref={sectionRef}
-      className="w-full border-t border-neutral-200 bg-white px-10 py-[7vh]"
+      className="w-full border-t border-neutral-200 bg-white px-5 sm:px-10 py-[7vh]"
       aria-label="The team on the road"
     >
       {/* Header row */}
@@ -156,7 +156,7 @@ export default function TeamSection() {
 
         <p
           ref={introRef}
-          className="ml-auto body-base text-neutral-600 lg:mt-[0.5rem] lg:max-w-[28rem]"
+          className="ml-auto lg:mt-[0.5rem] lg:max-w-[28rem]"
         >
           Every Discover Himalayas journey is supported by a close-knit team
           of guides, mechanics, coordinators and local experts who know
@@ -179,21 +179,21 @@ export default function TeamSection() {
               />
             </div>
 
-            <p
+            <h5
               data-card-detail
-              className="mt-[1rem] heading-sm text-neutral-900"
+              className="mt-[1rem]  text-neutral-900"
             >
               {member.name}
-            </p>
+            </h5>
             <p
               data-card-detail
-              className="mt-[0.15rem] caption-text text-neutral-500"
+              className="mt-[0.15rem]  "
             >
               {member.role}
             </p>
             <p
               data-card-detail
-              className="mt-[0.6rem] body-sm text-neutral-600"
+              className="mt-[0.6rem] "
             >
               {member.bio}
             </p>
@@ -206,11 +206,11 @@ export default function TeamSection() {
         ref={footerRef}
         className="mx-auto mt-[3.5rem] flex flex-col items-center gap-y-[1.5rem] border-t border-neutral-200 pt-[1.75rem] text-center sm:flex-row sm:justify-between sm:gap-y-0 sm:text-left"
       >
-        <p className="caption-text text-neutral-400">
+        <p className="">
           [ Est. 1994 ]
         </p>
 
-        <p className="caption-text text-neutral-500 normal-case italic">
+        <p className="  ">
           "Every region has its own landscape, its own rhythm and its own
           stories."
         </p>

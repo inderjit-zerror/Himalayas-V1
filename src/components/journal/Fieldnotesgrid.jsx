@@ -126,7 +126,7 @@ export default function FieldNotesGrid() {
               <span className="field-note-underline absolute -bottom-1 left-0 h-[1.5px] w-full origin-left scale-x-0 bg-neutral-900" />
             </h3>
 
-            <p className="mt-3 max-w-md text-[15px] leading-relaxed text-neutral-600 sm:text-base">
+            <p className="mt-3 max-w-md ">
               {note.body}
             </p>
           </a>

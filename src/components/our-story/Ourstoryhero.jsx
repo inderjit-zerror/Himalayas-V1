@@ -318,11 +318,11 @@ export default function OurStoryHero() {
 
       {/* Content grid */}
       <div className="relative z-10 flex min-h-screen w-full flex-col justify-between px-[5vw] py-[8vh] text-white">
-        
+
         {/* Top: eyebrow + intro paragraph */}
-        <div className="max-w-[26rem]">
-          <p className="eyebrow-tag">// Our Story</p>
-          <p className="intro-copy p-small mt-[0.75rem] max-w-[24rem]">
+        <div className="max-w-[26rem] ">
+          <p className="eyebrow-tag text-white! ">// Our Story</p>
+          <p className=" mt-[0.75rem]  text-white! max-w-[24rem]">
             Born from a lifelong connection to the Himalayas and enriched
             by decades of exploring the Indian subcontinent, Discover
             Himalayas creates journeys defined by local knowledge, lasting
@@ -332,13 +332,13 @@ export default function OurStoryHero() {
 
         {/* Middle: headline */}
         <div className="flex items-center gap-[1.25rem] sm:gap-[2rem] py-12 h-primary">
-          <h1 className="heading-hero">
+          <h2 className="heading-hero sm:max-w-[40vw]">
             {HEADLINE_LINES.map((line) => (
               <span key={line} className="block">
                 {line}
               </span>
             ))}
-          </h1>
+          </h2>
         </div>
 
         {/* Bottom: three-column story */}
@@ -347,9 +347,9 @@ export default function OurStoryHero() {
             {STORY_COLUMNS.map((column) => (
               <div key={column.label} className="flex flex-col">
                 {/* Red Label */}
-                <p className="text-[#c1441f] font-bold mb-2">
+                <h5 className="text-[#c1441f] font-bold mb-2">
                   {column.label}
-                </p>
+                </h5>
 
                 {/* Timeline Connector (Dot, Dashed Line, Arrow) */}
                 <div className="flex items-center w-full mb-4 text-gray-300/80">
@@ -358,14 +358,14 @@ export default function OurStoryHero() {
                   {/* Dashed Line */}
                   <div className="flex-1 h-[1px] bg-transparent border-t border-dashed border-current mx-1"></div>
                   {/* Arrow */}
-                  <svg 
-                    width="14" 
-                    height="14" 
-                    viewBox="0 0 24 24" 
-                    fill="none" 
-                    stroke="currentColor" 
-                    strokeWidth="2.5" 
-                    strokeLinecap="round" 
+                  <svg
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2.5"
+                    strokeLinecap="round"
                     strokeLinejoin="round"
                     className="shrink-0 -ml-1"
                   >
@@ -374,7 +374,7 @@ export default function OurStoryHero() {
                 </div>
 
                 {/* Paragraph Copy */}
-                <p className="text-white font-semibold leading-relaxed max-w-[22rem]">
+                <p className=" text-white!  max-w-[22rem]">
                   {column.copy}
                 </p>
               </div>

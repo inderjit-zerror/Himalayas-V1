@@ -28,9 +28,8 @@ function TornEdge({ flip = false, fill = "#ffffff", className = "" }) {
     <svg
       viewBox="0 0 1440 40"
       preserveAspectRatio="none"
-      className={`pointer-events-none absolute left-0 h-8 w-full sm:h-10 ${
-        flip ? "top-0 -translate-y-px rotate-180" : "bottom-0 translate-y-px"
-      } ${className}`}
+      className={`pointer-events-none absolute left-0 h-8 w-full sm:h-10 ${flip ? "top-0 -translate-y-px rotate-180" : "bottom-0 translate-y-px"
+        } ${className}`}
     >
       <path
         d="M0,32 L48,12 L96,28 L144,6 L192,24 L240,10 L288,30 L336,4 L384,26 L432,14
@@ -126,32 +125,32 @@ export default function NotebookHero() {
         }}
       />
 
-      <div className="relative z-10 mx-auto grid  grid-cols-1 gap-14 px-6 pt-10 md:grid-cols-[1fr_300px] md:gap-10 md:px-20">
+      <div className="relative z-10 mx-auto grid  grid-cols-1 gap-14 px-6 pt-10 md:grid-cols-[1fr_20vw] md:gap-10 md:px-20">
         {/* ---------------------------------------------------------- */}
         {/* LEFT: eyebrow, headline, intro                              */}
         {/* ---------------------------------------------------------- */}
         <div>
-          <p className="font-[family-name:var(--font-mono)] text-xs font-bold uppercase tracking-[0.2em] text-neutral-500">
-            <span className="text-neutral-800">// {ENTRY.eyebrow[0]}</span>
-            <span className="mx-2 text-neutral-400">/</span>
+          <p className=" uppercase flex">
+            <p className="">// {ENTRY.eyebrow[0]}</p>
+            <p className="mx-2 text-neutral-400">/</p>
             {ENTRY.eyebrow[1]}
-            <span className="mx-2 text-neutral-400">/</span>
+            <p className="mx-2 text-neutral-400">/</p>
             {ENTRY.eyebrow[2]}
           </p>
 
-          <h1 className="mt-4 font-[family-name:var(--font-headline)] font-bold uppercase leading-[0.88] tracking-tight text-neutral-900 text-[clamp(2.75rem,8vw,6.25rem)]">
+          <h2 className="mt-4 font-[family-name:var(--font-headline)] font-bold uppercase leading-[0.88] tracking-tight text-neutral-900 text-[clamp(2.75rem,8vw,6.25rem)]">
             {ENTRY.headlineLines.map((line) => (
               <span key={line} className="block overflow-hidden">
                 <span className="headline-line block">{line}</span>
               </span>
             ))}
-          </h1>
+          </h2>
 
-          <p className="intro-copy mt-8 max-w-xl font-[family-name:var(--font-mono)] text-sm font-bold uppercase leading-relaxed tracking-wide text-neutral-700 sm:text-base">
+          <p className=" mt-8 max-w-xl ">
             {ENTRY.intro}
           </p>
 
-          <p className="intro-copy mt-6 font-[family-name:var(--font-mono)] text-xs font-bold uppercase tracking-[0.2em] text-neutral-900">
+          <p className=" mt-2">
             {ENTRY.readTime}
           </p>
         </div>
@@ -161,9 +160,9 @@ export default function NotebookHero() {
         {/* ---------------------------------------------------------- */}
         <div
           ref={sidebarRef}
-          className="border-t border-neutral-400/40 pt-8 md:border-l md:border-t-0 md:pl-9 md:pt-0"
+          className="border-t border-neutral-400/40 pt-8  w-fit md:border-l md:border-t-0 md:pl-9 md:pt-0"
         >
-          <p className="font-[family-name:var(--font-mono)] text-xs uppercase tracking-[0.2em] text-neutral-500">
+          <p className="uppercase ">
             [ {ENTRY.sidebar.label} ]
           </p>
 
@@ -183,10 +182,10 @@ export default function NotebookHero() {
             />
           </svg>
 
-          <h3 className="mt-4 text-base font-semibold text-neutral-900">
+          <h3 className="mt-4 ">
             {ENTRY.sidebar.title}
           </h3>
-          <p className="mt-2 text-sm leading-relaxed text-neutral-600">
+          <p className="mt-2 ">
             {ENTRY.sidebar.body}
           </p>
         </div>

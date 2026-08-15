@@ -82,7 +82,7 @@ export default function PartnershipsSection() {
   return (
     <section
       ref={sectionRef}
-      className="w-full bg-white px-10 py-[8vh]"
+      className="w-full bg-white px-5 sm:px-10 py-[8vh]"
       aria-label="Partnerships"
     >
       <div className="mx-auto  grid  grid-cols-1 items-center gap-y-[3rem] lg:grid-cols-2 lg:gap-x-[4rem]">
@@ -99,7 +99,7 @@ export default function PartnershipsSection() {
 
           <h2
             ref={headlineRef}
-            className="mt-[1rem] heading-xl text-neutral-900 h-primary "
+            className="mt-[1rem] heading-xl  "
           >
             <span className="block overflow-hidden">
               <span className="inline-block">BUILT ON</span>
@@ -114,7 +114,7 @@ export default function PartnershipsSection() {
 
           <p
             ref={(el) => (paraRefs.current[0] = el)}
-            className="mt-[1.75rem] body-base text-neutral-600"
+            className="mt-[1.75rem] body-base "
           >
             Over the years, Discover Himalayas has grown through enduring
             friendships with travellers, local communities and collaborators
@@ -126,7 +126,7 @@ export default function PartnershipsSection() {
 
           <p
             ref={(el) => (paraRefs.current[1] = el)}
-            className="mt-[1.25rem] body-base text-neutral-600"
+            className="mt-[1.25rem] body-base "
           >
             These relationships continue to shape the way we travel
             today—opening doors, creating trust and reminding us that the

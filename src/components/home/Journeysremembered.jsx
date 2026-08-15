@@ -413,10 +413,10 @@ export default function JourneysRemembered() {
         <p className="eyebrow-text mb-4 text-neutral-400">
           // Journeys Remembered
         </p>
-        <p className="body-lead text-neutral-700 ml-auto max-w-3xl">
-          <span className="font-semibold text-neutral-900">
+        <p className=" ml-auto max-w-3xl">
+         
             Every traveller returns with a different story.
-          </span>{" "}
+          
           Some remember the challenge of a high mountain pass. Others
           remember a conversation, a remote village, a sunrise over the
           peaks, or a shared meal around a table. Read the stories that
@@ -461,10 +461,10 @@ export default function JourneysRemembered() {
               <h5 className="mb-1 heading-sm text-neutral-900">
                 &quot;{story.title}&quot;
               </h5>
-              <p className="body-base font-semibold text-neutral-900">
+              <p className=" ">
                 {story.author}
               </p>
-              <p className="caption-text text-neutral-500">
+              <p className="">
                 {story.trip}
               </p>
             </article>
@@ -501,10 +501,10 @@ export default function JourneysRemembered() {
         ref={footerRef}
         className="mt-10 sm:mt-14 flex flex-col items-start justify-between gap-6 border-t border-neutral-200 pt-6 sm:pt-8 md:mt-16 md:flex-row md:items-center"
       >
-        <span className="caption-text text-neutral-400">
+        <p className="">
           [ Est. 1994 ]
-        </span>
-        <p className="caption-text text-neutral-500 text-center sm:text-left w-full sm:w-auto normal-case">
+        </p>
+        <p className=" text-center sm:text-left w-full sm:w-auto normal-case">
           &quot;Every region has its own landscape, its own rhythm and its
           own stories&quot;
         </p>

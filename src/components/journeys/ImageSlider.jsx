@@ -33,26 +33,26 @@ export default function ImageSlider({
   };
 
   return (
-    <section className="w-full  mx-auto  px-10 py-20  ">
+    <section className="w-full  mx-auto  px-5 sm:px-10 py-20  ">
       {/* Top Bar - Fixed Header Content */}
       <div className="flex flex-col md:flex-row justify-between items-start md:items-start gap-4 mb-6">
-        
+
         {/* Left Header Tag */}
-        <div className="text-black font-extrabold text-sm md:text-base tracking-wide uppercase">
-          <span>{tag} </span>
-          <span className="text-black">{location}</span>
+        <div className="  text-sm md:text-base tracking-wide uppercase">
+          <h4>{tag} </h4>
+          <p className=" mt-3">{location}</p>
         </div>
 
         {/* Right Header Text / Quote */}
         <div className="max-w-md text-xs md:text-sm text-neutral-800 leading-relaxed">
-          <span className="font-bold">{title}: </span>
-          <span className="text-neutral-600">"{quote}"</span>
+          <h5 className="font-bold">{title}: </h5>
+          <p className="mt-2">"{quote}"</p>
         </div>
       </div>
 
       {/* Main Image Container */}
       <div className="relative w-full aspect-[16/9] md:aspect-[21/9] bg-neutral-200 overflow-hidden">
-        
+
         {/* Image - Only this updates on click */}
         <img
           src={images[currentIndex]}
