@@ -166,7 +166,7 @@ export default function WhyDiscoverHimalayas() {
             they decide. If your question isn&apos;t here, let&apos;s
             talk&hellip;
           </p>
-          <a href="/faq">
+          <a href="/faq" className="max-sm:hidden">
             <button
               type="button"
               className="flex items-center gap-2 bg-neutral-900 px-6 py-3 btn-text text-white transition-colors hover:bg-neutral-700"
@@ -196,6 +196,25 @@ export default function WhyDiscoverHimalayas() {
               onToggle={() => handleToggle(item.id)}
             />
           ))}
+
+           <a href="/faq" className="sm:hidden ">
+            <button
+              type="button"
+              className="flex items-center mt-10 w-full justify-center gap-2 bg-neutral-900 px-6 py-3 btn-text text-white transition-colors hover:bg-neutral-700"
+            >
+              View All FAQs
+              <svg
+                viewBox="0 0 24 24"
+                className="h-4 w-4 fill-none stroke-current stroke-2"
+              >
+                <path
+                  d="M9 6l6 6-6 6"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </button>
+          </a>
         </div>
       </div>
     </section>

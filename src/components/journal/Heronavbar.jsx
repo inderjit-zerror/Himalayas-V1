@@ -195,7 +195,7 @@ export default function HeroNavbar() {
                   <a
                     key={item.label}
                     href={item.href}
-                    className="dropdown-item group flex items-center justify-between px-5 py-3 text-neutral-700 transition-colors duration-150 hover:bg-neutral-900 hover:text-white"
+                    className="dropdown-item group flex items-center justify-between px-10 py-3 text-neutral-700 transition-colors duration-150 hover:bg-neutral-900 hover:text-white"
                   >
                     <p>{item.label}</p>
                     <svg

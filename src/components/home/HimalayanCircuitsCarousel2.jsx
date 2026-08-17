@@ -84,12 +84,12 @@ export default function HimalayanCircuitsCarousel2() {
   };
 
   return (
-    <section className="w-full bg-white px-4 py-16 sm:py-24 md:px-10">
+    <section className="w-full bg-white px-4 py-10 sm:py-24 md:px-10">
       <div className="mx-auto w-full">
         {/* Header row */}
         <div className="mb-10 flex flex-col justify-between gap-6 sm:gap-8 md:flex-row md:items-start">
-          <h2 className="heading-lg h-primary text-neutral-900 uppercase">
-            Himalayan
+          <h2 className="heading-lg h-primary text-neutral-900 uppercase font-medium!">
+            Beyond the
             <br />
             Circuits
           </h2>

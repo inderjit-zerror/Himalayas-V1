@@ -88,7 +88,7 @@ export default function Hero() {
   return (
     <section
       ref={heroRef}
-      className="relative flex h-[100dvh] w-full flex-col justify-end overflow-hidden "
+      className="relative flex h-[100dvh] w-full flex-col justify-center overflow-hidden max-sm:h-[50vh] "
     >
       <div className="absolute inset-0 -z-10 h-[120%] w-full">
         <video
@@ -100,7 +100,7 @@ export default function Hero() {
       </div>
 
       <div className="relative z-10 w-full pb-10 sm:pb-12 text-center px-4">
-        <h5 className="btn-text text-white drop-shadow-md max-w-4xl mx-auto leading-relaxed">
+        <h5 className="btn-text text-white drop-shadow-md  mx-auto leading-relaxed">
           Creating Motorcycle and Overland Journeys Across the Himalayas and the Indian Subcontinent
         </h5>
       </div>

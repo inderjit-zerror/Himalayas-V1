@@ -138,7 +138,7 @@ export default function NotebookHero() {
             {ENTRY.eyebrow[2]}
           </p>
 
-          <h2 className="mt-4 font-[family-name:var(--font-headline)] font-bold uppercase leading-[0.88] tracking-tight text-neutral-900 text-[clamp(2.75rem,8vw,6.25rem)]">
+          <h2 className="mt-4 font-[family-name:var(--font-headline)] font-semibold! sm:max-w-[51vw]  uppercase leading-[0.88] tracking-tight text-neutral-900 text-[clamp(2.75rem,8vw,6.25rem)]">
             {ENTRY.headlineLines.map((line) => (
               <span key={line} className="block overflow-hidden">
                 <span className="headline-line block">{line}</span>

@@ -88,9 +88,9 @@ export default function HimalayanCircuitsCarouselJ() {
       <div className="mx-auto w-full">
         {/* Header row */}
         <div className="mb-10 flex flex-col justify-between gap-6 sm:gap-8 md:flex-row md:items-start">
-          <h2 className="uppercase">
+          <h3 className="uppercase">
            Stories from Ladakh
-          </h2>
+          </h3>
 
           <p className="max-w-xl ">
             

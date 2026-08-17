@@ -7,6 +7,7 @@ import JourneysRemembered from "@/components/home/Journeysremembered";
 import OurStory from "@/components/home/Ourstory";
 import PeopleBehindJourneys from "@/components/home/Peoplebehindjourneys";
 import SiteFooter from "@/components/home/Sitefooter";
+import StoriesSection from "@/components/home/StoriesSection";
 import StorySection from "@/components/home/Storysection";
 import Video from "@/components/home/Video";
 import WhyDiscoverHimalayas from "@/components/home/Whydiscoverhimalayas";
@@ -24,6 +25,7 @@ const HomePage = () => {
       <HimalayanCircuitsCarousel2 />
       <PeopleBehindJourneys />
       <JourneysRemembered />
+      <StoriesSection />
       <WhyDiscoverHimalayas />
 
 

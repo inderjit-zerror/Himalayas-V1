@@ -39,7 +39,7 @@ export default function ImageSlider({
 
         {/* Left Header Tag */}
         <div className="  text-sm md:text-base tracking-wide uppercase">
-          <h4>{tag} </h4>
+          <h5>{tag} </h5>
           <p className=" mt-3">{location}</p>
         </div>
 

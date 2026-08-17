@@ -14,7 +14,7 @@ gsap.registerPlugin(ScrollTrigger);
 const PARAGRAPHS = [
   {
     lead: "The Road Changes Every Year.",
-    rest: "People often imagine Himalayan roads as fixed lines on a map, but they are constantly changing. A landslide reshapes a bend, a new bridge replaces an old river crossing, and a remote village becomes connected by road for the first time. The seasons transform familiar landscapes, weather rewrites the conditions of every pass, and roads that seemed effortless one year can demand patience and respect the next.",
+    rest: "The Road Changes Every Year. People often imagine Himalayan roads as fixed lines on a map, but they are constantly changing. A landslide reshapes a bend, a new bridge replaces an old river crossing, and a remote village becomes connected by road for the first time. The seasons transform familiar landscapes, weather rewrites the conditions of every pass, and roads that seemed effortless one year can demand patience and respect the next.",
   },
   {
     lead: null,
@@ -107,11 +107,11 @@ export default function StoryWithPolaroid() {
       <div className="space-y-6 text-[15px] leading-relaxed  sm:text-base">
         {PARAGRAPHS.map((p, i) => (
           <p key={i} className="">
-            {p.lead && (
-              <h2 className="mb-5">
+            {/* {p.lead && (
+              <p className="mb-5">
                 {p.lead}{" "}
-              </h2>
-            )}
+              </p>
+            )} */}
             {p.rest}
           </p>
         ))}

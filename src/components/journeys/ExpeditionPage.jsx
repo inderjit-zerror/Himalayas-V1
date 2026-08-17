@@ -37,7 +37,7 @@ export default function ExpeditionPage() {
     ];
 
     return (
-        <div className="min-h-screen bg-white text-black   selection:bg-gray-800 selection:text-white pt-[10vh] max-sm:pb-10 px-5 sm:px-10">
+        <div className="min-h-screen bg-white text-black   selection:bg-gray-800 selection:text-white pt-[10vh] px-5 max-sm:pb-10  sm:px-10">
             {/* Navigation Header */}
             <header className="w-full pt-10 px-6 md:px-12 flex justify-center lg:justify-center z-20 relative">
                 <div className="flex flex-col md:flex-row shadow-sm">
@@ -84,11 +84,11 @@ export default function ExpeditionPage() {
             // LADAKH
                     </div>
 
-                    <h2 className="text-5xl sm:text-6xl md:text-7xl lg:text-[105px]  uppercase leading-[0.9] tracking-tighter mb-10 text-black">
+                    <h3 className="text-5xl sm:text-6xl md:text-7xl lg:text-[105px]  uppercase leading-[0.9] tracking-tighter mb-10 text-black">
                         TO THE<br />
                         HIGHEST ROAD<br />
                         ON EARTH
-                    </h2>
+                    </h3>
 
                     <p className="text-lg md:text-[22px]  leading-[1.6] max-w-[38rem]">
                         Ladakh is Discover Himalayas' signature high-altitude expedition. An extraordinary Royal Enfield journey through the world's highest motorable passes, ancient Buddhist kingdoms and the vast high-altitude landscapes of Ladakh.

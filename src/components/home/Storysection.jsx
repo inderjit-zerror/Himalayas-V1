@@ -60,9 +60,9 @@ export default function StorySection() {
   return (
     <section
       ref={sectionRef}
-      className="w-full bg-white h-fit px-6 py-24 md:px-10 flex flex-col justify-between md:py-20"
+      className="w-full bg-white h-fit px-6 py-15 md:px-10 flex flex-col justify-between md:py-20"
     >
-      <div className="mx-auto grid grid-cols-1 gap-12 md:grid-cols-2 md:gap-16 items-center">
+      <div className="mx-auto grid grid-cols-1 gap-10 md:grid-cols-2 md:gap-16 items-center">
         {/* Left: big headline */}
         <h2 className="h-primary text-neutral-900">
           The best journeys are shaped over time
@@ -83,7 +83,7 @@ export default function StorySection() {
       </div>
 
       {/* Bottom row: est. date, quote, CTA */}
-      <div className="mx-auto mt-24 flex w-full flex-col items-start justify-between gap-6 border-t border-neutral-200 pt-8 md:flex-row md:items-center md:gap-4">
+      <div className="mx-auto sm:mt-24 flex w-full flex-col items-start justify-between gap-6  sm:border-t sm: border-neutral-200 pt-8 md:flex-row md:items-center md:gap-4">
         <p className="">
           [ EST. 1994 ]
         </p>
@@ -95,7 +95,7 @@ export default function StorySection() {
 
         <a
           href="/journeys"
-          className="inline-flex items-center gap-2 bg-neutral-900 px-6 py-3 btn-text text-white transition-colors hover:bg-neutral-700"
+          className="inline-flex items-center gap-2 bg-[#E13D33] px-6 py-3 btn-text text-white transition-colors hover:bg-[#db2b22]"
         >
           Explore Journeys
           <span aria-hidden="true">&rsaquo;</span>

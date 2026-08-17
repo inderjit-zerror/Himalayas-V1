@@ -268,12 +268,12 @@ export default function HimalayanCircuitsCarousel() {
   };
 
   return (
-    <section className="w-full bg-white px-4 py-16 sm:py-24 md:px-10">
+    <section className="w-full bg-white px-4 py-10 sm:py-24 md:px-10">
       <div className="mx-auto w-full">
         <div className="mb-10 flex flex-col justify-between gap-6 sm:gap-8 md:flex-row md:items-start">
-          <h2 className="heading-lg text-neutral-900 h-primary uppercase">
-            Beyond the <br className="hidden sm:block" /> Himalayas
-          </h2>
+          <h2 className="heading-lg text-neutral-900 h-primary uppercase font-medium!">
+            Himalayan <br className="hidden sm:block" />Circuits
+          </h2> 
 
           <p className="max-w-xl ">
             Journeys that Reveal a Different Side of India. From desert kingdoms and tropical coastlines to ancient cities and wildlife-rich forests, these journeys celebrate the remarkable diversity of the Indian subcontinent.
@@ -356,7 +356,7 @@ export default function HimalayanCircuitsCarousel() {
           </p>
           <a
             href="/destinations"
-            className="inline-flex w-full sm:w-auto justify-center items-center gap-2 bg-neutral-900 px-6 py-4 sm:py-3 btn-text text-white transition-colors hover:bg-neutral-700"
+            className="inline-flex w-full sm:w-auto justify-center items-center gap-2 bg-[#E13D33] px-6 py-4 sm:py-3 btn-text text-white transition-colors hover:bg-[#E13D33]"
           >
             Explore Destinations
             <span aria-hidden="true">&rsaquo;</span>

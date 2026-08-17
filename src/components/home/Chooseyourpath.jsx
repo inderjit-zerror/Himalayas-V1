@@ -134,14 +134,14 @@
 //               <button
 //                 type="button"
 //                 onClick={() => setShowBeyond(false)}
-//                 className="flex w-full items-center justify-between bg-neutral-900 px-5 py-4 text-xs font-semibold tracking-wider text-white"
+//                 className="flex w-full items-center justify-between bg-neutral-900 px-10 py-4 text-xs font-semibold tracking-wider text-white"
 //               >
 //                 HIMALAYAN JOURNEYS
 //                 <ChevronDown size={16} strokeWidth={2.5} />
 //               </button>
 
 //               {/* Journey list */}
-//               <ul className="px-5 py-4">
+//               <ul className="px-10 py-4">
 //                 {HIMALAYAN_JOURNEYS.map((item) => (
 //                   <li key={item.label} className="py-1.5">
 //                     <a
@@ -159,7 +159,7 @@
 //               <button
 //                 type="button"
 //                 onClick={() => setShowBeyond((v) => !v)}
-//                 className="flex w-full items-center justify-between border-t border-neutral-200 px-5 py-4 text-xs font-semibold tracking-wider text-neutral-800 hover:bg-neutral-50"
+//                 className="flex w-full items-center justify-between border-t border-neutral-200 px-10 py-4 text-xs font-semibold tracking-wider text-neutral-800 hover:bg-neutral-50"
 //               >
 //                 BEYOND HIMALAYAS
 //                 <ChevronRight size={16} strokeWidth={2.5} />
@@ -168,7 +168,7 @@
 //               {/* Beyond Himalayas sub-panel */}
 //               <div
 //                 ref={beyondPanelRef}
-//                 className="hidden border-t border-neutral-200 bg-white px-5 py-4"
+//                 className="hidden border-t border-neutral-200 bg-white px-10 py-4"
 //                 style={{ visibility: "hidden" }}
 //               >
 //                 <ul>
@@ -296,9 +296,9 @@ export default function ChooseYourPath() {
   return (
     <section className="bg-white px-4 border-t border-[#292929]/40 py-10 sm:py-14 md:px-16 lg:px-10">
       <div className="mx-auto w-full">
-        <h3 className="heading-lg  h-secondary text-neutral-900 uppercase">
+        <h4 className="heading-lg  h-secondary text-neutral-900 uppercase">
           CHOOSE YOUR PATH
-        </h3>
+        </h4>
         <p className="mt-3 max-w-xl ">
           Whether you&apos;re joining a scheduled expedition or planning a
           tailor-made adventure, we&apos;ll help you choose the right route,
@@ -314,7 +314,7 @@ export default function ChooseYourPath() {
               type="button"
               onClick={() => setIsOpen((v) => !v)}
               aria-expanded={isOpen}
-              className="flex w-full items-center justify-between gap-8 border border-[#e0574a] px-6 py-4 btn-text text-[#e0574a] transition-colors hover:bg-[#e0574a] hover:text-white sm:w-56"
+              className="flex w-full items-center justify-between gap-8 border border-[#e0574a] px-6 py-4 btn-text text-[#e0574a] transition-colors hover:bg-[#e0574a] hover:text-white "
             >
               EXPLORE JOURNEYS
               <ChevronRight size={16} strokeWidth={2.5} />
@@ -328,12 +328,12 @@ export default function ChooseYourPath() {
               <button
                 type="button"
                 onClick={() => setShowBeyond(false)}
-                className="flex w-full items-center justify-between bg-neutral-900 px-5 py-4 btn-text text-white"
+                className="flex w-full items-center justify-between bg-neutral-900 px-10 py-4 btn-text text-white"
               >
                 HIMALAYAN JOURNEYS
                 <ChevronDown size={16} strokeWidth={2.5} />
               </button>
-              <ul className="px-5 py-4">
+              <ul className="px-10 py-4">
                 {HIMALAYAN_JOURNEYS.map((item) => (
                   <li key={item.label} className="py-1.5">
                     <a
@@ -349,14 +349,14 @@ export default function ChooseYourPath() {
               <button
                 type="button"
                 onClick={() => setShowBeyond((v) => !v)}
-                className="flex w-full items-center justify-between border-t border-neutral-200 px-5 py-4 btn-text text-neutral-800 hover:bg-neutral-50"
+                className="flex w-full items-center justify-between border-t border-neutral-200 px-10 py-4 btn-text text-neutral-800 hover:bg-neutral-50"
               >
                 BEYOND HIMALAYAS
                 <ChevronRight size={16} strokeWidth={2.5} />
               </button>
               <div
                 ref={beyondPanelRef}
-                className="hidden border-t border-neutral-200 bg-white px-5 py-4"
+                className="hidden border-t border-neutral-200 bg-white px-10 py-4"
                 style={{ visibility: "hidden" }}
               >
                 <ul>
@@ -378,7 +378,7 @@ export default function ChooseYourPath() {
 
           <button
             type="button"
-            className="flex w-full items-center justify-between gap-8 border border-neutral-300 px-6 py-4 btn-text text-neutral-500 transition-colors hover:border-neutral-900 hover:text-neutral-900 sm:w-56"
+            className="flex mx-auto max-sm:w-full  items-center justify-between gap-8 border border-neutral-300 px-6 py-4 btn-text text-neutral-500 transition-colors hover:border-neutral-900 hover:text-neutral-900 w-fit"
           >
             CUSTOMISE JOURNEYS
             <ChevronRight size={16} strokeWidth={2.5} />
@@ -386,7 +386,7 @@ export default function ChooseYourPath() {
 
           <button
             type="button"
-            className="ml-0 flex w-full items-center justify-between gap-8 bg-neutral-900 px-6 py-4 btn-text text-white transition-colors hover:bg-neutral-700 sm:ml-auto sm:w-56"
+            className="ml-0 flex max-sm:w-full  items-center justify-between gap-8 bg-neutral-900 px-6 py-4 btn-text text-white transition-colors hover:bg-neutral-700 sm:ml-auto w-fit"
           >
             READ JOURNAL
             <ChevronRight size={16} strokeWidth={2.5} />

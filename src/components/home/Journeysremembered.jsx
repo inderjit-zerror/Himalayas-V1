@@ -412,7 +412,9 @@ export default function JourneysRemembered() {
       <div ref={headingRef} className="mb-8 sm:mb-10  md:mb-14">
         <p className="eyebrow-text mb-4 text-neutral-400">
           // Journeys Remembered
+          
         </p>
+         
         <p className=" ml-auto max-w-3xl">
          
             Every traveller returns with a different story.
@@ -423,6 +425,30 @@ export default function JourneysRemembered() {
           continue long after the roads.
         </p>
       </div>
+      <div className="mt-4 sm:mt-6 flex justify-start gap-3 mb-4 pr-2">
+          <button
+            type="button"
+            onClick={() => scrollByCard(-1)}
+            disabled={!canScrollPrev}
+            aria-label="Previous stories"
+            className="flex h-10 w-10 sm:h-11 sm:w-11 items-center justify-center rounded-full border border-neutral-300 text-neutral-700 transition-colors hover:border-neutral-900 hover:bg-neutral-900 hover:text-white disabled:cursor-not-allowed disabled:opacity-30"
+          >
+            <svg viewBox="0 0 24 24" className="h-4 w-4 sm:h-5 sm:w-5 fill-none stroke-current stroke-2">
+              <path d="M15 18l-6-6 6-6" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+          </button>
+          <button
+            type="button"
+            onClick={() => scrollByCard(1)}
+            disabled={!canScrollNext}
+            aria-label="Next stories"
+            className="flex h-10 w-10 sm:h-11 sm:w-11 items-center justify-center rounded-full border border-neutral-300 text-neutral-700 transition-colors hover:border-neutral-900 hover:bg-neutral-900 hover:text-white disabled:cursor-not-allowed disabled:opacity-30"
+          >
+            <svg viewBox="0 0 24 24" className="h-4 w-4 sm:h-5 sm:w-5 fill-none stroke-current stroke-2">
+              <path d="M9 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+          </button>
+        </div>
 
       <div className="relative w-full">
         <div
@@ -471,7 +497,7 @@ export default function JourneysRemembered() {
           ))}
         </div>
 
-        <div className="mt-4 sm:mt-6 flex justify-end gap-3 pr-2">
+        {/* <div className="mt-4 sm:mt-6 flex justify-end gap-3 pr-2">
           <button
             type="button"
             onClick={() => scrollByCard(-1)}
@@ -494,12 +520,12 @@ export default function JourneysRemembered() {
               <path d="M9 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
           </button>
-        </div>
+        </div> */}
       </div>
 
       <div
         ref={footerRef}
-        className="mt-10 sm:mt-14 flex flex-col items-start justify-between gap-6 border-t border-neutral-200 pt-6 sm:pt-8 md:mt-16 md:flex-row md:items-center"
+        className=" sm:mt-14 flex flex-col items-start justify-between gap-6 sm:border-t  sm:border-neutral-200 pt-6 sm:pt-8 md:mt-16 md:flex-row md:items-center"
       >
         <p className="">
           [ Est. 1994 ]

@@ -8,9 +8,9 @@ export default function LadakhSection() {
           
           {/* Section 1: Why Ride Ladakh? */}
           <div className="space-y-4">
-            <h2 className=" ">
+            <h3 className=" ">
               Why Ride Ladakh?
-            </h2>
+            </h3>
             <div className="space-y-3 leading-relaxed text-base md:text-lg">
               <p className=" ">
                 Ladakh is Discover Himalayas' signature high-altitude expedition.
@@ -27,9 +27,9 @@ export default function LadakhSection() {
 
           {/* Section 2: The Route */}
           <div className="space-y-4 pt-2">
-            <h2 className="text-3xl md:text-4xl font-extrabold text-black tracking-tight">
+            <h3 className="text-3xl md:text-4xl font-extrabold text-black tracking-tight">
               The Route
-            </h2>
+            </h3>
             <p className="leading-relaxed ">
               Beginning in Leh, the route gradually climbs through Ladakh's valleys and
               mountain passes before reaching Nubra, Pangong, Hanle and the
@@ -47,9 +47,9 @@ export default function LadakhSection() {
           {/* Card 1: Journey Highlights */}
           <div className="border border-neutral-600 bg-white">
             <div className="bg-[#333333] py-6 px-4 text-center">
-              <h4 className="text-xs font-semibold uppercase tracking-wider text-white">
+              <h5 className="text-xs font-semibold uppercase tracking-wider text-white">
                 Journey Highlights
-              </h4>
+              </h5>
             </div>
             <div className="p-6">
               <ul className="list-disc list-inside space-y-2 text-neutral-700 text-sm md:text-base leading-snug">
@@ -65,9 +65,9 @@ export default function LadakhSection() {
           {/* Card 2: Is This Journey For You? */}
           <div className="border border-neutral-600 bg-white">
             <div className="bg-[#dcdcdc] py-6 px-4 text-center border-b border-neutral-400">
-              <h4 className="text-xs font-semibold uppercase tracking-wider text-neutral-700">
+              <h5 className="text-xs font-semibold uppercase tracking-wider text-neutral-700">
                 Is This Journey For You?
-              </h4>
+              </h5>
             </div>
             <div className="p-6">
               <p className="text-neutral-700 text-sm md:text-base leading-relaxed">

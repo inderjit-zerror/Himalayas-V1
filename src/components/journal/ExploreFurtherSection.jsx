@@ -70,9 +70,9 @@ export default function ExploreFurtherSection() {
         
         {/* Header Section */}
         <div className="flex flex-col md:flex-row justify-between items-start md:items-start mb-12 gap-4">
-          <h2 className=" uppercase">
+          <h3 className=" uppercase">
             Ready to explore further?
-          </h2>
+          </h3>
           <p className="">
             If this journey resonated with you, here are a few more places to continue exploring.
           </p>

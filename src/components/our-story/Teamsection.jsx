@@ -141,10 +141,10 @@ export default function TeamSection() {
       aria-label="The team on the road"
     >
       {/* Header row */}
-      <div className="mx-auto grid grid-cols-1 gap-y-[1.5rem] lg:grid-cols-[minmax(0,32rem)_1fr] lg:items-start lg:gap-x-[3rem]">
+      <div className="mx-auto  grid grid-cols-1 gap-y-[1.5rem] lg:grid-cols-[minmax(1fr)] lg:items-start lg:gap-x-[3rem]">
         <h2
           ref={headlineRef}
-          className="heading-xl text-neutral-900 h-primary"
+          className="w-fit  text-neutral-900 h-primary"
         >
           <span className="block overflow-hidden ">
             <span className="inline-block">THE TEAM ON</span>
@@ -204,7 +204,7 @@ export default function TeamSection() {
       {/* Bottom bar */}
       <div
         ref={footerRef}
-        className="mx-auto mt-[3.5rem] flex flex-col items-center gap-y-[1.5rem] border-t border-neutral-200 pt-[1.75rem] text-center sm:flex-row sm:justify-between sm:gap-y-0 sm:text-left"
+        className="mx-auto sm:mt-[3.5rem] flex flex-col items-center gap-y-[1.5rem] sm:border-t sm:border-neutral-200 pt-[1.75rem] text-center sm:flex-row sm:justify-between sm:gap-y-0 sm:text-left"
       >
         <p className="">
           [ Est. 1994 ]
@@ -218,7 +218,7 @@ export default function TeamSection() {
         <button
           ref={ctaRef}
           type="button"
-          className="inline-flex items-center gap-[0.5rem] rounded-[0.25rem] bg-[#c1441f] px-[1.5rem] py-[0.50rem] btn-text text-white transition-colors duration-300 hover:bg-[#c1441f]/90"
+          className="inline-flex max-sm:justify-center max-sm:w-full items-center gap-[0.5rem] rounded-[0.25rem] bg-[#c1441f] px-[1.5rem] py-[0.50rem] btn-text text-white transition-colors duration-300 hover:bg-[#c1441f]/90"
         >
           Explore Journeys
           <svg

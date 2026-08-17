@@ -232,7 +232,7 @@ export default function OurStory() {
         <div className="grid grid-cols-1 gap-8 sm:gap-10 lg:grid-cols-12 lg:gap-8">
           <h2 className="ost-heading col-span-12 h-primary text-neutral-900 lg:col-span-7">
             More than
-            <br />a journey
+            <br className="max-sm:hidden" />a journey
           </h2>
 
           <div className="ost-copy col-span-12 flex items-center lg:col-span-5">
@@ -252,7 +252,7 @@ export default function OurStory() {
 
         <div className="mt-12 sm:mt-16 border-t border-neutral-200 lg:mt-20" />
 
-        <div className="grid grid-cols-1 divide-y divide-neutral-200 py-10 sm:py-12 sm:grid-cols-3 sm:divide-y-0 sm:divide-x">
+        <div className="grid grid-cols-1 divide-y divide-neutral-200 sm:py-10 sm:py-12 sm:grid-cols-3 sm:divide-y-0 sm:divide-x">
           {STATS.map((stat, i) => (
             <div
               key={stat.label}
@@ -263,7 +263,7 @@ export default function OurStory() {
               </p>
               <h2
                 ref={(el) => (statRefs.current[i] = el)}
-                className="h-primary tabular-nums text-neutral-900"
+                className="h-primary tabular-nums text-neutral-900 max-sm:text-[3rem]!"
               >
                 0
               </h2>

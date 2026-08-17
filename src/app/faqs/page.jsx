@@ -110,9 +110,9 @@ export default function FAQContactSection() {
           <p className="text-xs font-bold tracking-wider text-black uppercase mb-3">
             // FREQUENTLY ASKED QUESTIONS
           </p>
-          <h3 className="text-xl md:text-2xl font-black text-black tracking-tight mb-2 h-secondary">
+          <h4 className="text-xl md:text-2xl font-black text-black uppercase  tracking-tight mb-2 h-secondary">
             Three decades of questions. Three decades of answers.
-          </h3>
+          </h4>
           <p className="text-xs md:text-sm text-gray-700 leading-relaxed">
             From first-time riders to seasoned overlanders, we've answered thousands of questions before journeys began. These are the ones that come up most often.
           </p>
@@ -182,11 +182,15 @@ export default function FAQContactSection() {
                       onClick={() => toggleFaq(index)}
                       className={`relative flex-1 cursor-pointer px-4 py-3 text-xs font-semibold transition-colors duration-200 ${
                         isOpen
-                          ? 'bg-[#383838] text-white'
+                          ? 'bg-[#383838] text-white!'
                           : 'bg-[#e0e0e0] text-gray-800 hover:bg-gray-300'
                       }`}
                     >
-                      <p>{faq.question}</p>
+                      <p className={`${
+                        isOpen
+                          ? 'bg-[#383838] text-white!'
+                          : 'bg-[#e0e0e0] text-gray-800 hover:bg-gray-300'
+                      }`}>{faq.question}</p>
 
                       {/* Bottom-left triangular fold/notch effect */}
                       <div
@@ -226,7 +230,7 @@ export default function FAQContactSection() {
             <p className=" mb-2">
               If your questions are not listed write to us
             </p>
-            <h3 className="text-base font-bold text-black mb-4 h-secondary">Contact us</h3>
+            <h4 className="text-base font-bold text-black mb-4 h-secondary">Contact us</h4>
 
             <form onSubmit={(e) => e.preventDefault()} className="flex flex-col gap-3">
               {/* First and Last Name */}
@@ -302,7 +306,7 @@ export default function FAQContactSection() {
               {/* Submit Button */}
               <button
                 type="submit"
-                className="w-20 bg-[#424242] text-white text-xs font-semibold py-1.5 mt-1 hover:bg-black transition-colors"
+                className="w-fit max-sm:w-full sm:px-20 bg-[#424242] text-white text-xs font-semibold py-1.5 mt-1 hover:bg-black transition-colors"
               >
                 Send
               </button>
