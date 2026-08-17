@@ -110,7 +110,7 @@ export default function FAQContactSection() {
           <p className="text-xs font-bold tracking-wider text-black uppercase mb-3">
             // FREQUENTLY ASKED QUESTIONS
           </p>
-          <h4 className="text-xl md:text-2xl font-black text-black uppercase  tracking-tight mb-2 h-secondary">
+          <h4 className="text-xl md:text-2xl font-black text-black uppercase  text-[1.3rem]! font-semibold! tracking-tight mb-2 h-secondary">
             Three decades of questions. Three decades of answers.
           </h4>
           <p className="text-xs md:text-sm text-gray-700 leading-relaxed">
@@ -230,7 +230,7 @@ export default function FAQContactSection() {
             <p className=" mb-2">
               If your questions are not listed write to us
             </p>
-            <h4 className="text-base font-bold text-black mb-4 h-secondary">Contact us</h4>
+            <h4 className="text-base  text-[1.3rem]! font-semibold! font-bold text-black mb-4 h-secondary">Contact us</h4>
 
             <form onSubmit={(e) => e.preventDefault()} className="flex flex-col gap-3">
               {/* First and Last Name */}
