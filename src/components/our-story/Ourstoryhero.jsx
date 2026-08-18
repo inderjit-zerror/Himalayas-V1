@@ -303,7 +303,7 @@ const STORY_COLUMNS = [
 export default function OurStoryHero() {
   return (
     <section
-      className="relative min-h-screen w-full bg-ink overflow-hidden"
+      className="relative min-h-[165vh] w-full bg-ink overflow-hidden"
       aria-label="Our Story"
     >
       {/* Background photo */}
@@ -317,10 +317,10 @@ export default function OurStoryHero() {
       </div>
 
       {/* Content grid */}
-      <div className="relative z-10 flex min-h-screen w-full flex-col justify-between px-[5vw] py-[8vh] text-white">
+      <div className="relative z-10 flex min-h-[165vh] w-full flex-col justify-between px-[5vw] py-[8vh] text-white">
 
         {/* Top: eyebrow + intro paragraph */}
-        <div className="max-w-[26rem] ">
+        <div className="max-w-[26rem] mt-[20vh] ">
           <p className="eyebrow-tag text-white! ">// Our Story</p>
           <p className=" mt-[0.75rem]  text-white! max-w-[24rem]">
             Born from a lifelong connection to the Himalayas and enriched
@@ -330,6 +330,9 @@ export default function OurStoryHero() {
           </p>
         </div>
 
+        <div>
+
+        
         {/* Middle: headline */}
         <div className="flex items-center gap-[1.25rem] sm:gap-[2rem] py-12 h-primary">
           <h2 className="heading-hero sm:max-w-[40vw]">
@@ -380,6 +383,8 @@ export default function OurStoryHero() {
               </div>
             ))}
           </div>
+        </div>
+
         </div>
       </div>
     </section>

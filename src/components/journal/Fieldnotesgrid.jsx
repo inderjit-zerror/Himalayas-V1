@@ -121,10 +121,10 @@ export default function FieldNotesGrid() {
             </div>
 
             {/* title with animated underline */}
-            <h3 className="relative mt-4 inline-block text-[15px] font-bold text-neutral-900 sm:text-base">
+            <p className="relative mt-4 inline-block text-[15px]  text-neutral-900 sm:text-base font-extrabold! ">
               {note.title}
               <span className="field-note-underline absolute -bottom-1 left-0 h-[1.5px] w-full origin-left scale-x-0 bg-neutral-900" />
-            </h3>
+            </p>
 
             <p className="mt-3 max-w-md ">
               {note.body}

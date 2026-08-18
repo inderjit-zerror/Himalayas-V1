@@ -113,9 +113,9 @@ export default function Filmstripgallery() {
         </div>
 
         {/* Title */}
-        <h3 className="uppercase text-xs sm:text-sm md:text-base tracking-wide">
+        <h4 className="uppercase text-xs sm:text-sm md:text-base tracking-wide font-medium!">
           Along The Way
-        </h3>
+        </h4>
       </div>
 
       {/* Gallery Track Container */}

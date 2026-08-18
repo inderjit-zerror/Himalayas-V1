@@ -8,29 +8,12 @@ if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
 }
 
-// Convert the strings to objects to hold unique sizing and positioning classes for each image.
-// Percentages ensure it remains perfectly responsive on mobile, while we use Tailwind to offset them.
 const IMAGES = [
-  { 
-    src: "/img/1.jpg", 
-    imgClass: "w-full h-full top-0 left-0" 
-  },
-  { 
-    src: "/img/3.jpg", 
-    imgClass: "w-[92%] h-[88%] bottom-0 right-0 lg:w-[85%] lg:h-[85%] rounded-lg" 
-  },
-  { 
-    src: "/img/5.jpg", 
-    imgClass: "w-[88%] h-[92%] top-4 left-4 lg:w-[80%] lg:h-[90%] rounded-lg" 
-  },
-  { 
-    src: "/img/6.jpg", 
-    imgClass: "w-[95%] h-[82%] bottom-6 left-0 lg:w-[90%] lg:h-[75%] lg:bottom-10 lg:left-4 rounded-lg" 
-  },
-  { 
-    src: "/img/7.jpg", 
-    imgClass: "w-[85%] h-[85%] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 lg:w-[75%] lg:h-[80%] rounded-lg" 
-  },
+  { src: "/img/1.jpg" },
+  { src: "/img/3.jpg" },
+  { src: "/img/5.jpg" },
+  { src: "/img/6.jpg" },
+  { src: "/img/7.jpg" },
 ];
 
 export default function CuratedItineraries() {
@@ -42,47 +25,70 @@ export default function CuratedItineraries() {
     const ctx = gsap.context(() => {
       const images = imageRefs.current.filter(Boolean);
       
-      // Animate the wrappers down initially
-      gsap.set(images, { yPercent: 100 });
+      // Changed yPercent: 100 to y: "100vh" so they start below the entire screen
+      gsap.set(images, { y: "100vh" });
+      gsap.set(images[0], { y: 0 });
 
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: wrapperRef.current,
           start: "top top",
           end: "bottom bottom",
-          scrub: 1,
+          scrub: true, // Increased from 1 to 1.5 for a much smoother, slightly delayed trailing effect
         },
       });
 
-      // Slide each wrapper up
       images.forEach((img, i) => {
+        if (i === 0) return;
+
+        // 1. Bring the new image up from the very bottom of the screen
         tl.to(
           img,
           {
-            yPercent: 0,
+            y: 0,
             ease: "none",
-            duration: 1,
           },
           i
         );
+
+        // 2. Scale down the previous image gently and fade it for depth smoothness
+        tl.to(
+          images[i - 1],
+          {
+            scale: 0.85, // Changed from 0.6 to 0.85 so the jump isn't as harsh
+// Fading it out adds a much smoother 3D depth illusion
+            ease: "none",
+          },
+          i 
+        );
       });
 
-      gsap.from(".ci-eyebrow, .ci-heading, .ci-copy, .ci-cta", {
-        opacity: 0,
-        y: 24,
-        duration: 0.9,
-        stagger: 0.08,
-        ease: "power3.out",
-        scrollTrigger: {
-          trigger: wrapperRef.current,
-          start: "top 70%",
-          toggleActions: "play none none none",
-        },
-      });
+      // // Text reveal animation
+      // gsap.from(".ci-eyebrow, .ci-heading, .ci-copy, .ci-cta", {
+      //   opacity: 0,
+      //   y: 24,
+      //   duration: 0.9,
+      //   stagger: 0.08,
+      //   ease: "power3.out",
+      //   scrollTrigger: {
+      //     trigger: wrapperRef.current,
+      //     start: "top 70%",
+      //     toggleActions: "play none none none",
+      //   },
+      // });
     }, wrapperRef);
 
     return () => ctx.revert();
   }, []);
+
+
+  const handleScrollToNext = (e) => {
+    e.preventDefault();
+    const targetSection = document.getElementById("NEXTSHIFTSECTION");
+    if (targetSection) {
+      targetSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   return (
     <div ref={wrapperRef} className="relative h-[500vh] bg-white">
@@ -91,7 +97,8 @@ export default function CuratedItineraries() {
         className="sticky top-0 flex min-h-[100dvh] w-full items-center overflow-hidden px-4 sm:py-20 sm:px-10 lg:px-10"
       >
         <div className="mx-auto w-full grid grid-cols-1 items-center gap-10 lg:grid-cols-12 lg:gap-16">
-          <div className="col-span-12 lg:col-span-5">
+          {/* Added relative and z-20 here so images sliding up on mobile don't cover the text */}
+          <div className="col-span-12 lg:col-span-5 relative z-20">
             <p className="ci-eyebrow eyebrow-text mb-4 text-neutral-400 lg:mb-6">
               [ DESTINATIONS ]
             </p>
@@ -102,7 +109,7 @@ export default function CuratedItineraries() {
               itineraries
             </h2>
 
-            <p className=" mb-8 max-w-md lg:mb-10">
+            <p className="ci-copy mb-8 max-w-md lg:mb-10 text-neutral-600">
               From the high-altitude deserts of Ladakh and the timeless
               villages of Spiti to the mountain kingdoms of Nepal and
               Bhutan, the dawn-lit landscapes of Arunachal Pradesh, the
@@ -113,7 +120,7 @@ export default function CuratedItineraries() {
               refined every journey through experience.
             </p>
 
-            <div className="ci-cta flex items-center gap-4">
+            <a href="#NEXTSHIFTSECTION" onClick={handleScrollToNext}><div  className="ci-cta flex items-center gap-4 cursor-pointer">
               <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-neutral-300 text-neutral-500">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -130,29 +137,29 @@ export default function CuratedItineraries() {
                   />
                 </svg>
               </span>
-              <span className="btn-text text-neutral-700">
+              <span className="btn-text font-medium text-neutral-700">
                 EXPLORE JOURNEYS
               </span>
-            </div>
+            </div></a>
           </div>
 
           <div className="col-span-12 h-[45vh] w-full lg:col-span-7 lg:h-[75vh] xl:px-20">
-            {/* Removed the rounded-sm from this parent to allow inner images to handle their own rounding */}
-            <div className="relative h-full w-full overflow-hidden lg:aspect-[4/5]">
+            {/* Removed 'overflow-hidden' and 'rounded-2xl' from this parent wrapper */}
+            <div className="relative h-full w-full lg:aspect-[4/5]">
               {IMAGES.map((item, i) => (
                 <div
                   key={item.src}
                   ref={(el) => (imageRefs.current[i] = el)}
-                  // The wrapper remains full-size and takes the animation
-                  className="absolute inset-0"
+                  // Moved overflow-hidden, rounded-2xl, and shadow-2xl HERE to the individual sliding cards
+                  // Added will-change-transform to force GPU acceleration for smoother animations
+                  className="absolute inset-0 h-full w-full origin-top overflow-hidden rounded-2xl shadow-2xl will-change-transform"
                   style={{ zIndex: i + 1 }}
                 >
-                  {/* The image receives the unique sizing and offsets */}
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
                     src={item.src}
-                    alt=""
-                    className={`absolute object-cover shadow-2xl transition-transform duration-500 ${item.imgClass}`}
+                    alt="Curated itinerary destination"
+                    className="h-full w-full object-cover"
                     draggable={false}
                   />
                 </div>

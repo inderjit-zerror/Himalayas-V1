@@ -78,12 +78,12 @@ function AccordionItem({ item, isOpen, onToggle }) {
         aria-expanded={isOpen}
         className="flex w-full items-center justify-between gap-6 text-left"
       >
-        <h5
-          className={`heading-sm transition-colors ${isOpen ? "text-red-600" : "text-neutral-800"
+        <p
+          className={`heading-sm transition-colors ${isOpen ? "text-red-600!" : "text-neutral-800!"
             }`}
         >
           {item.question}
-        </h5>
+        </p>
         <span
           className={`flex h-6 w-6 flex-none items-center justify-center transition-colors ${isOpen ? "text-red-600" : "text-neutral-500"
             }`}
@@ -157,10 +157,10 @@ export default function WhyDiscoverHimalayas() {
           <p className="mb-6 eyebrow-text text-neutral-400">
             [ Why Discover Himalayas ]
           </p>
-          <h3 className="mb-6 max-w-xl h-secondary heading-lg text-neutral-800">
+          <h5 className="mb-6 max-w-xl h-secondary font-medium! capitalize! heading-lg text-neutral-800">
             Before we start planning your journey, there&apos;s one question
             worth asking&hellip; are we the right people to take you there?
-          </h3>
+          </h5>
           <p className="mb-8 max-w-xl ">
             Here are some of the questions travellers usually ask us before
             they decide. If your question isn&apos;t here, let&apos;s
@@ -169,7 +169,7 @@ export default function WhyDiscoverHimalayas() {
           <a href="/faq" className="max-sm:hidden">
             <button
               type="button"
-              className="flex items-center gap-2 bg-neutral-900 px-6 py-3 btn-text text-white transition-colors hover:bg-neutral-700"
+              className="flex items-center gap-2 bg-neutral-900 px-20 py-3 btn-text text-white transition-colors hover:bg-neutral-700"
             >
               View All FAQs
               <svg

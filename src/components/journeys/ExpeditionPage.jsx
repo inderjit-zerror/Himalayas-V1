@@ -84,11 +84,11 @@ export default function ExpeditionPage() {
             // LADAKH
                     </div>
 
-                    <h3 className="text-5xl sm:text-6xl md:text-7xl lg:text-[105px]  uppercase leading-[0.9] tracking-tighter mb-10 text-black">
+                    <h2 className="text-5xl sm:text-6xl md:text-7xl lg:text-[105px]  uppercase leading-[0.9] tracking-tighter mb-10 text-black">
                         TO THE<br />
                         HIGHEST ROAD<br />
                         ON EARTH
-                    </h3>
+                    </h2>
 
                     <p className="text-lg md:text-[22px]  leading-[1.6] max-w-[38rem]">
                         Ladakh is Discover Himalayas' signature high-altitude expedition. An extraordinary Royal Enfield journey through the world's highest motorable passes, ancient Buddhist kingdoms and the vast high-altitude landscapes of Ladakh.
@@ -98,18 +98,18 @@ export default function ExpeditionPage() {
                 {/* Right Column: At A Glance Sidebar */}
                 <div className="lg:col-span-4 lg:pl-10 mt-8 lg:mt-24">
                     <div className="mb-8">
-                        <h3 className=" uppercase ">
+                        <h4 className=" uppercase  font-medium! ">
                             AT A GLANCE
-                        </h3>
+                        </h4>
                         <div className="h-[2px] bg-black w-[150px] mt-4"></div>
                     </div>
 
                     <div className="space-y-1">
                         {glanceData.map((item, index) => (
                             <div key={index} className="text-[17px] leading-relaxed">
-                                <h5 className="font-bold  block">
+                                <p className="font-bold!  block ">
                                     {item.label}
-                                </h5>
+                                </p>
                                 <p className=" mb-3 mt-2">
                                     {item.value}
                                 </p>

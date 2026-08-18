@@ -222,9 +222,9 @@ export default function OurStory() {
   return (
     <section
       ref={sectionRef}
-      className="w-full bg-white px-4 py-16 sm:px-10 lg:px-10 lg:pb-10 lg:pt-20 "
+      className="w-full bg-white h-fit px-4 py-16 sm:px-10 lg:px-10 lg:pb-10 lg:pt-20 "
     >
-      <div className="mx-auto w-full">
+      <div className="mx-auto w-full  sm:min-h-[90vh] flex flex-col justify-between ">
         <p className="ost-eyebrow eyebrow-text mb-6 text-neutral-400">
           // Our Story
         </p>
@@ -238,11 +238,13 @@ export default function OurStory() {
           <div className="ost-copy col-span-12 flex items-center lg:col-span-5">
             <p className="">
               
-                For over three decades, we&apos;ve explored the Himalayas,
+                <span className="font-extrabold">
+                  For over three decades, we&apos;ve explored the Himalayas,
                 returning season after season to the places, people and
-                stories that continue to shape every journey we create,
+                stories that continue to shape every journey we create, 
+                </span> 
               
-              sharing not only remarkable landscapes but the stories,
+               sharing not only remarkable landscapes but the stories,
               cultures and friendships that make these mountains
               unforgettable. Before we introduced travellers to the
               Himalayas, the Himalayas were already teaching us.
@@ -284,7 +286,7 @@ export default function OurStory() {
             </span>
           </p>
 
-          <button className="group flex w-full sm:w-auto justify-center items-center gap-2 bg-neutral-900 px-6 py-4 sm:py-3 btn-text text-white transition-colors hover:bg-neutral-800">
+          <button className="group flex w-full sm:w-auto justify-center items-center gap-2 bg-neutral-900 px-20 py-4 sm:py-3 btn-text text-white transition-colors hover:bg-neutral-800">
             MEET THE TEAM
             <span className="transition-transform group-hover:translate-x-1">
               &rsaquo;

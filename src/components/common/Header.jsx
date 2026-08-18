@@ -12,17 +12,17 @@ gsap.registerPlugin(ScrollTrigger);
 const NAV_LINKS = [
   { label: "OUR STORY", href: "/our-story" },
   { label: "JOURNEYS", href: "/journeys" },
-  { label: "FAQS", href: "/faqs" },
   { label: "JOURNAL", href: "/journal" },
+  { label: "FAQS", href: "/faqs" },
 ];
 
 // Links shown inside the full-screen menu overlay
 const MENU_LINKS = [
   { label: "Home", href: "/" },
-  { label: "OUR STORY", href: "/our-story" },
-  { label: "JOURNEYS", href: "/journeys" },
-  { label: "FAQS", href: "/faqs" },
-  { label: "JOURNAL", href: "/journal" },
+  { label: "Our Story", href: "/our-story" },
+  { label: "Journeys", href: "/journeys" },
+  { label: "Journal", href: "/journal" },
+  { label: "FAQs", href: "/faqs" },
 ];
 
 const MENU_IMAGES = [
@@ -46,10 +46,11 @@ export default function Header() {
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  // Scroll-driven compact/expanded nav bar (unchanged behavior)
+  // Scroll-driven compact/expanded nav bar
   useEffect(() => {
     const nav = navRef.current;
     const bg = bgRef.current;
+    if (!nav || !bg) return;
 
     gsap.set(bg, { yPercent: -100 });
     gsap.set(nav, { paddingTop: "1.75rem", paddingBottom: "1.75rem" });
@@ -74,7 +75,7 @@ export default function Header() {
       start: "top top",
       end: "150 top",
       onUpdate: (self) => {
-        nav.dataset.scrolled = self.progress > 0.05 ? "true" : "false";
+        if (nav) nav.dataset.scrolled = self.progress > 0.05 ? "true" : "false";
       },
     });
 
@@ -150,6 +151,8 @@ function FullScreenMenu({ isOpen, onClose }) {
   const contactRef = useRef(null);
 
   const hasMounted = useRef(false);
+  const [isJourneysHovered, setIsJourneysHovered] = useState(false);
+  const hoverTimeoutRef = useRef(null);
 
   // Lock body scroll while menu is open
   useEffect(() => {
@@ -173,7 +176,53 @@ function FullScreenMenu({ isOpen, onClose }) {
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, [isOpen, onClose]);
 
-  // Open / close animation
+  // Handle Journeys hover state with delay to allow smooth mouse transition
+  const handleMouseEnter = () => {
+    if (hoverTimeoutRef.current) clearTimeout(hoverTimeoutRef.current);
+    setIsJourneysHovered(true);
+  };
+
+  const handleMouseLeave = () => {
+    hoverTimeoutRef.current = setTimeout(() => {
+      setIsJourneysHovered(false);
+    }, 150);
+  };
+
+  const handleJourneysClick = (e) => {
+    if (typeof window !== "undefined" && window.innerWidth < 1024) {
+      e.preventDefault();
+      setIsJourneysHovered((prev) => !prev);
+    }
+  };
+
+  // Animate Journeys sub-menu list in/out responsive to screen size
+  useEffect(() => {
+    if (!isOpen || !listsRef.current) return;
+
+    const isMobile = window.innerWidth < 1024;
+
+    if (isJourneysHovered) {
+      gsap.to(listsRef.current, {
+        autoAlpha: 1,
+        x: 0,
+        display: "flex",
+        duration: 0.4,
+        ease: "power2.out",
+        overwrite: "auto",
+      });
+    } else {
+      gsap.to(listsRef.current, {
+        autoAlpha: 0,
+        x: isMobile ? 0 : 40,
+        display: "none",
+        duration: 0.3,
+        ease: "power2.in",
+        overwrite: "auto",
+      });
+    }
+  }, [isJourneysHovered, isOpen]);
+
+  // Open / close menu animation
   useEffect(() => {
     const overlay = overlayRef.current;
     const panel = panelRef.current;
@@ -189,11 +238,17 @@ function FullScreenMenu({ isOpen, onClose }) {
         gsap.set(overlay, { display: "flex" });
         gsap.set(panel, { clipPath: "inset(0% 0% 100% 0%)" });
         gsap.set(
-          [closeBtnRef.current, logoRef.current, socialRef.current, listsRef.current, contactRef.current],
+          [closeBtnRef.current, logoRef.current, socialRef.current, contactRef.current],
           { opacity: 0, y: 12 }
         );
         gsap.set(images, { opacity: 0, y: 24 });
         gsap.set(navItems, { opacity: 0, y: 24 });
+
+        // Ensure sub-menu lists start completely hidden off to the right (desktop) or stacked (mobile)
+        if (listsRef.current) {
+          const isMobile = window.innerWidth < 1024;
+          gsap.set(listsRef.current, { autoAlpha: 0, x: isMobile ? 0 : 40, display: "none" });
+        }
 
         const tl = gsap.timeline({ defaults: { ease: "power3.out" } });
 
@@ -205,11 +260,7 @@ function FullScreenMenu({ isOpen, onClose }) {
           )
           .to(images, { opacity: 1, y: 0, duration: 0.5, stagger: 0.1 }, "-=0.2")
           .to(navItems, { opacity: 1, y: 0, duration: 0.45, stagger: 0.07 }, "-=0.35")
-          .to(
-            [listsRef.current, contactRef.current],
-            { opacity: 1, y: 0, duration: 0.45, stagger: 0.08 },
-            "-=0.3"
-          );
+          .to(contactRef.current, { opacity: 1, y: 0, duration: 0.45 }, "-=0.3");
       }, overlay);
 
       return () => ctx.revert();
@@ -217,7 +268,10 @@ function FullScreenMenu({ isOpen, onClose }) {
       const ctx = gsap.context(() => {
         const tl = gsap.timeline({
           defaults: { ease: "power2.in" },
-          onComplete: () => gsap.set(overlay, { display: "none" }),
+          onComplete: () => {
+            gsap.set(overlay, { display: "none" });
+            setIsJourneysHovered(false);
+          },
         });
 
         tl.to(
@@ -248,7 +302,7 @@ function FullScreenMenu({ isOpen, onClose }) {
     >
       <div
         ref={panelRef}
-        className="flex h-full w-full flex-col overflow-y-auto bg-white px-4 py-5 sm:px-6 sm:py-6 md:px-10 md:py-8"
+        className="flex h-full w-full flex-col overflow-y-auto bg-white sm:w-[95vw] sm:h-[80vh]  sm:m-auto px-4 py-5 sm:px-6 sm:py-6 md:px-10 md:py-8"
       >
         {/* Top bar: close / logo / socials */}
         <div className="flex shrink-0 items-center justify-between">
@@ -284,35 +338,18 @@ function FullScreenMenu({ isOpen, onClose }) {
           </div>
         </div>
 
-        {/* Main content grid — stacked and reordered (nav first) on mobile, full layout from lg up */}
-        <div className="mt-8 grid flex-1 grid-cols-1 gap-8 sm:mt-10 md:mt-14 lg:grid-cols-12 lg:gap-10">
-          {/* Nav links — shown first on mobile since it's the primary job of the menu */}
-          <nav className="order-1 lg:order-2 lg:col-span-3">
-            <ul className="flex flex-col gap-1 sm:gap-2">
-              {MENU_LINKS.map((link, i) => (
-                <li key={link.href} ref={(el) => (navItemsRef.current[i] = el)}>
-                  <Link
-                    href={link.href}
-                    onClick={onClose}
-                    className={`block border-b border-neutral-200 py-2.5 text-2xl transition-colors hover:text-neutral-400 sm:py-3 sm:text-3xl md:text-4xl ${link.active ? "font-semibold text-neutral-900" : "font-normal text-neutral-800"
-                      }`}
-                  >
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </nav>
-
-          {/* Image cards */}
-          <div className="order-2 grid grid-cols-2 gap-3 sm:gap-4 lg:order-1 lg:col-span-5 lg:gap-5 max-sm:hidden">
-            <div className="flex flex-col gap-3 sm:gap-4 lg:gap-5">
+        {/* Main content flex container */}
+        <div className="mt-8 flex flex-1 flex-col gap-8 sm:mt-10 md:mt-12 lg:flex-row lg:items-stretch lg:gap-12 lg:h-[calc(100%-80px)]">
+          
+          {/* Images container — 55% Width and 100% Height on Desktop */}
+          <div className="order-2 grid w-full shrink-0 grid-cols-2 gap-3 sm:gap-4 max-sm:hidden lg:order-1 lg:h-full lg:w-[55%] lg:gap-5">
+            <div className="flex flex-col gap-3 sm:gap-4 lg:h-full lg:gap-5">
               {MENU_IMAGES.filter((img) => !img.tall).map((img, i) => (
                 <MenuImage
                   key={img.label}
                   img={img}
                   setRef={(el) => (imagesRef.current[i] = el)}
-                  className="h-28 sm:h-40 md:h-48"
+                  className="h-28 sm:h-40 md:h-48 lg:h-1/2"
                 />
               ))}
             </div>
@@ -321,22 +358,70 @@ function FullScreenMenu({ isOpen, onClose }) {
                 key={img.label}
                 img={img}
                 setRef={(el) => (imagesRef.current[2 + i] = el)}
-                className="h-full min-h-[15rem] sm:min-h-[17.5rem] lg:min-h-[21rem]"
+                className="h-full min-h-[15rem] sm:min-h-[17.5rem] lg:min-h-full"
               />
             ))}
           </div>
 
-          {/* Destination lists + contact */}
-          <div
-            ref={listsRef}
-            className="order-3 grid grid-cols-2 gap-6 sm:gap-8 lg:col-span-4 lg:flex lg:flex-col"
-          >
-            <LinkList title="Himalayan journeys" items={HIMALAYAN_JOURNEYS} />
-            <LinkList title="Beyond Himalayas" items={BEYOND_HIMALAYAS} />
+          {/* Right Column — Nav Links & Vertical Sub-Menu Side-by-Side (45% Width) */}
+          <div className="order-1 flex w-full flex-col justify-start gap-6 sm:flex-row lg:order-2 lg:h-full lg:w-[45%]">
+            
+            {/* Navigation links */}
+            <nav className="w-full sm:w-1/2">
+              <ul className="flex flex-col gap-1 sm:gap-2">
+                {MENU_LINKS.map((link, i) => {
+                  const isJourneys = link.label.toUpperCase() === "JOURNEYS";
+                  return (
+                    <li
+                      key={link.href}
+                      ref={(el) => (navItemsRef.current[i] = el)}
+                      onMouseEnter={isJourneys ? handleMouseEnter : undefined}
+                      onMouseLeave={isJourneys ? handleMouseLeave : undefined}
+                    >
+                      <Link
+                        href={link.href}
+                        onClick={(e) => {
+                          if (isJourneys) handleJourneysClick(e);
+                          else onClose();
+                        }}
+                        className="flex items-center justify-between border-b border-neutral-200 py-2.5 text-2xl font-normal text-neutral-800 transition-colors hover:text-neutral-400 sm:py-3 sm:text-3xl md:text-4xl"
+                      >
+                        <span>{link.label}</span>
+                        {isJourneys && (
+                          <svg 
+                            className={`h-5 w-5 transition-transform duration-300 lg:hidden ${isJourneysHovered ? "rotate-180" : ""}`} 
+                            fill="none" 
+                            viewBox="0 0 24 24" 
+                            stroke="currentColor"
+                          >
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                          </svg>
+                        )}
+                      </Link>
+                    </li>
+                  );
+                })}
+              </ul>
+            </nav>
+
+            {/* Sub-menu: Stacked Vertically, Slides in from Right */}
+            <div
+              ref={listsRef}
+              onMouseEnter={handleMouseEnter}
+              onMouseLeave={handleMouseLeave}
+              className="hidden w-full flex-col gap-6 opacity-0 sm:w-1/2 sm:gap-8"
+            >
+              <LinkList title="Himalayan journeys" items={HIMALAYAN_JOURNEYS} onClose={onClose} />
+              <LinkList title="Beyond Himalayas" items={BEYOND_HIMALAYAS} onClose={onClose} />
+            </div>
           </div>
         </div>
 
-        <div ref={contactRef} className="mt-8 flex shrink-0 justify-center border-t border-neutral-100 pt-4 lg:mt-6 lg:justify-end lg:border-t-0">
+        {/* Footer Contact Link */}
+        <div
+          ref={contactRef}
+          className="mt-8 flex shrink-0 justify-center border-t border-neutral-100 pt-4 lg:mt-6 lg:justify-end lg:border-t-0"
+        >
           <a href="/contact" onClick={onClose} className="text-sm text-neutral-600 hover:text-neutral-400">
             Contact us
           </a>
@@ -361,20 +446,20 @@ function MenuImage({ img, setRef, className }) {
   );
 }
 
-function LinkList({ title, items }) {
+function LinkList({ title, items, onClose }) {
   return (
     <div>
-      <h4 className="border-b border-neutral-300 pb-2 text-sm font-semibold uppercase tracking-wide text-neutral-900">
+      <h5 className="border-b border-neutral-300 pb-2 text-sm font-semibold uppercase tracking-wide text-neutral-900">
         {title}
-      </h4>
+      </h5>
       <ul className="mt-3 flex flex-col gap-2">
         {items.map((item) => (
-          <p key={item} className="flex items-start gap-2 text-sm text-neutral-700">
-            <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-neutral-500" />
-            <Link href="#" className="hover:text-neutral-400">
+          <li key={item} className="flex items-center gap-2 text-sm text-neutral-700">
+            <span className="h-1 w-1 shrink-0 rounded-full bg-neutral-500" />
+            <Link href="#" onClick={onClose} className="hover:text-neutral-400">
               {item}
             </Link>
-          </p>
+          </li>
         ))}
       </ul>
     </div>

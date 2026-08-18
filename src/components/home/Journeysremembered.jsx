@@ -417,7 +417,7 @@ export default function JourneysRemembered() {
          
         <p className=" ml-auto max-w-3xl">
          
-            Every traveller returns with a different story.
+            <span className=" font-extrabold!" >Every traveller returns with a different story.</span>
           
           Some remember the challenge of a high mountain pass. Others
           remember a conversation, a remote village, a sunrise over the
@@ -536,7 +536,7 @@ export default function JourneysRemembered() {
         </p>
         <button
           type="button"
-          className="flex w-full sm:w-auto justify-center items-center gap-2 bg-neutral-900 px-6 py-4 sm:py-3 btn-text text-white transition-colors hover:bg-neutral-700"
+          className="flex w-full sm:w-auto justify-center items-center gap-2 bg-neutral-900 px-20 py-4 sm:py-3 btn-text text-white transition-colors hover:bg-neutral-700"
         >
           Read Their Stories
           <svg viewBox="0 0 24 24" className="h-4 w-4 fill-none stroke-current stroke-2">

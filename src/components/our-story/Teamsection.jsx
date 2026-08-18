@@ -141,30 +141,30 @@ export default function TeamSection() {
       aria-label="The team on the road"
     >
       {/* Header row */}
-      <div className="mx-auto  grid grid-cols-1 gap-y-[1.5rem] lg:grid-cols-[minmax(1fr)] lg:items-start lg:gap-x-[3rem]">
-        <h2
-          ref={headlineRef}
-          className="w-fit  text-neutral-900 h-primary"
-        >
-          <span className="block overflow-hidden ">
-            <span className="inline-block">THE TEAM ON</span>
-          </span>
-          <span className="block overflow-hidden">
-            <span className="inline-block">THE ROAD</span>
-          </span>
-        </h2>
+<div className="mx-auto grid grid-cols-1 gap-y-[1.5rem] lg:grid-cols-2 lg:items-start lg:gap-x-[3rem]">
+  <h2
+    ref={headlineRef}
+    className="w-fit flex flex-col  text-neutral-900 h-primary"
+  >
+    <span className="block overflow-hidden">
+      <span className="inline-block">THE TEAM ON</span>
+    </span>
+    <span className="block overflow-hidden">
+      <span className="inline-block">THE ROAD</span>
+    </span>
+  </h2>
 
-        <p
-          ref={introRef}
-          className="ml-auto lg:mt-[0.5rem] lg:max-w-[28rem]"
-        >
-          Every Discover Himalayas journey is supported by a close-knit team
-          of guides, mechanics, coordinators and local experts who know
-          these roads and landscapes intimately. Together, they ensure
-          every journey is safe, seamless and deeply connected to the
-          places we visit.
-        </p>
-      </div>
+  <p
+    ref={introRef}
+    className="ml-auto lg:mt-[0.5rem] lg:max-w-[28rem]"
+  >
+    Every Discover Himalayas journey is supported by a close-knit team
+    of guides, mechanics, coordinators and local experts who know
+    these roads and landscapes intimately. Together, they ensure
+    every journey is safe, seamless and deeply connected to the
+    places we visit.
+  </p>
+</div>
 
       {/* Team grid */}
       <div className="mx-auto mt-[3.5rem] grid grid-cols-1 gap-x-[1.5rem] gap-y-[2.5rem] sm:grid-cols-2 lg:grid-cols-5">
@@ -218,7 +218,7 @@ export default function TeamSection() {
         <button
           ref={ctaRef}
           type="button"
-          className="inline-flex max-sm:justify-center max-sm:w-full items-center gap-[0.5rem] rounded-[0.25rem] bg-[#c1441f] px-[1.5rem] py-[0.50rem] btn-text text-white transition-colors duration-300 hover:bg-[#c1441f]/90"
+          className="inline-flex max-sm:justify-center max-sm:w-full items-center gap-[0.5rem] rounded-[0.25rem] bg-[#c1441f] px-20 py-[0.50rem] btn-text text-white transition-colors duration-300 hover:bg-[#c1441f]/90"
         >
           Explore Journeys
           <svg

@@ -53,7 +53,7 @@ const faqs = [
 
 export default function FAQContactSection() {
   const [activeCategory, setActiveCategory] = useState('Welcome');
-  const [openFaq, setOpenFaq] = useState(0); // Index 0 open by default
+  const [openFaq, setOpenFaq] = useState(null); // Index 0 open by default
   const [searchQuery, setSearchQuery] = useState('');
   
   const contentRefs = useRef([]);
@@ -102,11 +102,11 @@ export default function FAQContactSection() {
   );
 
   return (
-    <section className="w-full bg-white text-black py-12 px-6 md:px-12 lg:px-10   pt-[20vh]">
+    <section className="w-full bg-white text-black py-12    pt-[13vh]">
       <div className=" mx-auto">
         
         {/* Header Title Section */}
-        <div className="mb-20 max-w-3xl">
+        <div className="mb-20 w-full bg-[#f5f5f5] py-[10vh] px-10">
           <p className="text-xs font-bold tracking-wider text-black uppercase mb-3">
             // FREQUENTLY ASKED QUESTIONS
           </p>
@@ -119,13 +119,13 @@ export default function FAQContactSection() {
         </div>
 
         {/* 3-Column Grid Layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10  justify-between px-6 md:px-12 lg:px-10">
           
           {/* Column 1: Search & Navigation List (4 Cols) */}
-          <div className="lg:col-span-4 flex flex-col gap-4">
+          <div className="lg:col-span-4 sm:w-[25vw] flex flex-col gap-4">
             
             {/* Search Input */}
-            <div className="relative border-b border-dashed border-gray-400 pb-2 mb-2 flex items-center justify-between">
+            <div className="relative border-b  border-dashed border-gray-400 pb-2 mb-2 flex items-center justify-between">
               <div className="flex items-center w-full gap-2">
                 <p className="text-xs font-semibold text-gray-800">Search:</p>
                 <input
@@ -194,10 +194,10 @@ export default function FAQContactSection() {
 
                       {/* Bottom-left triangular fold/notch effect */}
                       <div
-                        className={`absolute left-0 -bottom-1.5 w-0 h-0 border-t-[6px] border-r-[6px] ${
+                        className={`absolute left-[0.6%] -bottom-2 w-0  h-0  scale-[2] border-t-[6px] border-r-[6px] ${
                           isOpen
-                            ? 'border-t-[#1f1f1f] border-r-transparent'
-                            : 'border-t-[#b5b5b5] border-r-transparent'
+                            ? 'border-t-[#383838] border-r-transparent'
+                            : 'border-t-[#e0e0e0] border-r-transparent'
                         }`}
                       />
                     </div>
@@ -226,7 +226,7 @@ export default function FAQContactSection() {
           </div>
 
           {/* Column 3: Contact Form (4 Cols) */}
-          <div className="lg:col-span-4 flex flex-col pt-1 pl-0 lg:pl-4">
+          <div className="lg:col-span-4 flex sm:w-[25vw] ml-auto flex-col pt-1 pl-0 lg:pl-4">
             <p className=" mb-2">
               If your questions are not listed write to us
             </p>

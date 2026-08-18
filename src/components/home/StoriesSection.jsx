@@ -30,7 +30,7 @@ export default function StoriesSection() {
   ];
 
   return (
-    <section className="relative w-full min-h-screen flex items-center justify-center bg-white overflow-hidden py-10 px-5">
+    <section className="relative w-full min-h-screen flex items-center justify-center bg-white overflow-hidden py-10 px-10">
       {/* 
         Background Topographic Map 
         Replace '/images/topo-bg.png' with your actual background pattern image path 
@@ -69,9 +69,9 @@ export default function StoriesSection() {
                 className="group flex items-center justify-between py-5 border-t border-gray-300 first:border-t-0 last:border-b transition-colors duration-300 hover:border-gray-400"
               >
                 <div className="pr-6">
-                  <h5 className="text-black font-semibold text-base mb-1">
+                  <p className="text-black!  font-bold! text-base mb-1">
                     {item.title}
-                  </h5>
+                  </p>
                   <p className="text-gray-500 text-sm leading-snug">
                     {item.description}
                   </p>
@@ -94,7 +94,7 @@ export default function StoriesSection() {
 
           {/* Call to Action Button */}
           <div>
-            <button className="bg-[#e84e40] hover:bg-[#d03d30] text-white px-8 py-3.5 text-sm font-bold tracking-wider uppercase flex items-center justify-center transition-colors duration-300 shadow-[2px_2px_0px_0px_rgba(0,0,0,0.8)]  group">
+            <button className="bg-[#e84e40] hover:bg-[#d03d30] text-white px-8 py-3.5 text-sm font-bold tracking-wider uppercase flex items-center justify-center transition-colors duration-300  group">
               Visit The Journal
               <svg 
                 xmlns="http://www.w3.org/2000/svg" 

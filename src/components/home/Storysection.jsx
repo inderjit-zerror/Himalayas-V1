@@ -60,24 +60,24 @@ export default function StorySection() {
   return (
     <section
       ref={sectionRef}
-      className="w-full bg-white h-fit px-6 py-15 md:px-10 flex flex-col justify-between md:py-20"
+      className="w-full bg-white min-h-[90vh] px-6 py-15 md:px-10 flex flex-col justify-between md:py-20"
     >
-      <div className="mx-auto grid grid-cols-1 gap-10 md:grid-cols-2 md:gap-16 items-center">
+      <div className="mx-auto grid grid-cols-1 h-auto my-auto  gap-10 md:grid-cols-2 md:gap-16 items-center">
         {/* Left: big headline */}
-        <h2 className="h-primary text-neutral-900">
+        <h2 className="h-primary text-neutral-900 ">
           The best journeys are shaped over time
         </h2>
 
         {/* Right: lead line + word-reveal paragraph */}
-        <div className="flex justify-end ml-auto items-center md:pt-2">
+        <div className="flex justify-end ml-auto items-center md:pt-2 ">
           <p
             ref={paraRef}
-            className="max-w-md p-large text-neutral-800"
+            className="max-w-md p-large "
           >
             <span className="font-semibold text-neutral-900">
               {LEAD_LINE}{" "}
             </span>
-            {renderWords(BODY_TEXT)}
+            <span className="font-bold!">For over three decades, Discover Himalayas has been exploring the mountain roads, hidden valleys and living cultures of the Himalayas. </span>Every journey is shaped by experience, local relationships and a deep respect for the people who call them home. Whether you dream of riding legendary mountain passes or travelling slowly through the deserts, forests, and coastlines of India, Nepal, and Bhutan, every journey begins with curiosity—and leaves you with stories that stay with you long after you return home.
           </p>
         </div>
       </div>
@@ -95,7 +95,7 @@ export default function StorySection() {
 
         <a
           href="/journeys"
-          className="inline-flex items-center gap-2 bg-[#E13D33] px-6 py-3 btn-text text-white transition-colors hover:bg-[#db2b22]"
+          className="inline-flex items-center gap-2 bg-[#E13D33] px-20 py-3 btn-text text-white transition-colors hover:bg-[#db2b22]"
         >
           Explore Journeys
           <span aria-hidden="true">&rsaquo;</span>

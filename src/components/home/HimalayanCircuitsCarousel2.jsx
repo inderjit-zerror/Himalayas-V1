@@ -84,21 +84,18 @@ export default function HimalayanCircuitsCarousel2() {
   };
 
   return (
-    <section className="w-full bg-white px-4 py-10 sm:py-24 md:px-10">
+    <section className="w-full bg-white pl-4 py-10 sm:py-24 md:pl-10">
       <div className="mx-auto w-full">
         {/* Header row */}
-        <div className="mb-10 flex flex-col justify-between gap-6 sm:gap-8 md:flex-row md:items-start">
-          <h2 className="heading-lg h-primary text-neutral-900 uppercase font-medium!">
+        <div className="mb-10 flex flex-col justify-between gap-6 sm:gap-8 md:flex-row md:items-start pr-10">
+          <h2 className="heading-lg h-primary text-[3rem]! text-neutral-900 uppercase font-medium!">
             Beyond the
             <br />
-            Circuits
+            Himalayas
           </h2>
 
           <p className="max-w-xl ">
-            Every Journey Begins with a Different Dream. Some seek legendary
-            mountain roads. Others are drawn to remote landscapes, living
-            cultures or the joy of travelling slowly through extraordinary
-            places.
+           <apan className="font-extrabold!" >Journeys that Reveal a Different Side of India.</apan> From desert kingdoms and tropical coastlines to ancient cities and wildlife-rich forests, these journeys celebrate the remarkable diversity of the Indian subcontinent
           </p>
         </div>
 
@@ -173,7 +170,7 @@ export default function HimalayanCircuitsCarousel2() {
         </div>
 
         {/* Footer row */}
-        <div className="mt-10 sm:mt-14 flex flex-col items-start justify-between gap-6 md:flex-row md:items-center">
+        <div className="mt-10 sm:mt-14 flex flex-col items-start justify-between gap-6 pr-10 md:flex-row md:items-center">
           <p className="">[ Est. 1994 ]</p>
           <p className=" text-center md:text-left normal-case">
             “Every region has its own landscape, its own rhythm and its own
@@ -181,7 +178,7 @@ export default function HimalayanCircuitsCarousel2() {
           </p>
           <a
             href="/destinations"
-            className="inline-flex w-full sm:w-auto justify-center items-center gap-2 bg-neutral-900 px-6 py-4 sm:py-3 btn-text text-white transition-colors hover:bg-neutral-700"
+            className="inline-flex w-full sm:w-auto justify-center items-center gap-2 bg-neutral-900 px-20 py-4 sm:py-3 btn-text text-white transition-colors hover:bg-neutral-700"
           >
             Explore Destinations
             <span aria-hidden="true">&rsaquo;</span>

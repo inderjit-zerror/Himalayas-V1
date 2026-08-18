@@ -49,7 +49,7 @@ export default function NotebookHeroSection() {
   return (
     <section 
       ref={containerRef} 
-      className="relative w-full min-h-[200vh] bg-stone-900 text-stone-900 overflow-hidden   flex flex-col justify-between p-6 md:p-12 lg:p-16"
+      className="relative w-full min-h-[150vh] bg-stone-900 text-stone-900 overflow-hidden   flex flex-col justify-between p-6 md:p-12 lg:p-16"
     >
       {/* Background Image Container */}
       <div className="absolute inset-0 z-0">
@@ -64,16 +64,16 @@ export default function NotebookHeroSection() {
       </div>
 
       {/* Main Content Layout */}
-      <div className="relative z-10 max-w-7xl w-full mx-auto flex flex-col h-full gap-8 items-start pt-20">
+      <div className="relative z-10  w-full mx-auto flex flex-col h-full gap-8 items-start pt-20">
         
         {/* Left Column: Category & Hero Headline */}
         <div ref={titleRef} className="lg:col-span-7 flex flex-col justify-start pt-4">
           <p className="text-xs md:text-sm font-bold tracking-widest text-stone-800 uppercase mb-4 drop-shadow-sm">
             // VINOD'S NOTEBOOK / LADAKH / OCTOBER 2024
           </p>
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-black uppercase tracking-tight text-stone-800 leading-[0.88] max-w-2xl drop-shadow-sm">
+          <h2 className="text-5xl md:text-7xl lg:text-8xl font-black uppercase tracking-tight text-stone-800 leading-[0.88] max-w-2xl drop-shadow-sm">
             The Road I Never Grow Tired Of
-          </h1>
+          </h2>
         </div>
 
         {/* Right Column: Notebook Sheet & Overlapping Polaroid */}
@@ -82,7 +82,7 @@ export default function NotebookHeroSection() {
           {/* Lined Notebook Paper Card */}
           <div 
             ref={notePaperRef}
-            className="relative w-full max-w-md bg-[#f7f4ea] text-stone-900 p-6 sm:p-8 shadow-2xl rounded-sm border border-stone-300/80"
+            className="relative w-full max-w-xl bg-[#f7f4ea] text-stone-900 p-6 sm:p-8 shadow-2xl rounded-sm border border-stone-300/80"
             style={{
               backgroundImage: 'repeating-linear-gradient(transparent, transparent 27px, #e2ded0 28px)',
               backgroundAttachment: 'local',

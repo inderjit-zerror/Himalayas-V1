@@ -70,9 +70,9 @@ export default function ExploreFurtherSection() {
         
         {/* Header Section */}
         <div className="flex flex-col md:flex-row justify-between items-start md:items-start mb-12 gap-4">
-          <h3 className=" uppercase">
+          <h4 className=" uppercase font-semibold!">
             Ready to explore further?
-          </h3>
+          </h4>
           <p className="">
             If this journey resonated with you, here are a few more places to continue exploring.
           </p>
@@ -101,7 +101,7 @@ export default function ExploreFurtherSection() {
               </p> */}
 
               {/* Title */}
-              <h5 className="text-base font-bold text-black leading-snug mb-2 group-hover:underline underline-offset-2">
+              <h5 className="text-base font-bold capitalize! text-black leading-snug mb-2 group-hover:underline underline-offset-2">
                 {item.title}
               </h5>
 

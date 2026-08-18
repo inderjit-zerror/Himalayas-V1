@@ -84,10 +84,10 @@ export default function HimalayanCircuitsCarouselJ() {
   };
 
   return (
-    <section className="w-full bg-white px-4 py-16 sm:py-24 md:px-10">
+    <section className="w-full bg-white pl-4 py-16 sm:py-24 md:pl-10">
       <div className="mx-auto w-full">
         {/* Header row */}
-        <div className="mb-10 flex flex-col justify-between gap-6 sm:gap-8 md:flex-row md:items-start">
+        <div className="mb-10 flex flex-col justify-between  gap-6 sm:gap-8 md:flex-row md:items-start pr-10">
           <h3 className="uppercase">
            Stories from Ladakh
           </h3>
