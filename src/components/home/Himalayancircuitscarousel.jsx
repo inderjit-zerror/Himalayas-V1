@@ -84,7 +84,7 @@
 //   };
 
 //   return (
-//     <section className="w-full bg-white px-6 py-24 md:px-10">
+//     <section className="w-full bg-white px-6 py-24 md:px-20">
 //       <div className="mx-auto ">
 //         {/* Header row */}
 //         <div className="mb-10 flex flex-col justify-between gap-8 md:flex-row md:items-start">
@@ -280,7 +280,7 @@ export default function HimalayanCircuitsCarousel() {
           </p>
         </div>
 
-        <div className="mb-8 flex items-center gap-3">
+        <div className="mb-8 flex items-center gap-3 max-sm:hidden">
           <button
             type="button"
             aria-label="Previous circuit"

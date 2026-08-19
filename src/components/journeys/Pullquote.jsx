@@ -2,7 +2,7 @@
 
 export default function PullQuote() {
   return (
-    <section className="w-full bg-white sm:h-screen px-6 py-20 sm:px-10 flex justify-center items-center ">
+    <section className="w-full bg-white sm:h-screen px-6 py-20 sm:px-20 flex justify-center items-center ">
       <div className="mx-auto max-w-[80vw]">
         <blockquote className="text-4xl font-black uppercase h-primary  leading-[1.15] tracking-tight text-neutral-900 sm:text-5xl">
           <span className="mr-1">&ldquo;</span>

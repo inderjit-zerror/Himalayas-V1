@@ -82,7 +82,7 @@ export default function ChooseYourPath() {
   }, []);
 
   return (
-    <section className="bg-white px-4 border-t border-[#292929]/40 py-10 sm:py-14 md:px-16 lg:px-10">
+    <section className="bg-white px-4 border-t border-[#292929]/40 py-10 sm:py-14 md:px-16 lg:px-20">
       <div className="mx-auto w-full">
         <h4 className="heading-lg h-secondary text-neutral-900 uppercase">
           CHOOSE YOUR PATH
@@ -116,12 +116,12 @@ export default function ChooseYourPath() {
               <button
                 type="button"
                 onClick={() => setShowBeyond(false)}
-                className="flex w-full items-center justify-between bg-neutral-900 px-10 py-4 btn-text text-white"
+                className="flex w-full items-center justify-between bg-neutral-900 px-20 py-4 btn-text text-white"
               >
                 HIMALAYAN JOURNEYS
                 <ChevronDown size={16} strokeWidth={2.5} />
               </button>
-              <ul className="px-10 py-4">
+              <ul className="px-20 py-4">
                 {HIMALAYAN_JOURNEYS.map((item) => (
                   <li key={item.label} className="py-1.5">
                     <a
@@ -137,14 +137,14 @@ export default function ChooseYourPath() {
               <button
                 type="button"
                 onClick={() => setShowBeyond((v) => !v)}
-                className="flex w-full items-center justify-between border-t border-neutral-200 px-10 py-4 btn-text text-neutral-800 hover:bg-neutral-50"
+                className="flex w-full items-center justify-between border-t border-neutral-200 px-20 py-4 btn-text text-neutral-800 hover:bg-neutral-50"
               >
                 BEYOND HIMALAYAS
                 <ChevronRight size={16} strokeWidth={2.5} />
               </button>
               <div
                 ref={beyondPanelRef}
-                className="hidden border-t border-neutral-200 bg-white px-10 py-4"
+                className="hidden border-t border-neutral-200 bg-white px-20 py-4"
                 style={{ visibility: "hidden" }}
               >
                 <ul>

@@ -106,7 +106,7 @@ export default function FAQContactSection() {
       <div className=" mx-auto">
         
         {/* Header Title Section */}
-        <div className="mb-20 w-full bg-[#f5f5f5] py-[10vh] px-10">
+        <div className="mb-20 w-full bg-[#f5f5f5] py-[10vh] px-20">
           <p className="text-xs font-bold tracking-wider text-black uppercase mb-3">
             // FREQUENTLY ASKED QUESTIONS
           </p>
@@ -119,7 +119,7 @@ export default function FAQContactSection() {
         </div>
 
         {/* 3-Column Grid Layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10  justify-between px-6 md:px-12 lg:px-10">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10  justify-between px-6 md:px-12 lg:px-20">
           
           {/* Column 1: Search & Navigation List (4 Cols) */}
           <div className="lg:col-span-4 sm:w-[25vw] flex flex-col gap-4">

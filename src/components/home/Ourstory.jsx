@@ -73,7 +73,7 @@
 //   return (
 //     <section
 //       ref={sectionRef}
-//       className="w-full bg-white px-6 py-20 sm:px-10 lg:px-10 lg:pb-10 lg:pt-20 "
+//       className="w-full bg-white px-6 py-20 sm:px-20 lg:px-20 lg:pb-10 lg:pt-20 "
 //     >
 //       <div className="mx-auto ">
 //         {/* Eyebrow */}
@@ -222,7 +222,7 @@ export default function OurStory() {
   return (
     <section
       ref={sectionRef}
-      className="w-full bg-white h-fit px-4 py-16 sm:px-10 lg:px-10 lg:pb-10 lg:pt-20 "
+      className="w-full bg-white h-fit px-4 py-16 sm:px-20 lg:px-20 lg:pb-10 lg:pt-20 "
     >
       <div className="mx-auto w-full  sm:min-h-[90vh] flex flex-col justify-between ">
         <p className="ost-eyebrow eyebrow-text mb-6 text-neutral-400">

@@ -64,7 +64,7 @@ export default function SiteFooter() {
             trigger: footerRef.current,
             start: "top 85%",
           },
-        }
+        },
       );
     }, footerRef);
 
@@ -74,7 +74,7 @@ export default function SiteFooter() {
   return (
     <footer
       ref={footerRef}
-      className="relative min-h-[80vh] overflow-hidden px-4 sm:px-6 flex flex-col justify-end pt-32 pb-10 text-white md:px-16 lg:px-10"
+      className="relative min-h-[80vh] overflow-hidden px-4 sm:px-6 flex flex-col justify-end pt-32 pb-10 text-white md:px-16 lg:px-20"
     >
       <div
         className="absolute inset-0 bg-cover bg-top"
@@ -88,7 +88,9 @@ export default function SiteFooter() {
       <div className="relative z-10 mx-auto w-full">
         {FLORUP.map((col) => (
           <div key={col.title} className="footer-reveal mb-10">
-            <h5 className="mb-3 sm:mb-2 heading-sm font-semibold">{col.title}</h5>
+            <h5 className="mb-3 sm:mb-2 heading-sm font-semibold">
+              {col.title}
+            </h5>
             <ul className="space-y-2 sm:space-y-0">
               {col.links.map((link) => (
                 <li key={link} className="flex items-center gap-2">
@@ -108,7 +110,9 @@ export default function SiteFooter() {
         <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4">
           {FOOTER_COLUMNS.map((col) => (
             <div key={col.title} className="footer-reveal">
-              <h5 className="mb-3 sm:mb-2 heading-sm font-semibold">{col.title}</h5>
+              <h5 className="mb-3 sm:mb-2 heading-sm font-semibold">
+                {col.title}
+              </h5>
               <ul className="space-y-2 sm:space-y-0">
                 {col.links.map((link) => (
                   <li key={link} className="flex items-center gap-2">
@@ -126,8 +130,8 @@ export default function SiteFooter() {
           ))}
 
           {/* Newsletter / social block */}
-          <div className="footer-reveal sm:col-span-2 lg:col-span-1">
-            <div className="mb-5 flex items-center gap-3">
+          <div className="footer-reveal sm:col-span-2 lg:col-span-1   ">
+            <div className="mb-5 flex items-center gap-3 sm:hidden">
               {SOCIALS.map(({ icon: Icon, href, label }) => (
                 <a
                   key={label}
@@ -143,24 +147,42 @@ export default function SiteFooter() {
               ))}
             </div>
 
+            <div className="mb-5 flex items-center gap-3 max-sm:hidden absolute top-[-35%] left-[-0%]">
+          {SOCIALS.map(({ icon: Icon, href, label }) => (
+            <a
+              key={label}
+              href={href}
+              aria-label={label}
+              target="_blank"
+              rel="noreferrer"
+              className="flex h-9 w-9 items-center justify-center rounded-full border border-white/70 text-white transition-colors hover:bg-white hover:text-neutral-900"
+            >
+              {/* 3. REMOVED strokeWidth AS REACT-ICONS (FA) DOESN'T NEED IT */}
+              <Icon size={16} />
+            </a>
+          ))}
+        </div>
+
             <div className="mt-6 sm:mt-0">
               <h5 className="heading-sm font-semibold leading-snug">
                 Stay Connected with Discover Himalayas
               </h5>
               <p className="mt-3 body-sm leading-relaxed text-white!">
-                Stories from across the Himalayas and the Indian subcontinent, new
-                journeys and expedition updates&mdash;shared occasionally, never
-                excessively.
+                Stories from across the Himalayas and the Indian subcontinent,
+                new journeys and expedition updates&mdash;shared occasionally,
+                never excessively.
               </p>
             </div>
           </div>
-        </div> 
+        </div>
+
+        
 
         <div className="footer-reveal mt-12 sm:mt-14 flex flex-col items-start justify-between gap-3 border-t border-white/20 pt-6 caption-text text-white sm:flex-row sm:items-center">
-          <p className="text-center sm:text-left w-full sm:w-auto text-white!">
+          <p className="text-center sm:text-left text-[0.9rem]! w-full sm:w-auto text-white!">
             Privacy Policy | Terms | Copyright
           </p>
-          <p className="text-center sm:text-left w-full sm:w-auto text-white!">
+          <p className="text-center sm:text-left text-[0.9rem]! w-full sm:w-auto text-white!">
             Designed &amp; Developed by MAd Earth Designs
           </p>
         </div>

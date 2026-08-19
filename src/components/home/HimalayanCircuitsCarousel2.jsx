@@ -100,7 +100,7 @@ export default function HimalayanCircuitsCarousel2() {
         </div>
 
         {/* Arrows */}
-        <div className="mb-8 flex items-center gap-3">
+        <div className="mb-8 flex items-center gap-3 max-sm:hidden">
           <button
             type="button"
             aria-label="Previous circuit"

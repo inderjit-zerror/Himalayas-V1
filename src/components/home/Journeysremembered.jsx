@@ -160,7 +160,7 @@
 //   return (
 //     <section
 //       ref={sectionRef}
-//       className="w-full bg-white px-6 py-16 md:px-12 md:py-20 lg:px-10"
+//       className="w-full bg-white px-6 py-16 md:px-12 md:py-20 lg:px-20"
 //     >
 //       {/* Eyebrow + heading */}
 //       <div ref={headingRef} className="mb-10 max-w-3xl md:mb-14">
@@ -407,7 +407,7 @@ export default function JourneysRemembered() {
   return (
     <section
       ref={sectionRef}
-      className="w-full bg-white px-4 py-12 sm:py-16 md:px-12 md:py-20 lg:px-10"
+      className="w-full bg-white px-4 py-12 sm:py-16 md:px-12 md:py-20 lg:px-20"
     >
       <div ref={headingRef} className="mb-8 sm:mb-10  md:mb-14">
         <p className="eyebrow-text mb-4 text-neutral-400">
@@ -425,7 +425,7 @@ export default function JourneysRemembered() {
           continue long after the roads.
         </p>
       </div>
-      <div className="mt-4 sm:mt-6 flex justify-start gap-3 mb-4 pr-2">
+      <div className="mt-4 sm:mt-6 flex justify-start gap-3 mb-4 pr-2 max-sm:hidden">
           <button
             type="button"
             onClick={() => scrollByCard(-1)}

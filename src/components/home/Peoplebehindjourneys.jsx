@@ -65,7 +65,7 @@
 //   return (
 //     <section
 //       ref={sectionRef}
-//       className="w-full bg-white px-6 py-20 sm:px-10 lg:px-20 lg:py-28"
+//       className="w-full bg-white px-6 py-20 sm:px-20 lg:px-20 lg:py-28"
 //     >
 //       <div className="mx-auto max-w-[1200px]">
 //         {/* Top Eyebrow */}
@@ -194,7 +194,7 @@ export default function PeopleBehindJourneys() {
   return (
     <section
       ref={sectionRef}
-      className="w-full bg-white px-4 py-16 sm:px-10 lg:px-20 lg:py-28 overflow-hidden"
+      className="w-full bg-white px-4 py-16 sm:px-20 lg:px-20 lg:py-28 overflow-hidden"
     >
       <div className="mx-auto ">
         <p className="pbj-eyebrow eyebrow-text mb-10 sm:mb-12 text-neutral-400">

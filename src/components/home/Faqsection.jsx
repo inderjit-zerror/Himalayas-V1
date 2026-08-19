@@ -88,7 +88,7 @@
 //             <button
 //               type="submit"
 //               disabled={status === "submitting"}
-//               className="whitespace-nowrap border border-neutral-800 bg-white px-10 py-2.5 text-sm font-semibold text-neutral-900 transition-colors hover:bg-neutral-900 hover:text-white disabled:opacity-60"
+//               className="whitespace-nowrap border border-neutral-800 bg-white px-20 py-2.5 text-sm font-semibold text-neutral-900 transition-colors hover:bg-neutral-900 hover:text-white disabled:opacity-60"
 //             >
 //               {status === "submitting"
 //                 ? "Subscribing..."
@@ -184,7 +184,7 @@ export default function FAQSection() {
             <button
               type="submit"
               disabled={status === "submitting"}
-              className="whitespace-nowrap border border-neutral-800 bg-white px-10 py-3 sm:py-2.5 btn-text text-neutral-900 transition-colors hover:bg-neutral-900 hover:text-white disabled:opacity-60"
+              className="whitespace-nowrap border border-neutral-800 bg-white px-20 py-3 sm:py-2.5 btn-text text-neutral-900 transition-colors hover:bg-neutral-900 hover:text-white disabled:opacity-60"
             >
               {status === "submitting"
                 ? "Subscribing..."

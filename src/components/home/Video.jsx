@@ -13,7 +13,7 @@ export default function Video() {
   return (
     <section
   
-      className="relative flex  w-full flex-col justify-end overflow-hidden max-sm:h-[50vh] sm:h-screen "
+      className="relative flex  w-full flex-col justify-end overflow-hidden max-sm:h-[50vh] sm:h-[85vh] "
     >
       {/* Parallax Background */}
       <div className="absolute inset-0 -z-10 h-[120%] max-sm:h-[50vh] w-[95vw] mx-auto overflow-hidden ">

@@ -90,7 +90,7 @@ export default function Header() {
     <header
       ref={navRef}
       data-scrolled="false"
-      className="fixed top-0 left-0 z-50 w-full px-4 sm:px-6 md:px-10 transition-shadow duration-300 data-[scrolled=true]:shadow-sm"
+      className="fixed top-0 left-0 z-50 w-full px-4 sm:px-6 md:px-20 transition-shadow duration-300 data-[scrolled=true]:shadow-sm"
     >
       <div
         ref={bgRef}
@@ -302,7 +302,7 @@ function FullScreenMenu({ isOpen, onClose }) {
     >
       <div
         ref={panelRef}
-        className="flex h-full w-full flex-col overflow-y-auto bg-white sm:w-[95vw] sm:h-[80vh]  sm:m-auto px-4 py-5 sm:px-6 sm:py-6 md:px-10 md:py-8"
+        className="flex h-full w-full flex-col overflow-y-auto bg-white sm:w-[95vw] sm:h-[80vh]  sm:m-auto px-4 py-5 sm:px-6 sm:py-6 md:px-20 md:py-8"
       >
         {/* Top bar: close / logo / socials */}
         <div className="flex shrink-0 items-center justify-between">
@@ -417,15 +417,7 @@ function FullScreenMenu({ isOpen, onClose }) {
           </div>
         </div>
 
-        {/* Footer Contact Link */}
-        <div
-          ref={contactRef}
-          className="mt-8 flex shrink-0 justify-center border-t border-neutral-100 pt-4 lg:mt-6 lg:justify-end lg:border-t-0"
-        >
-          <a href="/contact" onClick={onClose} className="text-sm text-neutral-600 hover:text-neutral-400">
-            Contact us
-          </a>
-        </div>
+       
       </div>
     </div>
   );

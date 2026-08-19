@@ -137,7 +137,7 @@ export default function TeamSection() {
   return (
     <section
       ref={sectionRef}
-      className="w-full border-t border-neutral-200 bg-white px-5 sm:px-10 py-[7vh]"
+      className="w-full border-t border-neutral-200 bg-white px-5 sm:px-20 py-[7vh]"
       aria-label="The team on the road"
     >
       {/* Header row */}
@@ -167,10 +167,10 @@ export default function TeamSection() {
 </div>
 
       {/* Team grid */}
-      <div className="mx-auto mt-[3.5rem] grid grid-cols-1 gap-x-[1.5rem] gap-y-[2.5rem] sm:grid-cols-2 lg:grid-cols-5">
+      <div className="mx-auto mt-[3.5rem] grid grid-cols-1 sm:gap-20 gap-x-[1.5rem] gap-y-[2.5rem] sm:grid-cols-2 lg:grid-cols-5">
         {TEAM.map((member, i) => (
           <div key={i} ref={(el) => (cardRefs.current[i] = el)}>
-            <div className="overflow-hidden rounded-[0.375rem] bg-neutral-100">
+            <div className="overflow-hidden bg-neutral-100">
               <img
                 data-card-photo
                 src={member.image}

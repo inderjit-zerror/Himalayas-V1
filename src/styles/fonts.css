@@ -43,9 +43,9 @@ h6 {
 
 p {
   font-size: 1rem;
-  font-weight: 400;
+  font-weight:300;
   line-height: 1.4rem;
-  color: rgb(56, 56, 56);
+  color: rgb(95, 95, 95);
 }
 
 @media (min-width: 750px) {
@@ -62,7 +62,7 @@ p {
   h2 {
     font-size: 5rem;
     text-transform: uppercase;
-    font-weight: 1000;
+    font-weight: 900;
   }
 
   h3 {
@@ -85,9 +85,9 @@ p {
 
   p {
     font-size: 1.1rem;
-    font-weight: 400;
+    font-weight: 300;
     line-height: 1.5rem;
-    color: rgb(71, 71, 71);
+    color: rgb(95, 95, 95);
   }
 }
 

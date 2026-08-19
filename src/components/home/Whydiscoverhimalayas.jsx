@@ -79,19 +79,22 @@ function AccordionItem({ item, isOpen, onToggle }) {
         className="flex w-full items-center justify-between gap-6 text-left"
       >
         <p
-          className={`heading-sm transition-colors ${isOpen ? "text-red-600!" : "text-neutral-800!"
-            }`}
+          className={`heading-sm transition-colors ${
+            isOpen ? "text-red-600!" : "text-neutral-800!"
+          }`}
         >
           {item.question}
         </p>
         <span
-          className={`flex h-6 w-6 flex-none items-center justify-center transition-colors ${isOpen ? "text-red-600" : "text-neutral-500"
-            }`}
+          className={`flex h-6 w-6 flex-none items-center justify-center transition-colors ${
+            isOpen ? "text-red-600" : "text-neutral-500"
+          }`}
         >
           <svg
             viewBox="0 0 24 24"
-            className={`h-4 w-4 fill-none stroke-current stroke-[2.5] transition-transform duration-300 ${isOpen ? "rotate-180" : "rotate-0"
-              }`}
+            className={`h-4 w-4 fill-none stroke-current stroke-[2.5] transition-transform duration-300 ${
+              isOpen ? "rotate-180" : "rotate-0"
+            }`}
           >
             <path d="M6 9l6 6 6-6" strokeLinecap="round" strokeLinejoin="round" />
           </svg>
@@ -99,9 +102,7 @@ function AccordionItem({ item, isOpen, onToggle }) {
       </button>
 
       <div ref={answerRef} className="overflow-hidden" style={{ height: 0, opacity: 0 }}>
-        <p className="pt-4 pr-10 ">
-          {item.answer}
-        </p>
+        <p className="pt-4 pr-10 ">{item.answer}</p>
       </div>
     </div>
   );
@@ -112,7 +113,8 @@ export default function WhyDiscoverHimalayas() {
   const leftRef = useRef(null);
   const rightRef = useRef(null);
 
-  const [openId, setOpenId] = useState(4);
+  // Changed from useState(4) to useState(null)
+  const [openId, setOpenId] = useState(null);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -149,7 +151,7 @@ export default function WhyDiscoverHimalayas() {
   return (
     <section
       ref={sectionRef}
-      className="w-full bg-white px-6  py-16 md:px-12 md:py-20 lg:px-10"
+      className="w-full bg-white px-6  py-16 md:px-12 md:py-20 lg:px-20"
     >
       <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-20">
         {/* Left column */}
@@ -197,7 +199,7 @@ export default function WhyDiscoverHimalayas() {
             />
           ))}
 
-           <a href="/faq" className="sm:hidden ">
+          <a href="/faq" className="sm:hidden ">
             <button
               type="button"
               className="flex items-center mt-10 w-full justify-center gap-2 bg-neutral-900 px-6 py-3 btn-text text-white transition-colors hover:bg-neutral-700"

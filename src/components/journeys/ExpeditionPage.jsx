@@ -37,7 +37,7 @@ export default function ExpeditionPage() {
     ];
 
     return (
-        <div className="min-h-screen bg-white text-black   selection:bg-gray-800 selection:text-white pt-[10vh] px-5 max-sm:pb-10  sm:px-10">
+        <div className="min-h-screen bg-white text-black   selection:bg-gray-800 selection:text-white pt-[10vh] px-5 max-sm:pb-10  sm:px-20">
             {/* Navigation Header */}
             <header className="w-full pt-10 px-6 md:px-12 flex justify-center lg:justify-center z-20 relative">
                 <div className="flex flex-col md:flex-row shadow-sm">
