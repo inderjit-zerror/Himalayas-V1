@@ -2,6 +2,9 @@
 
 import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default function NotebookHeroSection() {
   const containerRef = useRef(null);
@@ -41,6 +44,44 @@ export default function NotebookHeroSection() {
         { scale: 1, opacity: 1, rotate: 4, duration: 0.8, ease: 'back.out(1.5)' },
         '-=0.4'
       );
+
+      // --- PARALLAX ON SCROLL ---
+
+      // Background image drifts slower than scroll (classic parallax)
+      gsap.to(bgRef.current, {
+        yPercent: 15,
+        ease: 'none',
+        scrollTrigger: {
+          trigger: containerRef.current,
+          start: 'top top',
+          end: 'bottom top',
+          scrub: true,
+        },
+      });
+
+      // Notebook paper drifts slightly, opposite-ish direction for depth
+      gsap.to(notePaperRef.current, {
+        yPercent: -6,
+        ease: 'none',
+        scrollTrigger: {
+          trigger: containerRef.current,
+          start: 'top top',
+          end: 'bottom top',
+          scrub: true,
+        },
+      });
+
+      // Polaroid drifts faster, creating a "closer to camera" feel
+      gsap.to(polaroidRef.current, {
+        yPercent: -18,
+        ease: 'none',
+        scrollTrigger: {
+          trigger: containerRef.current,
+          start: 'top top',
+          end: 'bottom top',
+          scrub: true,
+        },
+      });
     }, containerRef);
 
     return () => ctx.revert();
@@ -49,15 +90,15 @@ export default function NotebookHeroSection() {
   return (
     <section 
       ref={containerRef} 
-      className="relative w-full min-h-[150vh] bg-stone-900 text-stone-900 overflow-hidden   flex flex-col justify-between p-6 md:p-12 lg:p-16"
+      className="relative w-full min-h-[150vh] bg-stone-900 text-stone-900 overflow-hidden flex flex-col justify-between p-6 md:p-12 lg:p-16"
     >
       {/* Background Image Container */}
-      <div className="absolute inset-0 z-0">
+      <div className="absolute inset-0 z-0 overflow-hidden">
         <img
           ref={bgRef}
           src="https://images.unsplash.com/photo-1506197603052-3cc9c3a201bd?q=80&w=2000&auto=format&fit=crop"
           alt="Motorcycle on mountain road in Ladakh"
-          className="w-full h-full object-cover object-center"
+          className="w-full h-[120%] object-cover object-center will-change-transform"
         />
         {/* Soft gradient overlay for text readability */}
         <div className="absolute inset-0 bg-gradient-to-r from-black/30 via-transparent to-black/20 pointer-events-none" />
@@ -82,7 +123,7 @@ export default function NotebookHeroSection() {
           {/* Lined Notebook Paper Card */}
           <div 
             ref={notePaperRef}
-            className="relative w-full max-w-xl bg-[#f7f4ea] text-stone-900 p-6 sm:p-8 shadow-2xl rounded-sm border border-stone-300/80"
+            className="relative w-full max-w-xl bg-[#f7f4ea] text-stone-900 p-6 sm:p-8 shadow-2xl rounded-sm border border-stone-300/80 will-change-transform"
             style={{
               backgroundImage: 'repeating-linear-gradient(transparent, transparent 27px, #e2ded0 28px)',
               backgroundAttachment: 'local',
@@ -136,7 +177,7 @@ export default function NotebookHeroSection() {
           {/* Overlapping Polaroid Image Frame */}
           <div 
             ref={polaroidRef}
-            className="absolute -bottom-10 right-2 sm:-right-4 w-52 sm:w-64 bg-white p-3 pb-8 shadow-2xl border border-stone-200/80 z-20 transition-transform hover:scale-105 duration-300"
+            className="absolute -bottom-10 right-2 sm:-right-4 w-52 sm:w-64 bg-white p-3 pb-8 shadow-2xl border border-stone-200/80 z-20 transition-transform hover:scale-105 duration-300 will-change-transform"
           >
             <div className="w-full aspect-square overflow-hidden bg-stone-100 mb-2">
               <img 

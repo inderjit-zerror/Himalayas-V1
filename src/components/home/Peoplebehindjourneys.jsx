@@ -202,17 +202,19 @@ export default function PeopleBehindJourneys() {
         </p>
 
         <div className="flex flex-col gap-12 sm:gap-16 lg:flex-row lg:items-start lg:justify-between">
-          <div className="flex w-full justify-center lg:w-1/2 lg:justify-start pt-6 sm:pt-0">
+          <div className="flex w-full flex justify-center items-center lg:w-1/2 lg:justify-start pt-6 sm:pt-0">
             <div
-              className="pbj-polaroid w-full max-w-[280px] sm:max-w-[400px] lg:max-w-[500px] aspect-4/5 -rotate-3 bg-[#fdfdfc] p-3 pb-16 sm:p-4 sm:pb-20 shadow-[0_10px_40px_-15px_rgba(0,0,0,0.15)] border border-neutral-100"
+              className="pbj-polaroid w-full max-w-[280px] mx-auto sm:max-w-[400px] lg:max-w-[500px] aspect-4/5 -rotate-3 bg-[#dfdfdf] p-3 pb-16 sm:p-4 sm:pb-20 shadow-[0_10px_40px_-15px_rgba(0,0,0,0.15)] border border-neutral-100"
               style={{ transformOrigin: "center" }}
             >
-              <img
-                src="/img/9.jpg"
-                alt="Vinod and Nadia"
-                className="h-full w-full object-cover "
-                draggable={false}
-              />
+             <div className="w-[100%] h-[100%] overflow-hidden">
+               <img
+    src="/img/9.jpg"
+    alt="Vinod and Nadia"
+    className="h-full w-full object-cover object-[50%_-20%] scale-[1.6] flex translate-y-[15%]"
+    draggable={false}
+  />
+             </div>
             </div>
           </div>
 

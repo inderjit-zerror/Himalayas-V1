@@ -13,16 +13,16 @@ export default function Video() {
   return (
     <section
   
-      className="relative flex  w-full flex-col justify-end overflow-hidden max-sm:h-[50vh] sm:h-[85vh] "
+      className="relative flex  w-full flex-col justify-end  overflow-hidden max-sm:h-[50vh] sm:h-[85vh] "
     >
       {/* Parallax Background */}
-      <div className="absolute inset-0 -z-10 h-[120%] max-sm:h-[50vh] w-[95vw] mx-auto overflow-hidden ">
+      <div className="absolute inset-0 -z-10 h-[100%] max-sm:h-[50vh] w-[92vw] mx-auto overflow-hidden ">
         <video
         muted loop autoPlay
          
-          src="https://www.pexels.com/download/video/19674205/" /* Make sure image is in your public folder */
+          src="/video/Yak Video.mp4" /* Make sure image is in your public folder */
           // alt="Motorcycle Journey"
-          className="h-full w-full object-cover "
+          className="h-full w-full object-cover object-center "
         />
       </div>
     </section>

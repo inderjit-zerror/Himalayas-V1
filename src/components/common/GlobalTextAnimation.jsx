@@ -12,6 +12,9 @@ export default function GlobalTextAnimation() {
   const pathname = usePathname();
 
   useEffect(() => {
+    // Disable heading text animations on mobile devices
+    if (window.innerWidth < 768) return;
+
     // A small delay to ensure DOM is fully painted
     const timeout = setTimeout(() => {
       // Select all heading tags

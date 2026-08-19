@@ -465,7 +465,7 @@ export default function JourneysRemembered() {
               <button
                 type="button"
                 aria-label={`Play story: ${story.title}`}
-                className="relative mb-4 block aspect-[5/4] w-full overflow-hidden rounded-sm bg-neutral-100"
+                className="relative mb-4 block aspect-[5/3] w-full overflow-hidden rounded-sm bg-neutral-100"
               >
                 <img
                   src={story.image}

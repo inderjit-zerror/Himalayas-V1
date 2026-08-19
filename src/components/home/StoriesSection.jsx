@@ -135,21 +135,13 @@ export default function StoriesSection() {
               Circular Stamp/Badge Overlay 
               Positioned to overlap the top right of the main image
             */}
-            <div className="absolute -top-12 -right-6 sm:-top-16 sm:-right-12 w-32 h-32 sm:w-48 sm:h-48 z-20 pointer-events-none drop-shadow-md">
-              {/* Replace with your transparent circular logo badge */}
-              <div className="w-full h-full rounded-full border border-dashed border-gray-400 bg-white/50 backdrop-blur-sm flex items-center justify-center">
-                 {/* <span className="text-gray-500 text-xs text-center p-2">Place Circular Badge Here</span> */}
-              </div>
-            </div>
-            
-            {/* Postmark Lines Overlay (Optional) */}
-            <div className="absolute top-12 -left-12 sm:-left-20 w-24 h-16 sm:w-32 sm:h-24 z-20 pointer-events-none opacity-60">
-              {/* Add your wavy postmark PNG here */}
-            </div>
-
+         
           </div>
         </div>
       </div>
     </section>
   );
 }
+
+
+

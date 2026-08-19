@@ -41,45 +41,44 @@ export default function LadakhSection() {
 
         </div>
 
-        {/* Right Column - Sidebar Cards */}
-        <div className="lg:col-span-4 space-y-8 ml-auto">
-          
-          {/* Card 1: Journey Highlights */}
-          <div className="border border-neutral-600 bg-white w-fit ">
-            <div className="bg-[#333333] py-6  text-center px-20">
-              <h5 className="text-xs font-semibold uppercase tracking-wider text-white">
-                Journey Highlights
-              </h5>
-            </div>
-            <div className="p-6">
-              <ul className="list-disc list-inside space-y-2 text-neutral-700 text-sm md:text-base leading-snug">
-                <p className="text-[1rem]!">12 High Mountain Passes</p>
-                <p className="text-[1rem]!">3 High-Altitude Himalayan Lakes</p>
-                <p className="text-[1rem]!">Ancient Buddhist Monasteries</p>
-                <p className="text-[1rem]!">The Changpa Nomadic Plateau</p>
-                <p className="text-[1rem]!">The Indus &amp; Nubra Valleys</p>
-              </ul>
-            </div>
-          </div>
+       {/* Right Column - Sidebar Cards */}
+<div className="lg:col-span-4 space-y-8 ml-auto">
+  
+  {/* Card 1: Journey Highlights */}
+  <div className="border border-neutral-600 bg-white w-full max-w-sm">
+    <div className="bg-[#333333] py-6 text-center px-4">
+      <h5 className="text-xs font-semibold uppercase tracking-wider text-white">
+        Journey Highlights
+      </h5>
+    </div>
+    <div className="p-6">
+      <ul className="list-disc list-inside space-y-2 text-neutral-700 text-sm md:text-base leading-snug">
+        <p className="text-[1rem]!">12 High Mountain Passes</p>
+        <p className="text-[1rem]!">3 High-Altitude Himalayan Lakes</p>
+        <p className="text-[1rem]!">Ancient Buddhist Monasteries</p>
+        <p className="text-[1rem]!">The Changpa Nomadic Plateau</p>
+        <p className="text-[1rem]!">The Indus &amp; Nubra Valleys</p>
+      </ul>
+    </div>
+  </div>
 
-          {/* Card 2: Is This Journey For You? */}
-          <div className="border border-neutral-600 bg-white w-fit">
-            <div className="bg-[#dcdcdc] py-6 px-4 text-center border-b border-neutral-400">
-              <h5 className="text-xs font-semibold uppercase tracking-wider text-neutral-700">
-                Is This Journey For You?
-              </h5>
-            </div>
-            <div className="p-6">
-              <p className="text-neutral-700 text-[1rem]! sm:max-w-[14vw] text-sm md:text-base leading-relaxed">
-                Perfect for riders who dream of high-altitude adventure, long
-                mountain roads and experiencing one of the world's most
-                extraordinary landscapes from the saddle.
-              </p>
-            </div>
-          </div>
+  {/* Card 2: Is This Journey For You? */}
+  <div className="border border-neutral-600 bg-white w-full max-w-sm">
+    <div className="bg-[#dcdcdc] py-6 px-4 text-center border-b border-neutral-400">
+      <h5 className="text-xs font-semibold uppercase tracking-wider text-neutral-700">
+        Is This Journey For You?
+      </h5>
+    </div>
+    <div className="p-6">
+      <p className="text-neutral-700 text-[1rem]! text-sm md:text-base leading-relaxed">
+        Perfect for riders who dream of high-altitude adventure, long
+        mountain roads and experiencing one of the world's most
+        extraordinary landscapes from the saddle.
+      </p>
+    </div>
+  </div>
 
-        </div>
-
+</div>
       </div>
     </section>
   );
