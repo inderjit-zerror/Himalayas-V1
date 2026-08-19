@@ -591,7 +591,7 @@ export default function Header() {
       <nav className="mx-auto flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2 shrink-0">
           <Image
-            src=""
+            src="/img/logo1.png"
             alt="Discover Himalayas"
             width={140}
             height={48}
@@ -822,7 +822,7 @@ function FullScreenMenu({ isOpen, onClose }) {
           </button>
 
           <Link ref={logoRef} href="/" className="flex items-center">
-            <Image src="" alt="Discover Himalayas" width={120} height={44} className="h-7 w-auto sm:h-9 md:h-11" />
+            <Image src="/img/logo1.png" alt="Discover Himalayas" width={120} height={44} className="h-7 w-auto sm:h-9 md:h-11" />
           </Link>
 
           <div ref={socialRef} className="flex items-center gap-2 sm:gap-3">

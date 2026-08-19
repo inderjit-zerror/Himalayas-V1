@@ -120,13 +120,13 @@ export default function StoriesSection() {
             as a transparent PNG from your design tool and use it as the image. 
             Here is a structural wrapper for it.
           */}
-          <div className="relative w-full max-w-md xl:max-w-lg aspect-[3/4]  bg-transparent drop-shadow-2xl">
+          <div className="relative w-full max-w-md xl:max-w-xl h-fit  bg-transparent ">
             {/* Replace with your actual stamp + painting composite image */}
-            <div className="w-full h-full relative overflow-hidden rounded-md bg-gray-100 flex items-center justify-center border-8 border-white shadow-lg">
+            <div className="w-full h-full relative rounded-md bg-gray-100 flex items-center justify-center border-8 border-white ">
                
                   {/* Fallback text if image is missing. 
                   Use Next.js <Image /> here in production: */}
-                  <Image src="/img/8.jpg" alt="Motorcycle in Himalayas" layout="fill" objectFit="cover" />
+                 <img src="/pic/DD.png" alt="IMG" className='h-full w-full object-cover object-center' />
               
                
             </div>

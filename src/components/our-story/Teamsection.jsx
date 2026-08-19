@@ -13,31 +13,31 @@ const TEAM = [
     name: "Tenzin Gyatso",
     role: "Lead Trekking Specialist",
     bio: "22 years scaling Kashmir & Himachal ranges. Certified Wilderness First Responder.",
-    image: "https://images.unsplash.com/photo-1549958909-db7599598400?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    image: "/pic/r1.png",
   },
   {
     name: "Tenzin Gyatso",
     role: "Lead Trekking Specialist",
     bio: "22 years scaling Kashmir & Himachal ranges. Certified Wilderness First Responder.",
-    image: "https://images.unsplash.com/photo-1573826687715-6af4633a84fd?q=80&w=764&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    image: "/pic/r2.png",
   },
   {
     name: "Tenzin Gyatso",
     role: "Lead Trekking Specialist",
     bio: "22 years scaling Kashmir & Himachal ranges. Certified Wilderness First Responder.",
-    image: "https://images.unsplash.com/photo-1613737692508-55e399ce07df?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    image: "/pic/r3.png",
   },
   {
     name: "Tenzin Gyatso",
     role: "Lead Trekking Specialist",
     bio: "22 years scaling Kashmir & Himachal ranges. Certified Wilderness First Responder.",
-    image: "https://images.unsplash.com/photo-1702571498033-73089afa26d0?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    image: "/pic/r1.png",
   },
   {
     name: "Tenzin Gyatso",
     role: "Lead Trekking Specialist",
     bio: "22 years scaling Kashmir & Himachal ranges. Certified Wilderness First Responder.",
-    image: "https://images.unsplash.com/photo-1664710696470-f6aa9de6d823?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    image: "/pic/r4.png",
   },
 ];
 

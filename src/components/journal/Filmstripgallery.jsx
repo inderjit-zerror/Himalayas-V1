@@ -147,7 +147,7 @@ export default function Filmstripgallery() {
           <FilmFrame src="https://images.unsplash.com/photo-1510525009512-ad7fc13eefab?q=80&w=800&auto=format&fit=crop" alt="Goats in the mountains" />
 
           {/* Image 3: Stupa (Featured/Larger) */}
-          <FilmFrame src="https://images.unsplash.com/photo-1544634076-a90160ddf44e?q=80&w=800&auto=format&fit=crop" alt="Mountain Stupa" isLarge={true} />
+          <FilmFrame src="/pic/16.jpg" alt="Mountain Stupa" isLarge={true} />
 
           {/* Image 4: Portrait with metadata below */}
           <div className="flex flex-col">

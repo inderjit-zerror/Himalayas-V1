@@ -181,7 +181,7 @@ export default function NotebookHeroSection() {
           >
             <div className="w-full aspect-square overflow-hidden bg-stone-100 mb-2">
               <img 
-                src="https://images.unsplash.com/photo-1544634076-a90160ddf44e?q=80&w=600&auto=format&fit=crop" 
+                src="/img/26.jpg" 
                 alt="White Stupa in Ladakh"
                 className="w-full h-full object-cover grayscale-[10%]"
               />

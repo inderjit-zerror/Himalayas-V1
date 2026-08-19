@@ -268,7 +268,7 @@ export default function HimalayanCircuitsCarousel() {
   };
 
   return (
-    <section id="NEXTSHIFTSECTION" className="w-full bg-white pl-4 py-10 sm:py-24 md:pl-10">
+    <section id="NEXTSHIFTSECTION" className="w-full bg-white pl-4 py-10 sm:py-24 md:pl-20">
       <div className="mx-auto w-full">
         <div className="mb-10 flex flex-col justify-between gap-6 sm:gap-8 md:flex-row md:items-start pr-10">
           <h2 className="heading-lg text-neutral-900 text-[3rem]! h-primary uppercase font-medium!">

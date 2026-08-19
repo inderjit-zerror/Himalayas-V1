@@ -65,6 +65,11 @@ export default function FAQContactSection() {
 
   const contentRefs = useRef([]);
 
+  // Force scroll to top whenever this page/component mounts
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: "instant" });
+  }, []);
+
   // GSAP Accordion Animation
   const toggleFaq = (index) => {
     const isOpening = openFaq !== index;
@@ -129,131 +134,131 @@ export default function FAQContactSection() {
             <img
               src="/img/18.jpg"
               alt="img"
-              className="w-full h-full object-cover object-center"
+              className="w-full h-full object-cover object-top"
             />
             {/* Black tint overlay */}
-            <div className="absolute inset-0 bg-black/50" />
+            <div className="absolute inset-0 bg-black/10" />
           </div>
         </div>
 
         {/* 3-Column Grid Layout */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10  justify-between px-6 md:px-12 lg:px-20">
           {/* Column 1: Search & Navigation List (4 Cols) */}
-        <div className="lg:col-span-4 sm:w-[25vw] flex flex-col gap-4">
-  {/* Search Input */}
-  <div className="relative border-b border-dashed border-gray-400 pb-2 mb-2 flex items-center justify-between">
-    <div className="flex items-center w-full gap-2">
-      <p className="text-xs font-semibold text-gray-800">Search:</p>
-      <input
-        type="text"
-        value={searchQuery}
-        onChange={(e) => setSearchQuery(e.target.value)}
-        className="w-full bg-transparent text-xs focus:outline-none text-black"
-      />
-    </div>
-    <svg
-      className="w-4 h-4 text-black shrink-0"
-      fill="none"
-      stroke="currentColor"
-      viewBox="0 0 24 24"
-    >
-      <path
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth="2"
-        d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-      />
-    </svg>
-  </div>
+          <div className="lg:col-span-4 sm:w-[25vw] flex flex-col gap-4">
+            {/* Search Input */}
+            <div className="relative border-b border-dashed border-gray-400 pb-2 mb-2 flex items-center justify-between">
+              <div className="flex items-center w-full gap-2">
+                <p className="text-xs font-semibold text-gray-800">Search:</p>
+                <input
+                  type="text"
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  className="w-full bg-transparent text-xs focus:outline-none text-black"
+                />
+              </div>
+              <svg
+                className="w-4 h-4 text-black shrink-0"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                />
+              </svg>
+            </div>
 
-  {/* Category Items List */}
-  <nav className="flex flex-col divide-y divide-gray-100">
-    {filteredCategories.map((category) => (
-      <button
-        key={category}
-        onClick={() => setActiveCategory(category)}
-        className={`flex items-center justify-between py-2.5 text-xs text-left transition-colors group ${
-          activeCategory === category
-            ? "text-black font-semibold"
-            : "text-gray-600 hover:text-black"
-        }`}
-      >
-        <p>{category}</p>
-        <svg
-          className={`w-3 h-3 shrink-0 transition-colors ${
-            activeCategory === category
-              ? "text-black"
-              : "text-gray-400 group-hover:text-black"
-          }`}
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="2.5"
-            d="M9 5l7 7-7 7"
-          />
-        </svg>
-      </button>
-    ))}
-  </nav>
-</div>
-
-          {/* Column 2: Ribbon Accordion (4 Cols) */}
-        <div className="lg:col-span-4 flex flex-col gap-6 pt-2">
-  {faqs.map((faq, index) => {
-    const isOpen = openFaq === index;
-
-    return (
-      <div key={faq.id} className="flex flex-col">
-        {/* Banner Ribbon Header */}
-        <div className="flex items-center gap-3">
-          <div
-            onClick={() => toggleFaq(index)}
-            className={`relative flex-1 cursor-pointer px-4 py-3 text-xs font-semibold transition-colors duration-200 ${
-              isOpen
-                ? "bg-[#383838] text-white!"
-                : "bg-[#e0e0e0] text-gray-800 hover:bg-gray-300"
-            }`}
-          >
-            <p className={isOpen ? "text-white!" : "text-gray-800"}>
-              {faq.question}
-            </p>
-
-            {/* Bottom-left triangular fold/notch effect */}
-            <div
-              className={`absolute left-[0.6%] -bottom-2 w-0 h-0 scale-[2] border-t-[6px] border-r-[6px] ${
-                isOpen
-                  ? "border-t-[#383838] border-r-transparent"
-                  : "border-t-[#e0e0e0] border-r-transparent"
-              }`}
-            />
+            {/* Category Items List */}
+            <nav className="flex flex-col divide-y divide-gray-100">
+              {filteredCategories.map((category) => (
+                <button
+                  key={category}
+                  onClick={() => setActiveCategory(category)}
+                  className={`flex items-center justify-between py-2.5 text-xs text-left transition-colors group ${
+                    activeCategory === category
+                      ? "text-black font-semibold"
+                      : "text-gray-600 hover:text-black"
+                  }`}
+                >
+                  <p>{category}</p>
+                  <svg
+                    className={`w-3 h-3 shrink-0 transition-colors ${
+                      activeCategory === category
+                        ? "text-black"
+                        : "text-gray-400 group-hover:text-black"
+                    }`}
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2.5"
+                      d="M9 5l7 7-7 7"
+                    />
+                  </svg>
+                </button>
+              ))}
+            </nav>
           </div>
 
-          {/* Plus / Minus Icon to the right */}
-          <button
-            onClick={() => toggleFaq(index)}
-            className="text-xl font-light text-gray-800 shrink-0 w-6 h-6 flex items-center justify-center focus:outline-none"
-          >
-            {isOpen ? "−" : "+"}
-          </button>
-        </div>
+          {/* Column 2: Ribbon Accordion (4 Cols) */}
+          <div className="lg:col-span-4 flex flex-col gap-6 pt-2">
+            {faqs.map((faq, index) => {
+              const isOpen = openFaq === index;
 
-        {/* Accordion Content Container */}
-        <div
-          ref={(el) => (contentRefs.current[index] = el)}
-          className="overflow-hidden h-0 opacity-0"
-        >
-          <p className="pt-4 pb-2 px-1 text-[11px] leading-relaxed text-gray-700">
-            {faq.answer}
-          </p>
-        </div>
-      </div>
-    );
-  })}
-</div>
+              return (
+                <div key={faq.id} className="flex flex-col">
+                  {/* Banner Ribbon Header */}
+                  <div className="flex items-center gap-3">
+                    <div
+                      onClick={() => toggleFaq(index)}
+                      className={`relative flex-1 cursor-pointer px-4 py-3 text-xs font-semibold transition-colors duration-200 ${
+                        isOpen
+                          ? "bg-[#383838] text-white!"
+                          : "bg-[#e0e0e0] text-gray-800 hover:bg-gray-300"
+                      }`}
+                    >
+                      <p className={isOpen ? "text-white!" : "text-gray-800"}>
+                        {faq.question}
+                      </p>
+
+                      {/* Bottom-left triangular fold/notch effect */}
+                      <div
+                        className={`absolute left-[0.6%] -bottom-2 w-0 h-0 scale-[2] border-t-[6px] border-r-[6px] ${
+                          isOpen
+                            ? "border-t-[#383838] border-r-transparent"
+                            : "border-t-[#e0e0e0] border-r-transparent"
+                        }`}
+                      />
+                    </div>
+
+                    {/* Plus / Minus Icon to the right */}
+                    <button
+                      onClick={() => toggleFaq(index)}
+                      className="text-xl font-light text-gray-800 shrink-0 w-6 h-6 flex items-center justify-center focus:outline-none"
+                    >
+                      {isOpen ? "−" : "+"}
+                    </button>
+                  </div>
+
+                  {/* Accordion Content Container */}
+                  <div
+                    ref={(el) => (contentRefs.current[index] = el)}
+                    className="overflow-hidden h-0 opacity-0"
+                  >
+                    <p className="pt-4 pb-2 px-1 text-[11px] leading-relaxed text-gray-700">
+                      {faq.answer}
+                    </p>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
 
           {/* Column 3: Contact Form (4 Cols) */}
           <div className="lg:col-span-4 flex sm:w-[25vw] ml-auto flex-col pt-1 pl-0 lg:pl-4">
