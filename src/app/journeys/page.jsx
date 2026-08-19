@@ -9,26 +9,26 @@ import React from "react";
 
 const page = () => {
   const myImages1 = [
-    "https://images.unsplash.com/photo-1605649487212-47bdab064df7?q=80&w=1920&auto=format&fit=crop", // Ladakh mountain road
+    "/pic/13.jpg", // Ladakh mountain road
     "https://images.unsplash.com/photo-1581793745862-99fde7fa73d2?q=80&w=1920&auto=format&fit=crop", // High altitude pass & valley
     "https://images.unsplash.com/photo-1544735716-392fe2489ffa?q=80&w=1920&auto=format&fit=crop", // Himalayan peaks
     "https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?q=80&w=1920&auto=format&fit=crop", // High-altitude lake landscape
   ];
   const myImages2 = [
-    "https://images.unsplash.com/photo-1544735716-392fe2489ffa?q=80&w=1920&auto=format&fit=crop", // Himalayan peaks
+    "/pic/14.jpg", // Himalayan peaks
     "https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?q=80&w=1920&auto=format&fit=crop", // High-altitude lake landscape
     "https://images.unsplash.com/photo-1605649487212-47bdab064df7?q=80&w=1920&auto=format&fit=crop", // Ladakh mountain road
     "https://images.unsplash.com/photo-1581793745862-99fde7fa73d2?q=80&w=1920&auto=format&fit=crop", // High altitude pass & valley
   ];
   const myImages3 = [
-     "https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?q=80&w=1920&auto=format&fit=crop", // High-altitude lake landscape
+     "/pic/16.jpg", // High-altitude lake landscape
     "https://images.unsplash.com/photo-1605649487212-47bdab064df7?q=80&w=1920&auto=format&fit=crop", 
     "https://images.unsplash.com/photo-1544735716-392fe2489ffa?q=80&w=1920&auto=format&fit=crop", // Himalayan peaks
    // Ladakh mountain road
     "https://images.unsplash.com/photo-1581793745862-99fde7fa73d2?q=80&w=1920&auto=format&fit=crop", // High altitude pass & valley
   ];
   const myImages4 = [
-    "https://images.unsplash.com/photo-1605649487212-47bdab064df7?q=80&w=1920&auto=format&fit=crop", // Ladakh mountain road
+    "/pic/15.jpg", // Ladakh mountain road
     "https://images.unsplash.com/photo-1581793745862-99fde7fa73d2?q=80&w=1920&auto=format&fit=crop", // High altitude pass & valley
     "https://images.unsplash.com/photo-1544735716-392fe2489ffa?q=80&w=1920&auto=format&fit=crop", // Himalayan peaks
     "https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?q=80&w=1920&auto=format&fit=crop", // High-altitude lake landscape

@@ -30,7 +30,7 @@ export default function StoriesSection() {
   ];
 
   return (
-    <section className="relative w-full min-h-screen flex items-center justify-center bg-white overflow-hidden py-10 px-5">
+    <section className="relative w-full min-h-screen flex items-center justify-center bg-white overflow-hidden py-10 px-5 sm:px-20">
       {/* 
         Background Topographic Map 
         Replace '/images/topo-bg.png' with your actual background pattern image path 
