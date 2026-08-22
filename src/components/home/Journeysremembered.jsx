@@ -409,15 +409,15 @@ export default function JourneysRemembered() {
       ref={sectionRef}
       className="w-full bg-white px-4 py-12 sm:py-16 md:px-12 md:py-20 lg:px-20"
     >
-      <div ref={headingRef} className="mb-8 sm:mb-10  md:mb-14">
-        <p className="eyebrow-text mb-4 text-neutral-400">
+      <div ref={headingRef} className="mb-8 sm:mb-0  md:mb-14">
+        <p className="eyebrow-text  text-neutral-400 translate-y-[100%]">
           // Journeys Remembered
           
         </p>
          
         <p className=" ml-auto max-w-3xl">
          
-            <span className=" font-extrabold!" >Every traveller returns with a different story.</span>
+            <span className=" font-extrabold! text-black!" >Every traveller returns with a different story. </span>
           
           Some remember the challenge of a high mountain pass. Others
           remember a conversation, a remote village, a sunrise over the
@@ -431,7 +431,7 @@ export default function JourneysRemembered() {
             onClick={() => scrollByCard(-1)}
             disabled={!canScrollPrev}
             aria-label="Previous stories"
-            className="flex h-10 w-10 sm:h-11 sm:w-11 items-center justify-center rounded-full border border-neutral-300 text-neutral-700 transition-colors hover:border-neutral-900 hover:bg-neutral-900 hover:text-white disabled:cursor-not-allowed disabled:opacity-30"
+            className="flex h-10 w-10 sm:h-11 sm:w-11 items-center justify-center rounded-full border border-neutral-800 text-neutral-800 transition-colors hover:border-neutral-900 hover:bg-neutral-900 hover:text-white disabled:cursor-not-allowed disabled:opacity-30"
           >
             <svg viewBox="0 0 24 24" className="h-4 w-4 sm:h-5 sm:w-5 fill-none stroke-current stroke-2">
               <path d="M15 18l-6-6 6-6" strokeLinecap="round" strokeLinejoin="round" />
@@ -442,7 +442,7 @@ export default function JourneysRemembered() {
             onClick={() => scrollByCard(1)}
             disabled={!canScrollNext}
             aria-label="Next stories"
-            className="flex h-10 w-10 sm:h-11 sm:w-11 items-center justify-center rounded-full border border-neutral-300 text-neutral-700 transition-colors hover:border-neutral-900 hover:bg-neutral-900 hover:text-white disabled:cursor-not-allowed disabled:opacity-30"
+            className="flex h-10 w-10 sm:h-11 sm:w-11 items-center justify-center rounded-full border border-neutral-800 text-neutral-800 transition-colors hover:border-neutral-900 hover:bg-neutral-900 hover:text-white disabled:cursor-not-allowed disabled:opacity-30"
           >
             <svg viewBox="0 0 24 24" className="h-4 w-4 sm:h-5 sm:w-5 fill-none stroke-current stroke-2">
               <path d="M9 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round" />
@@ -487,10 +487,10 @@ export default function JourneysRemembered() {
               <h5 className="mb-1 heading-sm text-neutral-900">
                 &quot;{story.title}&quot;
               </h5>
-              <p className=" ">
+              <p className=" text-[0.8rem]! leading-[0.8rem]! mt-5 text-[Black]! font-bold!">
                 {story.author}
               </p>
-              <p className="">
+              <p className="text-[0.8rem]! text-black">
                 {story.trip}
               </p>
             </article>
@@ -536,7 +536,7 @@ export default function JourneysRemembered() {
         </p>
         <button
           type="button"
-          className="flex w-full sm:w-auto justify-center items-center gap-2 bg-neutral-900 px-20 py-4 sm:py-3 btn-text text-white transition-colors hover:bg-neutral-700"
+          className="flex w-full sm:w-auto justify-center uppercase items-center gap-2 bg-neutral-900 px-20 py-4 sm:py-2 btn-text text-white transition-colors hover:bg-neutral-700"
         >
           Read Their Stories
           <svg viewBox="0 0 24 24" className="h-4 w-4 fill-none stroke-current stroke-2">

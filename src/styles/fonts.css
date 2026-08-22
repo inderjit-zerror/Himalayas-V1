@@ -43,9 +43,9 @@ h6 {
 
 p {
   font-size: 1rem;
-  font-weight:300;
-  line-height: 1.4rem;
-  color: rgb(95, 95, 95);
+  font-weight:100;
+  line-height: 1.7rem;
+  color: #202020;
 }
 
 @media (min-width: 750px) {
@@ -86,8 +86,8 @@ p {
   p {
     font-size: 1.1rem;
     font-weight: 300;
-    line-height: 1.5rem;
-    color: rgb(95, 95, 95);
+    line-height: 1.7rem;
+    color: #202020;
   }
 }
 

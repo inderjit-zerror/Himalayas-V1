@@ -178,7 +178,7 @@ export default function HimalayanCircuitsCarousel2() {
           </p>
           <a
             href="/destinations"
-            className="inline-flex w-full sm:w-auto justify-center items-center gap-2 bg-neutral-900 px-20 py-4 sm:py-3 btn-text text-white transition-colors hover:bg-neutral-700"
+            className="inline-flex w-full sm:w-auto justify-center uppercase items-center gap-2 bg-neutral-900 px-20 py-4 sm:py-2 btn-text text-white transition-colors hover:bg-neutral-700"
           >
             Explore Destinations
             <span aria-hidden="true">&rsaquo;</span>

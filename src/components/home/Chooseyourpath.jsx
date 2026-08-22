@@ -95,7 +95,7 @@ export default function ChooseYourPath() {
 
         <div
           ref={wrapperRef}
-          className="relative mt-8 flex flex-col gap-4  sm:flex-row sm:flex-wrap sm: justify-between w-full"
+          className="relative mt-8 flex flex-col gap-4  sm:flex-row sm:flex-wrap sm: justify-between w-full sm:py-8 "
         >
           <div className="relative w-full sm:w-auto z-40">
             <button
@@ -116,12 +116,12 @@ export default function ChooseYourPath() {
               <button
                 type="button"
                 onClick={() => setShowBeyond(false)}
-                className="flex w-full items-center justify-between bg-neutral-900 px-20 py-4 btn-text text-white"
+                className="flex w-full items-center justify-between bg-neutral-900 px-5 py-4 btn-text text-white"
               >
                 HIMALAYAN JOURNEYS
                 <ChevronDown size={16} strokeWidth={2.5} />
               </button>
-              <ul className="px-20 py-4">
+              <ul className="px-5 py-4">
                 {HIMALAYAN_JOURNEYS.map((item) => (
                   <li key={item.label} className="py-1.5">
                     <a
@@ -137,14 +137,14 @@ export default function ChooseYourPath() {
               <button
                 type="button"
                 onClick={() => setShowBeyond((v) => !v)}
-                className="flex w-full items-center justify-between border-t border-neutral-200 px-20 py-4 btn-text text-neutral-800 hover:bg-neutral-50"
+                className="flex w-full items-center justify-between border-t border-neutral-200 px-5 py-4 btn-text text-neutral-800 hover:bg-neutral-50"
               >
                 BEYOND HIMALAYAS
                 <ChevronRight size={16} strokeWidth={2.5} />
               </button>
               <div
                 ref={beyondPanelRef}
-                className="hidden border-t border-neutral-200 bg-white px-20 py-4"
+                className="hidden border-t border-neutral-200 bg-white px-5 py-4"
                 style={{ visibility: "hidden" }}
               >
                 <ul>

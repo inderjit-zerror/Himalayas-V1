@@ -84,7 +84,7 @@ export default function HimalayanCircuitsCarouselJ() {
   };
 
   return (
-    <section className="w-full bg-white pl-4 py-16 sm:py-24 md:pl-10">
+    <section className="w-full bg-white pl-4 py-16 sm:py-24 md:pl-20">
       <div className="mx-auto w-full">
         {/* Header row */}
         <div className="mb-10 flex flex-col justify-between  gap-6 sm:gap-8 md:flex-row md:items-start pr-10">

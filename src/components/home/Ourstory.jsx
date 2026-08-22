@@ -286,7 +286,7 @@ export default function OurStory() {
             </span>
           </p>
 
-          <button className="group flex w-full sm:w-auto justify-center items-center gap-2 bg-neutral-900 px-20 py-4 sm:py-3 btn-text text-white transition-colors hover:bg-neutral-800">
+          <button className="group flex w-full sm:w-auto justify-center items-center gap-2 bg-neutral-900 px-20 py-2 sm:py-2 btn-text text-white transition-colors hover:bg-neutral-800">
             MEET THE TEAM
             <span className="transition-transform group-hover:translate-x-1">
               &rsaquo;

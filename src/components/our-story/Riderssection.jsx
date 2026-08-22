@@ -27,15 +27,15 @@ export default function RidersSection() {
     >
       <div className="mx-auto grid w-full grid-cols-1 items-center gap-y-[3.5rem] lg:grid-cols-2 lg:gap-x-[4rem]">
         {/* Stamp photo column */}
-        <div className="relative flex justify-center lg:justify-start">
+        <div className="relative flex justify-center ">
           <div
             ref={stampRef}
-            className="relative z-10 w-[min(24rem,80vw)] bg-white p-[1rem] shadow-[0_0.5rem_1.5rem_rgba(0,0,0,0.12)]"
+            className="relative z-10 w-fit p-[1rem] "
           >
             <img
-              src="https://images.unsplash.com/photo-1632050592122-6b730e1ac63f?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              src="/img/ODG.png"
               alt="A rider resting on rocks with a Himalayan mountain range behind him"
-              className="aspect-[4/5] w-full object-cover"
+              className=" w-full object-cover object-center relative"
             />
           </div>
 
@@ -46,7 +46,7 @@ export default function RidersSection() {
         <div className="max-w-[30rem]">
           <h2
             ref={headlineRef}
-            className="heading-xl text-neutral-900 "
+            className="heading-xl text-neutral-900  mb-20"
           >
             <span className="block overflow-hidden">
               <span className="inline-block">OUR</span>
@@ -70,7 +70,7 @@ export default function RidersSection() {
           <button
             ref={ctaRef}
             type="button"
-            className="mt-[1.75rem] inline-flex items-center gap-[0.5rem] rounded-[0.25rem] border border-neutral-300 px-[1.5rem] py-[0.75rem] btn-text text-neutral-500 transition-colors duration-300 hover:border-neutral-400 hover:text-neutral-700"
+            className="mt-[1.75rem] inline-flex items-center gap-[0.5rem]  border border-neutral-300 px-[1.5rem] py-2 btn-text text-neutral-500 transition-colors duration-300 hover:border-neutral-400 hover:text-neutral-700"
           >
             Travellers Stories
             <svg
@@ -84,7 +84,7 @@ export default function RidersSection() {
 
           <p
             ref={quoteRef}
-            className="mt-[2rem] "
+            className="mt-[2rem] font-bold! text-black! "
           >
             "Optate ditatem idenimp orionsed eosandem et volut omnimincto
             beraturem. Xerum is eum asi ulpa dolut rectur aspeditam".

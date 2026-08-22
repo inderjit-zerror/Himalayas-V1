@@ -35,6 +35,8 @@ export default function StoriesSection() {
         Background Topographic Map 
         Replace '/images/topo-bg.png' with your actual background pattern image path 
       */}
+
+       <img src="/img/BGOVER.png" alt="IMG" className="w-full h-full absolute z-1 object-cover object-center opacity-14" />
       <div 
         className="absolute inset-0 z-0 opacity-30 pointer-events-none"
         style={{
@@ -52,7 +54,7 @@ export default function StoriesSection() {
           
           {/* Header Text */}
           <div className="space-y-4">
-            <p className="text-[#a0a0a0] text-sm tracking-wider font-medium">
+            <p className="text-[#a0a0a0] text-sm tracking-wider font-medium mb-[8vh]">
               // Stories from the Road
             </p>
             <p className="text-gray-800 text-base sm:text-lg leading-relaxed max-w-lg">
@@ -94,7 +96,7 @@ export default function StoriesSection() {
 
           {/* Call to Action Button */}
           <div>
-            <button className="bg-[#e84e40] hover:bg-[#d03d30] text-white px-8 py-3.5 text-sm font-bold tracking-wider uppercase flex items-center justify-center transition-colors duration-300  group">
+            <button className="bg-[#e84e40] hover:bg-[#d03d30] text-white px-8 py-2 text-sm font-bold tracking-wider uppercase flex items-center justify-center transition-colors duration-300  group">
               Visit The Journal
               <svg 
                 xmlns="http://www.w3.org/2000/svg" 

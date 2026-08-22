@@ -71,7 +71,7 @@ function AccordionItem({ item, isOpen, onToggle }) {
   }, [isOpen]);
 
   return (
-    <div className="border-b border-neutral-300 py-6">
+    <div className="border-b-2 border-neutral-800 py-6">
       <button
         type="button"
         onClick={onToggle}
@@ -151,18 +151,21 @@ export default function WhyDiscoverHimalayas() {
   return (
     <section
       ref={sectionRef}
-      className="w-full bg-white px-6  py-16 md:px-12 md:py-20 lg:px-20"
+      className="w-full bg-white px-6  py-16 md:px-12 md:py-20 lg:px-20 relative"
     >
-      <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-20">
+
+     
+
+      <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-20 z-10">
         {/* Left column */}
         <div ref={leftRef}>
-          <p className="mb-6 eyebrow-text text-neutral-400">
+          <p className="mb-10 eyebrow-text text-neutral-400">
             [ Why Discover Himalayas ]
           </p>
-          <h5 className="mb-6 max-w-xl h-secondary font-medium! capitalize! heading-lg text-neutral-800">
+          <h4 className="mb-6 max-w-xl h-secondary font-medium! capitalize! heading-lg text-neutral-800">
             Before we start planning your journey, there&apos;s one question
             worth asking&hellip; are we the right people to take you there?
-          </h5>
+          </h4>
           <p className="mb-8 max-w-xl ">
             Here are some of the questions travellers usually ask us before
             they decide. If your question isn&apos;t here, let&apos;s
@@ -189,7 +192,7 @@ export default function WhyDiscoverHimalayas() {
         </div>
 
         {/* Right column: accordion */}
-        <div ref={rightRef}>
+        <div ref={rightRef} className="border-t-2 border-neutral-800">
           {FAQS.map((item) => (
             <AccordionItem
               key={item.id}
@@ -202,7 +205,7 @@ export default function WhyDiscoverHimalayas() {
           <a href="/faq" className="sm:hidden ">
             <button
               type="button"
-              className="flex items-center mt-10 w-full justify-center gap-2 bg-neutral-900 px-6 py-3 btn-text text-white transition-colors hover:bg-neutral-700"
+              className="flex items-center mt-10 w-full justify-center gap-2 bg-neutral-900 px-6 py-1 btn-text text-white transition-colors hover:bg-neutral-700"
             >
               View All FAQs
               <svg

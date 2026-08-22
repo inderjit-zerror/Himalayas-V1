@@ -156,7 +156,7 @@ export default function TeamSection() {
 
   <p
     ref={introRef}
-    className="ml-auto lg:mt-[0.5rem] lg:max-w-[28rem]"
+    className="ml-auto lg:mt-[0.5rem] lg:max-w-[50vw]"
   >
     Every Discover Himalayas journey is supported by a close-knit team
     of guides, mechanics, coordinators and local experts who know
@@ -187,13 +187,13 @@ export default function TeamSection() {
             </h5>
             <p
               data-card-detail
-              className="mt-[0.15rem]  "
+              className="mt-[0.25rem] text-[0.9rem]! leading-[1.1rem]! text-[#202020]!  "
             >
               {member.role}
             </p>
             <p
               data-card-detail
-              className="mt-[0.6rem] "
+              className="mt-[0.6rem] text-[0.9rem]! leading-[1.1rem]! text-[#202020]!"
             >
               {member.bio}
             </p>

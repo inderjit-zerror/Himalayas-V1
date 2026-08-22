@@ -95,7 +95,7 @@ export default function StorySection() {
 
         <a
           href="/journeys"
-          className="inline-flex items-center gap-2 bg-[#E13D33] px-20 py-3 btn-text text-white transition-colors hover:bg-[#db2b22]"
+          className="inline-flex items-center uppercase gap-2 bg-[#E13D33] px-20 py-2 btn-text text-white transition-colors hover:bg-[#db2b22]"
         >
           Explore Journeys
           <span aria-hidden="true">&rsaquo;</span>
