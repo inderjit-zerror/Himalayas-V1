@@ -542,7 +542,7 @@ export default function Header() {
     const bg = bgRef.current;
     if (!nav || !bg) return;
 
-    gsap.set(bg, { yPercent: -100 });
+    gsap.set(bg, { yPercent: -150 });
     gsap.set(nav, { paddingTop: "1.75rem", paddingBottom: "1.75rem" });
 
     const tl = gsap.timeline({
@@ -805,7 +805,7 @@ function FullScreenMenu({ isOpen, onClose }) {
 
       <div
         ref={panelRef}
-        className="relative flex h-full w-full flex-col overflow-y-auto bg-white sm:w-[95vw] sm:h-[80vh]  sm:m-auto px-4 py-5 sm:px-6 sm:py-6 md:px-20 md:py-8"
+        className="relative flex h-full w-full flex-col overflow-y-auto bg-white sm:w-[99vw] sm:h-[99vh]  sm:m-auto px-4 py-5 sm:px-6 sm:py-6 md:px-20 md:py-8"
       >
         {/* Top bar: close / logo / socials */}
         <div className="flex shrink-0 items-center justify-between">
@@ -845,7 +845,7 @@ function FullScreenMenu({ isOpen, onClose }) {
         <div className="mt-8 flex flex-1 flex-col gap-8 sm:mt-10 md:mt-12 lg:flex-row lg:items-stretch lg:gap-12 lg:h-[calc(100%-80px)]">
           
           {/* Images container — 55% Width and 100% Height on Desktop */}
-          <div className="order-2 grid w-full shrink-0 grid-cols-2 gap-3 sm:gap-4 max-sm:hidden lg:order-1 lg:h-full lg:w-[55%] lg:gap-5">
+          <div className="order-2 grid w-full shrink-0 grid-cols-2 gap-3 sm:gap-4 max-sm:hidden lg:order-1 lg:h-[95%] lg:w-[55%] lg:gap-5">
             <div className="flex flex-col gap-3 sm:gap-4 lg:h-full lg:gap-5">
               {MENU_IMAGES.filter((img) => !img.tall).map((img, i) => (
                 <MenuImage

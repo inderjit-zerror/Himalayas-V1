@@ -135,6 +135,7 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import BTNA from "../common/BTNA";
 
 if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
@@ -244,12 +245,8 @@ export default function PeopleBehindJourneys() {
             </div>
 
             <div className="pbj-cta mt-10 sm:mt-14 flex max-w-lg justify-start ">
-              <button className="group flex w-full sm:w-auto justify-center items-center gap-4 bg-[#e14032] px-20 py-4 sm:py-2 btn-text text-white transition-colors hover:bg-[#c5362a]">
-                MEET THE TEAM
-                <span className="text-lg transition-transform group-hover:translate-x-1">
-                  &rsaquo;
-                </span>
-              </button>
+              <BTNA txt={'MEET THE TEAM'} />
+              
             </div>
           </div>
         </div>

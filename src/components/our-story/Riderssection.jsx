@@ -3,6 +3,7 @@
 import { useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import BTNA from "../common/BTNA";
 
 if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
@@ -58,7 +59,7 @@ export default function RidersSection() {
 
           <p
             ref={paraRef}
-            className="mt-[1.75rem] "
+            className="mt-[1.75rem] mb-5 "
           >
             From experienced riders to first-time visitors, our travellers
             come from around the world to explore the Himalayas and the
@@ -67,21 +68,9 @@ export default function RidersSection() {
             local experiences.
           </p>
 
-          <button
-            ref={ctaRef}
-            type="button"
-            className="mt-[1.75rem] inline-flex items-center gap-[0.5rem]  border border-neutral-300 px-[1.5rem] py-2 btn-text text-neutral-500 transition-colors duration-300 hover:border-neutral-400 hover:text-neutral-700"
-          >
-            Travellers Stories
-            <svg
-              viewBox="0 0 24 24"
-              className="h-[0.85rem] w-[0.85rem] fill-none stroke-current stroke-[2.5]"
-              aria-hidden="true"
-            >
-              <path d="M9 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round" />
-            </svg>
-          </button>
+          <BTNA txt={'Travellers Stories'} />
 
+          
           <p
             ref={quoteRef}
             className="mt-[2rem] font-bold! text-black! "

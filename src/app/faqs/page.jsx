@@ -2,6 +2,7 @@
 
 import React, { useState, useRef, useEffect } from "react";
 import gsap from "gsap";
+import BTNB from "@/components/common/BTNB";
 
 const categories = [
   "Welcome",
@@ -344,13 +345,10 @@ export default function FAQContactSection() {
                 nisi ut.
               </p>
 
-              {/* Submit Button */}
-              <button
-                type="submit"
-                className="w-fit max-sm:w-full sm:px-20 bg-[#424242] text-white text-xs font-semibold py-1.5 mt-1 hover:bg-black transition-colors"
-              >
-                Send
-              </button>
+
+              <BTNB txt={'Send'} />
+
+             
             </form>
           </div>
         </div>

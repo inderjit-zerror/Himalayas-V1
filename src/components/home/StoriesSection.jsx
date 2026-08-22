@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import BTNA from '../common/BTNA';
 
 export default function StoriesSection() {
   const journalLinks = [
@@ -95,20 +96,10 @@ export default function StoriesSection() {
           </div>
 
           {/* Call to Action Button */}
+
           <div>
-            <button className="bg-[#e84e40] hover:bg-[#d03d30] text-white px-8 py-2 text-sm font-bold tracking-wider uppercase flex items-center justify-center transition-colors duration-300  group">
-              Visit The Journal
-              <svg 
-                xmlns="http://www.w3.org/2000/svg" 
-                fill="none" 
-                viewBox="0 0 24 24" 
-                strokeWidth={2.5} 
-                stroke="currentColor" 
-                className="w-4 h-4 ml-3 transform group-hover:translate-x-1 transition-transform"
-              >
-                <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
-              </svg>
-            </button>
+          <BTNA txt={'Visit The Journal'} />
+            
           </div>
 
         </div>

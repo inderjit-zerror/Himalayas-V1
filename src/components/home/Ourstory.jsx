@@ -160,6 +160,7 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import BTNB from "../common/BTNB";
 
 if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
@@ -286,12 +287,9 @@ export default function OurStory() {
             </span>
           </p>
 
-          <button className="group flex w-full sm:w-auto justify-center items-center gap-2 bg-neutral-900 px-20 py-2 sm:py-2 btn-text text-white transition-colors hover:bg-neutral-800">
-            MEET THE TEAM
-            <span className="transition-transform group-hover:translate-x-1">
-              &rsaquo;
-            </span>
-          </button>
+          <BTNB txt={'MEET THE TEAM'} />
+
+         
         </div>
       </div>
     </section>

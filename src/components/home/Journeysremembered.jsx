@@ -284,6 +284,7 @@
 import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import BTNB from "../common/BTNB";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -534,15 +535,9 @@ export default function JourneysRemembered() {
           &quot;Every region has its own landscape, its own rhythm and its
           own stories&quot;
         </p>
-        <button
-          type="button"
-          className="flex w-full sm:w-auto justify-center uppercase items-center gap-2 bg-neutral-900 px-20 py-4 sm:py-2 btn-text text-white transition-colors hover:bg-neutral-700"
-        >
-          Read Their Stories
-          <svg viewBox="0 0 24 24" className="h-4 w-4 fill-none stroke-current stroke-2">
-            <path d="M9 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round" />
-          </svg>
-        </button>
+
+        <BTNB txt={'Read Their Stories'} />
+        
       </div>
     </section>
   );

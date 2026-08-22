@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import BTNB from "../common/BTNB";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -71,7 +72,7 @@ function AccordionItem({ item, isOpen, onToggle }) {
   }, [isOpen]);
 
   return (
-    <div className="border-b-2 border-neutral-800 py-6">
+    <div className="border-b border-gray-300 py-6">
       <button
         type="button"
         onClick={onToggle}
@@ -160,7 +161,7 @@ export default function WhyDiscoverHimalayas() {
         {/* Left column */}
         <div ref={leftRef}>
           <p className="mb-10 eyebrow-text text-neutral-400">
-            [ Why Discover Himalayas ]
+            // Why Discover Himalayas 
           </p>
           <h4 className="mb-6 max-w-xl h-secondary font-medium! capitalize! heading-lg text-neutral-800">
             Before we start planning your journey, there&apos;s one question
@@ -171,28 +172,15 @@ export default function WhyDiscoverHimalayas() {
             they decide. If your question isn&apos;t here, let&apos;s
             talk&hellip;
           </p>
-          <a href="/faq" className="max-sm:hidden">
-            <button
-              type="button"
-              className="flex items-center gap-2 bg-neutral-900 px-20 py-3 btn-text text-white transition-colors hover:bg-neutral-700"
-            >
-              View All FAQs
-              <svg
-                viewBox="0 0 24 24"
-                className="h-4 w-4 fill-none stroke-current stroke-2"
-              >
-                <path
-                  d="M9 6l6 6-6 6"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-            </button>
+          <a href="/" className="max-sm:hidden">
+
+          <BTNB txt={'View All FAQs'} />
+            
           </a>
         </div>
 
         {/* Right column: accordion */}
-        <div ref={rightRef} className="border-t-2 border-neutral-800">
+        <div ref={rightRef} className="border-t border-gray-300">
           {FAQS.map((item) => (
             <AccordionItem
               key={item.id}
@@ -202,12 +190,14 @@ export default function WhyDiscoverHimalayas() {
             />
           ))}
 
+          
+
           <a href="/faq" className="sm:hidden ">
             <button
               type="button"
               className="flex items-center mt-10 w-full justify-center gap-2 bg-neutral-900 px-6 py-1 btn-text text-white transition-colors hover:bg-neutral-700"
             >
-              View All FAQs
+             
               <svg
                 viewBox="0 0 24 24"
                 className="h-4 w-4 fill-none stroke-current stroke-2"

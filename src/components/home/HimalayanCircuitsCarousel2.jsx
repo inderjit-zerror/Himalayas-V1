@@ -2,6 +2,7 @@
 
 import { useRef, useState, useEffect, useCallback } from "react";
 import { gsap } from "gsap";
+import BTNB from "../common/BTNB";
 
 // Dummy Unsplash placeholders — swap the query keywords or drop in your own
 // photo URLs later. `source.unsplash.com` serves a random matching image per
@@ -176,13 +177,9 @@ export default function HimalayanCircuitsCarousel2() {
             “Every region has its own landscape, its own rhythm and its own
             stories”
           </p>
-          <a
-            href="/destinations"
-            className="inline-flex w-full sm:w-auto justify-center uppercase items-center gap-2 bg-neutral-900 px-20 py-4 sm:py-2 btn-text text-white transition-colors hover:bg-neutral-700"
-          >
-            Explore Destinations
-            <span aria-hidden="true">&rsaquo;</span>
-          </a>
+
+          <BTNB txt={'Explore Destinations'} />
+          
         </div>
       </div>
     </section>

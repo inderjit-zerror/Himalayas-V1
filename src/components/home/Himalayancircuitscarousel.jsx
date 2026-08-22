@@ -194,6 +194,7 @@
 
 import { useRef, useState, useEffect, useCallback } from "react";
 import { gsap } from "gsap";
+import BTNA from "../common/BTNA";
 
 const CIRCUITS = [
   {
@@ -354,13 +355,9 @@ export default function HimalayanCircuitsCarousel() {
           <p className="  md:text-left normal-case">
             “Every region has its own landscape, its own rhythm and its own stories”
           </p>
-          <a
-            href="/destinations"
-            className="inline-flex w-full sm:w-auto uppercase justify-center items-center gap-2 bg-[#E13D33] px-20 py-4 sm:py-2 btn-text text-white transition-colors hover:bg-[#E13D33]"
-          >
-            Explore Destinations
-            <span aria-hidden="true">&rsaquo;</span>
-          </a>
+
+          <BTNA txt={'Explore Destinations'} />
+         
         </div>
       </div>
     </section>

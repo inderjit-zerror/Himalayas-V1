@@ -3,6 +3,7 @@
 import { useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import BTNA from "../common/BTNA";
 
 if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
@@ -47,7 +48,6 @@ export default function TeamSection() {
   const introRef = useRef(null);
   const cardRefs = useRef([]);
   const footerRef = useRef(null);
-  const ctaRef = useRef(null);
 
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
@@ -81,15 +81,21 @@ export default function TeamSection() {
           const photo = card.querySelector("[data-card-photo]");
           const details = card.querySelectorAll("[data-card-detail]");
 
-          gsap.timeline({
-            scrollTrigger: {
-              trigger: card,
-              start: "top 88%",
-              toggleActions: "play none none reverse",
-            },
-            delay: i * 0.08,
-          })
-            .from(card, { y: "2rem", opacity: 0, duration: 0.7, ease: "power2.out" })
+          gsap
+            .timeline({
+              scrollTrigger: {
+                trigger: card,
+                start: "top 88%",
+                toggleActions: "play none none reverse",
+              },
+              delay: i * 0.08,
+            })
+            .from(card, {
+              y: "2rem",
+              opacity: 0,
+              duration: 0.7,
+              ease: "power2.out",
+            })
             .from(
               photo,
               { scale: 1.18, duration: 0.9, ease: "power2.out" },
@@ -97,7 +103,13 @@ export default function TeamSection() {
             )
             .from(
               details,
-              { y: "0.75rem", opacity: 0, duration: 0.5, stagger: 0.06, ease: "power2.out" },
+              {
+                y: "0.75rem",
+                opacity: 0,
+                duration: 0.5,
+                stagger: 0.06,
+                ease: "power2.out",
+              },
               "<0.2"
             );
         });
@@ -113,19 +125,6 @@ export default function TeamSection() {
             toggleActions: "play none none reverse",
           },
         });
-
-        const btn = ctaRef.current;
-        const onEnter = () =>
-          gsap.to(btn, { scale: 1.04, duration: 0.25, ease: "power2.out" });
-        const onLeave = () =>
-          gsap.to(btn, { scale: 1, duration: 0.3, ease: "power2.out" });
-        btn.addEventListener("mouseenter", onEnter);
-        btn.addEventListener("mouseleave", onLeave);
-
-        return () => {
-          btn.removeEventListener("mouseenter", onEnter);
-          btn.removeEventListener("mouseleave", onLeave);
-        };
       });
 
       return () => mm.revert();
@@ -141,30 +140,26 @@ export default function TeamSection() {
       aria-label="The team on the road"
     >
       {/* Header row */}
-<div className="mx-auto grid grid-cols-1 gap-y-[1.5rem] lg:grid-cols-2 lg:items-start lg:gap-x-[3rem]">
-  <h2
-    ref={headlineRef}
-    className="w-fit flex flex-col  text-neutral-900 h-primary"
-  >
-    <span className="block overflow-hidden">
-      <span className="inline-block">THE TEAM ON</span>
-    </span>
-    <span className="block overflow-hidden">
-      <span className="inline-block">THE ROAD</span>
-    </span>
-  </h2>
+      <div className="mx-auto grid grid-cols-1 gap-y-[1.5rem] lg:grid-cols-2 lg:items-start lg:gap-x-[3rem]">
+        <h2
+          ref={headlineRef}
+          className="w-fit flex flex-col text-neutral-900 h-primary"
+        >
+          <span className="block overflow-hidden">
+            <span className="inline-block">THE TEAM ON</span>
+          </span>
+          <span className="block overflow-hidden">
+            <span className="inline-block">THE ROAD</span>
+          </span>
+        </h2>
 
-  <p
-    ref={introRef}
-    className="ml-auto lg:mt-[0.5rem] lg:max-w-[50vw]"
-  >
-    Every Discover Himalayas journey is supported by a close-knit team
-    of guides, mechanics, coordinators and local experts who know
-    these roads and landscapes intimately. Together, they ensure
-    every journey is safe, seamless and deeply connected to the
-    places we visit.
-  </p>
-</div>
+        <p ref={introRef} className="ml-auto lg:mt-[0.5rem] lg:max-w-[50vw]">
+          Every Discover Himalayas journey is supported by a close-knit team of
+          guides, mechanics, coordinators and local experts who know these roads
+          and landscapes intimately. Together, they ensure every journey is
+          safe, seamless and deeply connected to the places we visit.
+        </p>
+      </div>
 
       {/* Team grid */}
       <div className="mx-auto mt-[3.5rem] grid grid-cols-1 sm:gap-20 gap-x-[1.5rem] gap-y-[2.5rem] sm:grid-cols-2 lg:grid-cols-5">
@@ -179,15 +174,12 @@ export default function TeamSection() {
               />
             </div>
 
-            <h5
-              data-card-detail
-              className="mt-[1rem]  text-neutral-900"
-            >
+            <h5 data-card-detail className="mt-[1rem] text-neutral-900">
               {member.name}
             </h5>
             <p
               data-card-detail
-              className="mt-[0.25rem] text-[0.9rem]! leading-[1.1rem]! text-[#202020]!  "
+              className="mt-[0.25rem] text-[0.9rem]! leading-[1.1rem]! text-[#202020]!"
             >
               {member.role}
             </p>
@@ -206,29 +198,15 @@ export default function TeamSection() {
         ref={footerRef}
         className="mx-auto sm:mt-[3.5rem] flex flex-col items-center gap-y-[1.5rem] sm:border-t sm:border-neutral-200 pt-[1.75rem] text-center sm:flex-row sm:justify-between sm:gap-y-0 sm:text-left"
       >
-        <p className="">
-          [ Est. 1994 ]
-        </p>
-
-        <p className="  ">
+        <p>[ Est. 1994 ]</p>
+        <p>
           "Every region has its own landscape, its own rhythm and its own
           stories."
         </p>
-
-        <button
-          ref={ctaRef}
-          type="button"
-          className="inline-flex max-sm:justify-center max-sm:w-full items-center gap-[0.5rem] rounded-[0.25rem] bg-[#c1441f] px-20 py-[0.50rem] btn-text text-white transition-colors duration-300 hover:bg-[#c1441f]/90"
-        >
-          Explore Journeys
-          <svg
-            viewBox="0 0 24 24"
-            className="h-[0.9rem] w-[0.9rem] fill-none stroke-white stroke-[2.5]"
-            aria-hidden="true"
-          >
-            <path d="M9 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round" />
-          </svg>
-        </button>
+        {/* Wrapped in a transition div to handle hover smoothly without manual addEventListener refs */}
+        <div className="transition-transform duration-300 ease-out hover:scale-[1.04]">
+          <BTNA txt={"Explore Journeys"} />
+        </div>
       </div>
     </section>
   );

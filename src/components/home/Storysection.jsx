@@ -3,6 +3,8 @@
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { MdKeyboardArrowRight } from "react-icons/md";
+import BTNA from "../common/BTNA";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -93,13 +95,9 @@ export default function StorySection() {
           becomes experience.&rdquo;
         </p>
 
-        <a
-          href="/journeys"
-          className="inline-flex items-center uppercase gap-2 bg-[#E13D33] px-20 py-2 btn-text text-white transition-colors hover:bg-[#db2b22]"
-        >
-          Explore Journeys
-          <span aria-hidden="true">&rsaquo;</span>
-        </a>
+        <BTNA txt={'Explore Journeys'} />
+
+        
       </div>
     </section>
   );
