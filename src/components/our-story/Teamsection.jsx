@@ -136,7 +136,7 @@ export default function TeamSection() {
   return (
     <section
       ref={sectionRef}
-      className="w-full border-t border-neutral-200 bg-white px-5 sm:px-20 py-[7vh]"
+      className="w-full border-t border-neutral-200 bg-white px-5 sm:px-20 py-[7vh] overflow-x-hidden"
       aria-label="The team on the road"
     >
       {/* Header row */}

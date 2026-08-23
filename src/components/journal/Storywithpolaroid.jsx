@@ -99,7 +99,7 @@ export default function StoryWithPolaroid() {
   return (
     <section
       ref={sectionRef}
-      className="mx-auto grid  grid-cols-1 gap-16 px-6 py-20 md:grid-cols-2 md:gap-20 md:px-20 md:py-28"
+      className="mx-auto grid  grid-cols-1 gap-16 px-6 py-20 md:grid-cols-2 md:gap-20 md:px-20 md:py-28 overflow-x-hidden"
     >
       {/* ---------------------------------------------------------- */}
       {/* LEFT: body copy                                             */}

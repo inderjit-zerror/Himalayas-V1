@@ -39,10 +39,10 @@ const dropdownRef2 = useRef(null);
   ];
 
   return (
-    <div className="min-h-screen bg-white text-black   selection:bg-gray-800 selection:text-white pt-[10vh] px-5 max-sm:pb-10  sm:px-20">
+    <div className="min-h-screen bg-white text-black   selection:bg-gray-800 selection:text-white pt-[10vh] px-5 max-sm:pb-0  sm:px-20 overflow-x-hidden" >
       {/* Navigation Header */}
     <header className="w-full pt-10 px-6 md:px-12 flex justify-center lg:justify-center z-20 relative">
-  <div className="flex flex-col md:flex-row shadow-sm">
+  <div className="flex flex-col md:flex-row shadow-sm ">
     {/* Tab 1: Himalayan Journeys */}
     <div className="relative w-full md:w-[260px]" ref={dropdownRef}>
       <button
@@ -106,17 +106,17 @@ const dropdownRef2 = useRef(null);
 </header>
 
       {/* Main Content Area */}
-      <main className=" mx-auto  w-full   grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 relative z-0">
+      <main className=" mx-auto  w-full   grid grid-cols-1 lg:grid-cols-12 gap-10 sm:gap-16 lg:gap-24 relative z-0 max-sm:mt-5">
         {/* Left Column: Title & Description */}
         <div className="lg:col-span-8 flex flex-col justify-center pt-8 md:pt-0">
           <div className="text-sm md:text-base font-semibold tracking-[0.2em] text-[#333333] mb-8">
             // LADAKH
           </div>
 
-          <h2 className="text-5xl sm:text-6xl md:text-7xl lg:text-[105px]  uppercase leading-[0.9] tracking-tighter mb-10 text-black">
+          <h2 className="text-5xl sm:text-6xl md:text-7xl lg:text-[105px]  uppercase leading-[0.9] tracking-tighter  mb-5 sm:mb-10 text-black">
             TO THE
-            <br />
-            HIGHEST ROAD
+            <br className=" max-sm:hidden" />
+            <span className="max-sm:ml-2">HIGHEST ROAD</span>
             <br />
             ON EARTH
           </h2>
@@ -130,7 +130,7 @@ const dropdownRef2 = useRef(null);
         </div>
 
         {/* Right Column: At A Glance Sidebar */}
-        <div className="lg:col-span-4 lg:pl-10 mt-8 lg:mt-24">
+        <div className="lg:col-span-4 lg:pl-10 sm:mt-8 lg:mt-24">
           <div className="mb-8">
             <h4 className=" uppercase  font-medium! ">AT A GLANCE</h4>
             <div className="h-[2px] bg-black w-[150px] mt-4"></div>

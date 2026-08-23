@@ -82,7 +82,7 @@ export default function PartnershipsSection() {
   return (
     <section
       ref={sectionRef}
-      className="w-full bg-white px-5 sm:px-20 py-[8vh]"
+      className="w-full bg-white px-5 sm:px-20 py-[8vh] overflow-x-hidden"
       aria-label="Partnerships"
     >
       <div className="mx-auto  grid  grid-cols-1 items-center gap-y-[3rem] lg:grid-cols-2 lg:gap-x-[4rem]">

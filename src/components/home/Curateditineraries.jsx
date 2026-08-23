@@ -78,7 +78,7 @@ export default function CuratedItineraries() {
   };
 
   return (
-    <div ref={wrapperRef} className="relative h-[500vh] bg-white">
+    <div ref={wrapperRef} className="relative h-[500vh] bg-white ">
       <div
         ref={stickyRef}
         className="sticky top-0 flex min-h-[100dvh] w-full items-center overflow-hidden px-4 sm:py-20 sm:px-20 lg:px-20"

@@ -90,7 +90,7 @@ export default function NotebookHeroSection() {
   return (
     <section 
       ref={containerRef} 
-      className="relative w-full min-h-[150vh] bg-stone-900 text-stone-900 overflow-hidden flex flex-col justify-between p-6 md:p-12 lg:p-16"
+      className="relative w-full min-h-[150vh] bg-stone-900 text-stone-900 overflow-hidden flex flex-col justify-between p-6 md:p-12 lg:p-16 overflow-x-hidden"
     >
       {/* Background Image Container */}
       <div className="absolute inset-0 z-0 overflow-hidden">

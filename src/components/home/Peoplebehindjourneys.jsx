@@ -193,7 +193,7 @@ export default function PeopleBehindJourneys() {
   return (
     <section
       ref={sectionRef}
-      className="w-full bg-white px-4 py-16 sm:px-20 lg:px-20 lg:py-28 overflow-hidden"
+      className="w-full bg-white px-4 py-16 sm:px-20 lg:px-20 lg:py-28 overflow-hidden overflow-x-hidden"
     >
       <div className="mx-auto ">
         <p className="pbj-eyebrow eyebrow-text mb-10 sm:mb-12 text-neutral-400">

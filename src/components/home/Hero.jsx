@@ -74,7 +74,7 @@ export default function Hero() {
   return (
     <section
       ref={heroRef}
-      className="relative flex h-[100dvh] w-full flex-col justify-center overflow-hidden "
+      className="relative flex h-[100dvh] w-full flex-col justify-center overflow-hidden overflow-x-hidden "
     >
       {/* Logo splash - covers everything, fades out after 1s */}
       <div

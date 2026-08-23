@@ -33,7 +33,7 @@ export default function ImageSlider({
   };
 
   return (
-    <section className="w-full  mx-auto  px-5 sm:px-20 py-20  ">
+    <section className="w-full  mx-auto  px-5 sm:px-20 py-5 sm:py-20  overflow-x-hidden  ">
       {/* Top Bar - Fixed Header Content */}
       <div className="flex flex-col md:flex-row justify-between items-start md:items-start gap-4 mb-6">
 
@@ -64,7 +64,7 @@ export default function ImageSlider({
         <button
           onClick={handlePrev}
           aria-label="Previous Image"
-          className="absolute left-6 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full border-2 border-white/90 bg-black/20 hover:bg-black/40 text-white flex items-center justify-center transition-all duration-200 focus:outline-none active:scale-95"
+          className="absolute left-2 sm:left-6 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full border-2 border-white/90 bg-black/20 hover:bg-black/40 text-white flex items-center justify-center transition-all duration-200 focus:outline-none active:scale-95"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -86,7 +86,7 @@ export default function ImageSlider({
         <button
           onClick={handleNext}
           aria-label="Next Image"
-          className="absolute right-6 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full border-2 border-white/90 bg-black/20 hover:bg-black/40 text-white flex items-center justify-center transition-all duration-200 focus:outline-none active:scale-95"
+          className="absolute right-2 sm:right-6 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full border-2 border-white/90 bg-black/20 hover:bg-black/40 text-white flex items-center justify-center transition-all duration-200 focus:outline-none active:scale-95"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"

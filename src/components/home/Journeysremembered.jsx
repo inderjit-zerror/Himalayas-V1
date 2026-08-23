@@ -409,7 +409,7 @@ export default function JourneysRemembered() {
   return (
     <section
       ref={sectionRef}
-      className="w-full bg-white pl-5 py-12 sm:py-16 md:px-12 md:py-20 lg:px-20"
+      className="w-full bg-white pl-5 py-12 sm:py-16 md:px-12 md:py-20 lg:px-20 overflow-x-hidden"
     >
       <div ref={headingRef} className="mb-8 sm:mb-0  md:mb-14">
         <p className="eyebrow-text  text-neutral-400 max-sm:pb-5 sm:translate-y-[100%]">

@@ -23,7 +23,7 @@ export default function RidersSection() {
   return (
     <section
       ref={sectionRef}
-      className="w-full bg-white px-5 sm:px-20 sm:py-[8vh] max-sm:pt-10 "
+      className="w-full bg-white px-5 sm:px-20 sm:py-[8vh] max-sm:pt-10 overflow-x-hidden "
       aria-label="Our riders"
     >
       <div className="mx-auto grid w-full  grid-cols-1 items-center gap-y-[3.5rem] lg:grid-cols-2 lg:gap-x-[4rem]">

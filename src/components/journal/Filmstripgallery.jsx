@@ -102,7 +102,7 @@ export default function Filmstripgallery() {
   };
 
   return (
-    <div className="h-fit bg-white text-black px-4 py-10 sm:px-8 sm:py-16 md:px-16 overflow-hidden flex flex-col justify-start">
+    <div className="h-fit bg-white text-black px-4 py-10 sm:px-8 sm:py-16 md:px-16 overflow-hidden flex flex-col justify-start overflow-x-hidden">
 
       {/* Header Section */}
       <div className="flex justify-between items-center mb-8 sm:mb-16 w-full mx-auto">

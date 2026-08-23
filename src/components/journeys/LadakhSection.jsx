@@ -1,6 +1,6 @@
 export default function LadakhSection() {
   return (
-    <section className="bg-white sm:min-h-screen  flex justify-center items-center py-16 px-6 md:px-12 lg:px-20    text-neutral-800">
+    <section className="bg-white sm:min-h-screen  flex justify-center items-center py-16 px-6 md:px-12 lg:px-20    text-neutral-800 overflow-x-hidden">
       <div className=" mx-auto grid grid-cols-1 w-full  lg:grid-cols-12 gap-12 items-start">
         
         {/* Left Column - Main Content */}

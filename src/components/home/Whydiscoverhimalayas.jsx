@@ -153,7 +153,7 @@ export default function WhyDiscoverHimalayas() {
   return (
     <section
       ref={sectionRef}
-      className="w-full bg-white px-6  py-16 md:px-12 md:py-20 lg:px-20 relative"
+      className="w-full bg-white px-6  py-16 md:px-12 md:py-20 lg:px-20 relative overflow-x-hidden"
     >
 
      
