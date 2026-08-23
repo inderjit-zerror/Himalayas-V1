@@ -101,11 +101,13 @@ export default function PartnershipsSection() {
             ref={headlineRef}
             className="mt-[1rem] heading-xl  "
           >
-            <span className="block overflow-hidden">
+            <span className="block overflow-hidden ">
               <span className="inline-block">BUILT ON</span>
+              <span className="inline-block sm:hidden ml-2"> LASTING</span>
+              
             </span>
             <span className="block overflow-hidden">
-              <span className="inline-block">LASTING</span>
+              <span className="inline-block max-sm:hidden">LASTING</span>
             </span>
             <span className="block overflow-hidden">
               <span className="inline-block">FRIENDSHIPS</span>

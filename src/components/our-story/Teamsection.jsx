@@ -198,13 +198,13 @@ export default function TeamSection() {
         ref={footerRef}
         className="mx-auto sm:mt-[3.5rem] flex flex-col items-center gap-y-[1.5rem] sm:border-t sm:border-neutral-200 pt-[1.75rem] text-center sm:flex-row sm:justify-between sm:gap-y-0 sm:text-left"
       >
-        <p>[ Est. 1994 ]</p>
-        <p>
+        <p className="max-sm:mr-auto">[ Est. 1994 ]</p>
+        <p className="max-sm:text-start">
           "Every region has its own landscape, its own rhythm and its own
           stories."
         </p>
         {/* Wrapped in a transition div to handle hover smoothly without manual addEventListener refs */}
-        <div className="transition-transform duration-300 ease-out hover:scale-[1.04]">
+        <div className="transition-transform max-sm:w-full duration-300 ease-out hover:scale-[1.04]">
           <BTNA txt={"Explore Journeys"} />
         </div>
       </div>

@@ -285,12 +285,12 @@ export default function OurStory() {
           ))}
         </div>
 
-        <div className="border-t border-neutral-200" />
+        <div className="border-t border-neutral-200 " />
 
-        <div className="flex flex-col items-center justify-between gap-6 pt-8 sm:pt-10 sm:flex-row">
-          <p className=" uppercase  ">[ Est. 1994 ]</p>
+        <div className="flex flex-col items-center   justify-between  gap-6 pt-8 sm:pt-10 sm:flex-row">
+          <p className=" uppercase max-sm:mr-auto ">[ Est. 1994 ]</p>
 
-          <p className="text-center p-small ">
+          <p className="text-cente sm:text-start p-small ">
             &ldquo;The mountains were home before Discover Himalayas
             existed&rdquo;{" "}
             <span className="font-semibold italic text-neutral-800">

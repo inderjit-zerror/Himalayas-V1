@@ -158,10 +158,10 @@ export default function WhyDiscoverHimalayas() {
 
      
 
-      <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-20 z-10">
+      <div className="grid grid-cols-1 gap-0 lg:grid-cols-2 lg:gap-20 z-10">
         {/* Left column */}
         <div ref={leftRef}>
-          <p className="mb-10 eyebrow-text text-neutral-400">
+          <p className="mb-5 sm:mb-10 eyebrow-text text-neutral-400">
             // Why Discover Himalayas 
           </p>
           <h4 className="mb-6 max-w-xl h-secondary font-medium! capitalize! heading-lg text-neutral-800">
@@ -180,7 +180,7 @@ export default function WhyDiscoverHimalayas() {
         </div>
 
         {/* Right column: accordion */}
-        <div ref={rightRef} className="border-t border-gray-300">
+        <div ref={rightRef} className="border-t border-gray-300 ">
           {FAQS.map((item) => (
             <AccordionItem
               key={item.id}
@@ -192,7 +192,7 @@ export default function WhyDiscoverHimalayas() {
 
           
 
-          <Link href="/faqs" className="sm:hidden ">
+          <Link href="/faqs" className="sm:hidden">
              <BTNB txt={'View All FAQs'} />
           </Link>
         </div>

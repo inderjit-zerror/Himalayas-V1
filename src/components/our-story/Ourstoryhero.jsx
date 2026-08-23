@@ -60,6 +60,9 @@ export default function OurStoryHero() {
       className="relative min-h-[165vh] w-full bg-ink overflow-hidden"
       aria-label="Our Story"
     >
+
+      <div className="w-full sm:hidden h-full absolute top-0 left-0 bg-black/20 z-10" />
+
       {/* Background photo */}
       <div className="absolute inset-0 w-full h-full">
         <img

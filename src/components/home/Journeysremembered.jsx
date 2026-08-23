@@ -409,10 +409,10 @@ export default function JourneysRemembered() {
   return (
     <section
       ref={sectionRef}
-      className="w-full bg-white px-4 py-12 sm:py-16 md:px-12 md:py-20 lg:px-20"
+      className="w-full bg-white pl-5 py-12 sm:py-16 md:px-12 md:py-20 lg:px-20"
     >
       <div ref={headingRef} className="mb-8 sm:mb-0  md:mb-14">
-        <p className="eyebrow-text  text-neutral-400 translate-y-[100%]">
+        <p className="eyebrow-text  text-neutral-400 max-sm:pb-5 sm:translate-y-[100%]">
           // Journeys Remembered
           
         </p>
@@ -452,7 +452,7 @@ export default function JourneysRemembered() {
           </button>
         </div>
 
-      <div className="relative w-full">
+      <div className="relative w-full ">
         <div
           ref={trackRef}
           className="flex snap-x snap-mandatory gap-4 sm:gap-6 overflow-x-auto scroll-smooth pb-4 [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
@@ -527,7 +527,7 @@ export default function JourneysRemembered() {
 
       <div
         ref={footerRef}
-        className=" sm:mt-14 flex flex-col items-start justify-between gap-6 sm:border-t  sm:border-neutral-200 pt-6 sm:pt-8 md:mt-16 md:flex-row md:items-center"
+        className=" sm:mt-14 flex flex-col items-start pr-5 justify-between gap-6 sm:border-t  sm:border-neutral-200 pt-6 sm:pt-8 md:mt-16 md:flex-row md:items-center"
       >
         <p className="">
           [ Est. 1994 ]

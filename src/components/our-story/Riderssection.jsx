@@ -23,12 +23,12 @@ export default function RidersSection() {
   return (
     <section
       ref={sectionRef}
-      className="w-full bg-white px-5 sm:px-20 py-[8vh]"
+      className="w-full bg-white px-5 sm:px-20 sm:py-[8vh] max-sm:pt-10 "
       aria-label="Our riders"
     >
-      <div className="mx-auto grid w-full grid-cols-1 items-center gap-y-[3.5rem] lg:grid-cols-2 lg:gap-x-[4rem]">
+      <div className="mx-auto grid w-full  grid-cols-1 items-center gap-y-[3.5rem] lg:grid-cols-2 lg:gap-x-[4rem]">
         {/* Stamp photo column */}
-        <div className="relative flex justify-center ">
+        <div className="relative flex max-sm:hidden justify-center ">
           <div
             ref={stampRef}
             className="relative z-10 w-fit p-[1rem] "
@@ -47,13 +47,13 @@ export default function RidersSection() {
         <div className="max-w-[30rem]">
           <h2
             ref={headlineRef}
-            className="heading-xl text-neutral-900  mb-20"
+            className="heading-xl text-neutral-900  sm:mb-20 max-sm:flex"
           >
             <span className="block overflow-hidden">
               <span className="inline-block">OUR</span>
             </span>
             <span className="block overflow-hidden">
-              <span className="inline-block">RIDERS</span>
+              <span className="inline-block max-sm:ml-3">RIDERS</span>
             </span>
           </h2>
 
@@ -78,6 +78,22 @@ export default function RidersSection() {
             "Optate ditatem idenimp orionsed eosandem et volut omnimincto
             beraturem. Xerum is eum asi ulpa dolut rectur aspeditam".
           </p>
+        </div>
+
+        {/* Stamp photo column */}
+        <div className="relative flex sm:hidden justify-center max-sm:mb-15 ">
+          <div
+            ref={stampRef}
+            className="relative z-10 w-fit p-[1rem] "
+          >
+            <img
+              src="/img/ODG.png"
+              alt="A rider resting on rocks with a Himalayan mountain range behind him"
+              className=" w-full object-cover object-center relative"
+            />
+          </div>
+
+
         </div>
       </div>
     </section>

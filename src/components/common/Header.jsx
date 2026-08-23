@@ -153,8 +153,7 @@ function FullScreenMenu({ isOpen, onClose }) {
   const imagesRef = useRef([]);
   const navItemsRef = useRef([]);
   const listsRef = useRef(null);
-  const mobileListsRef = useRef(null);
-
+  
   const hasMounted = useRef(false);
   const [isJourneysHovered, setIsJourneysHovered] = useState(false);
   const hoverTimeoutRef = useRef(null);
@@ -193,13 +192,6 @@ function FullScreenMenu({ isOpen, onClose }) {
     hoverTimeoutRef.current = setTimeout(() => {
       setIsJourneysHovered(false);
     }, 150);
-  };
-
-  const handleJourneysClick = (e) => {
-    if (typeof window !== "undefined" && window.innerWidth < 1024) {
-      e.preventDefault();
-      setIsJourneysHovered((prev) => !prev);
-    }
   };
 
   // Animate Desktop Sub-menu list in/out
@@ -369,22 +361,22 @@ function FullScreenMenu({ isOpen, onClose }) {
                       onMouseEnter={isJourneys ? handleMouseEnter : undefined}
                       onMouseLeave={isJourneys ? handleMouseLeave : undefined}
                     >
-                      <Link
-                        href={link.href}
-                        onClick={(e) => {
-                          if (isJourneys) handleJourneysClick(e);
-                          else onClose();
-                        }}
+                      <div
                         className={`group flex items-center justify-between border-b border-neutral-200 py-3 text-2xl font-normal transition-colors sm:text-3xl ${
                           isActive ? "text-neutral-800" : "text-neutral-800 hover:text-neutral-400"
                         }`}
                       >
-                        <span>{link.label}</span>
-                        
-                        <div className="flex items-center gap-2">
+                        {/* We split this into a Link (for text navigation) and a Button (for arrow expanding) */}
+                        <Link
+                          href={link.href}
+                          onClick={() => onClose()}
+                          className="flex items-center flex-1"
+                        >
+                          <span>{link.label}</span>
+                          
                           {/* Active / Hover Arrow (Desktop) */}
                           <svg 
-                            className={`h-6 w-6 transition-all duration-300 hidden lg:block ${
+                            className={`h-6 w-6 ml-4 transition-all duration-300 hidden lg:block ${
                               isActive
                                 ? "opacity-100 translate-x-0 text-red-500" 
                                 : "opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 group-hover:text-current" 
@@ -395,20 +387,30 @@ function FullScreenMenu({ isOpen, onClose }) {
                           >
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 12h14M12 5l7 7-7 7" />
                           </svg>
+                        </Link>
 
-                          {/* Mobile Dropdown Arrow for Journeys */}
-                          {isJourneys && (
+                        {/* Mobile Dropdown Arrow for Journeys */}
+                        {isJourneys && (
+                          <button
+                            type="button"
+                            onClick={(e) => {
+                              e.preventDefault();
+                              setIsJourneysHovered((prev) => !prev);
+                            }}
+                            className="flex items-center justify-center p-2 lg:hidden cursor-pointer"
+                            aria-label="Toggle Journeys Sub-menu"
+                          >
                             <svg 
-                              className={`h-5 w-5 transition-transform duration-300 lg:hidden ${isJourneysHovered ? "rotate-180" : ""}`} 
+                              className={`h-6 w-6 transition-transform duration-300 ${isJourneysHovered ? "rotate-180" : ""}`} 
                               fill="none" 
                               viewBox="0 0 24 24" 
                               stroke="currentColor"
                             >
                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                             </svg>
-                          )}
-                        </div>
-                      </Link>
+                          </button>
+                        )}
+                      </div>
 
                       {/* Mobile Accordion Sub-menu inside Journeys tab */}
                       {isJourneys && (

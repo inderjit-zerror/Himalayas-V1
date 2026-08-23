@@ -131,7 +131,7 @@ export default function CuratedItineraries() {
             </a>
           </div>
 
-          <div className="col-span-12 h-[45vh] w-full lg:col-span-7 lg:h-[75vh] xl:px-20">
+          <div className="col-span-12 h-[45vh] w-full max-sm:pr-5 lg:col-span-7 lg:h-[75vh] xl:px-20">
             <div className="relative h-full w-full sm:w-[91%] sm:ml-auto lg:aspect-[4/5]">
               {IMAGES.map((item, i) => (
                 <div

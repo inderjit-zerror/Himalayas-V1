@@ -52,11 +52,11 @@ export default function StoriesSection() {
       <div className="relative z-10  mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
         
         {/* Left Column: Content & Links */}
-        <div className="flex flex-col space-y-10">
+        <div className="flex flex-col sm:space-y-10">
           
           {/* Header Text */}
           <div className="space-y-4">
-            <p className="text-[#a0a0a0] text-sm tracking-wider font-medium mb-[8vh]">
+            <p className="text-[#a0a0a0] text-sm tracking-wider font-medium sm:mb-[8vh]">
               // Stories from the Road
             </p>
             <p className="text-gray-800 text-base sm:text-lg leading-relaxed max-w-lg">
@@ -108,7 +108,7 @@ export default function StoriesSection() {
         </div>
 
         {/* Right Column: Image Composites */}
-        <div className="relative w-full flex justify-center lg:justify-end mt-12 lg:mt-0">
+        <div className="relative w-full flex justify-center lg:justify-end sm:mt-12 lg:mt-0">
           
           {/* 
             Main Stamp Image Container 

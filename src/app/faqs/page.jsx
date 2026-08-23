@@ -116,9 +116,11 @@ export default function FAQContactSection() {
 
   return (
     <section className="w-full bg-white text-black pb-20   ">
-      <div className=" mx-auto ">
+      <div className=" mx-auto relative ">
+
         {/* Header Title Section */}
         <div className="mb-20 w-full bg-[#f5f5f5] h-[40vh] max-sm:h-[60vh] px-5 sm:px-20 flex flex-col justify-center relative overflow-hidden">
+        <div className="w-full sm:hidden h-full absolute top-0 left-0 bg-black/20 z-10" />
           <p className="text-xs font-bold text-white! tracking-wider uppercase mb-3 z-10">
             // FREQUENTLY ASKED QUESTIONS
           </p>
@@ -143,7 +145,7 @@ export default function FAQContactSection() {
         </div>
 
         {/* 3-Column Grid Layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10  justify-between px-6 md:px-12 lg:px-20">
+        <div className="grid grid-cols-1 max-sm:gap-20 lg:grid-cols-12 gap-8 lg:gap-10  justify-between px-6 md:px-12 lg:px-20">
           {/* Column 1: Search & Navigation List (4 Cols) */}
           <div className="lg:col-span-4 sm:w-[25vw] flex flex-col gap-4">
             {/* Search Input */}

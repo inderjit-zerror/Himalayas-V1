@@ -9,18 +9,34 @@ export default function Filmstripgallery() {
   const drag = useRef({ startX: 0, startScrollX: 0, dragging: false, moved: false });
   const [isMobile, setIsMobile] = useState(false);
 
-  useEffect(() => {
-    const check = () => setIsMobile(window.innerWidth < 640);
-    check();
-    window.addEventListener('resize', check);
-    return () => window.removeEventListener('resize', check);
-  }, []);
-
+  // Fix 1: Ensure getMaxScroll doesn't return a positive number if the screen is wider than the track
   const getMaxScroll = () => {
     const track = trackRef.current;
     if (!track) return 0;
-    return -(track.scrollWidth - track.parentElement.clientWidth);
+    const max = track.parentElement.clientWidth - track.scrollWidth;
+    return Math.min(0, max); 
   };
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 640);
+      
+      // Fix 2: Clamp slider on resize (like phone rotation) to prevent it from getting stuck out of bounds
+      if (trackRef.current) {
+        const maxScroll = getMaxScroll();
+        const currentX = gsap.getProperty(trackRef.current, 'x');
+        if (currentX < maxScroll) {
+          gsap.set(trackRef.current, { x: maxScroll });
+        } else if (currentX > 0) {
+          gsap.set(trackRef.current, { x: 0 });
+        }
+      }
+    };
+    
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   // GSAP Slider Logic (arrow buttons)
   const slide = (direction) => {
@@ -119,9 +135,10 @@ export default function Filmstripgallery() {
       </div>
 
       {/* Gallery Track Container */}
+      {/* Fix 3: Changed justify-center to justify-start here so x: 0 aligns perfectly with the left edge */}
       <div
         ref={viewportRef}
-        className="w-full mx-auto overflow-visible flex justify-center items-center"
+        className="w-full mx-auto overflow-visible flex justify-start items-center"
       >
         <div
           ref={trackRef}
@@ -131,7 +148,6 @@ export default function Filmstripgallery() {
           onPointerLeave={onPointerUp}
           onPointerCancel={onPointerUp}
           onClickCapture={(e) => {
-            // Prevent accidental click/drag from triggering child link/click handlers
             if (drag.current.moved) {
               e.preventDefault();
               e.stopPropagation();
@@ -171,10 +187,6 @@ export default function Filmstripgallery() {
   );
 }
 
-/**
- * Reusable component for the black film-style border frame
- * seen in Screenshot 2026-08-13 122859.jpg
- */
 function FilmFrame({ src, alt, isLarge = false }) {
   return (
     <div
@@ -193,7 +205,6 @@ function FilmFrame({ src, alt, isLarge = false }) {
         />
       </div>
 
-      {/* Decorative vertical film text simulation */}
       <div
         className="absolute right-0.5 sm:right-1 top-1/2 -translate-y-1/2 flex items-center justify-center text-[#d1d1d1] text-[6px] sm:text-[7px] md:text-[9px] tracking-widest opacity-60 pointer-events-none"
         style={{ writingMode: 'vertical-rl' }}
