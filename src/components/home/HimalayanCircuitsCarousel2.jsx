@@ -95,7 +95,7 @@ export default function HimalayanCircuitsCarousel2() {
             Himalayas
           </h2>
 
-          <p className="max-w-xl ">
+          <p className="sm:w-[46vw] ">
            <apan className="font-extrabold!" >Journeys that Reveal a Different Side of India.</apan> From desert kingdoms and tropical coastlines to ancient cities and wildlife-rich forests, these journeys celebrate the remarkable diversity of the Indian subcontinent
           </p>
         </div>

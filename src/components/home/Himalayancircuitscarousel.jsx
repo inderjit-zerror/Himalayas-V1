@@ -271,12 +271,12 @@ export default function HimalayanCircuitsCarousel() {
   return (
     <section id="NEXTSHIFTSECTION" className="w-full bg-white pl-4 py-10 sm:py-24 md:pl-20">
       <div className="mx-auto w-full">
-        <div className="mb-10 flex flex-col justify-between gap-6 sm:gap-8 md:flex-row md:items-start pr-10">
+        <div className="mb-10 flex  justify-between   pr-20">
           <h2 className="heading-lg text-neutral-900 text-[3rem]! h-primary uppercase font-medium!">
             Himalayan <br className="hidden sm:block" />Circuits
           </h2> 
 
-          <p className="max-w-xl ">
+          <p className="sm:w-[44vw]  ">
            <span  className=" font-semibold!">Every Journey Begins with a Different Dream.</span> Some seek legendary mountain roads. Others are drawn to remote landscapes, living cultures or the joy of travelling slowly through extraordinary places.
           </p>
         </div>

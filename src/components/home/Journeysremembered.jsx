@@ -416,7 +416,7 @@ export default function JourneysRemembered() {
           
         </p>
          
-        <p className=" ml-auto max-w-3xl">
+        <p className=" sm:w-[44vw] ml-auto">
          
             <span className=" font-extrabold! text-black!" >Every traveller returns with a different story. </span>
           

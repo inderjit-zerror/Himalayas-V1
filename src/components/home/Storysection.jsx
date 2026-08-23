@@ -64,17 +64,17 @@ export default function StorySection() {
       ref={sectionRef}
       className="w-full bg-white sm:min-h-[90vh] px-6 py-15 md:px-20 flex flex-col justify-between md:py-20"
     >
-      <div className="mx-auto grid grid-cols-1 h-auto my-auto  gap-10 md:grid-cols-2 md:gap-16 items-center">
+      <div className="mx-auto grid grid-cols-1 h-auto my-auto  gap-10 md:grid-cols-2 md:gap-16 items-start">
         {/* Left: big headline */}
-        <h2 className="h-primary text-neutral-900 ">
+        <h2 className="h-primary max-w-xl text-neutral-900  ">
           The best journeys are shaped over time
         </h2>
 
         {/* Right: lead line + word-reveal paragraph */}
-        <div className="flex justify-end ml-auto items-center md:pt-2 ">
+        <div className="flex justify-end ml-auto sm:w-[50vw] items-center  sm:pr-30 ">
           <p
             ref={paraRef}
-            className="max-w-md p-large "
+            className=" p-large "
           >
             <span className="font-semibold text-neutral-900">
               {LEAD_LINE}{" "}

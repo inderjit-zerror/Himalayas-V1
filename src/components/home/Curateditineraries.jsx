@@ -90,9 +90,9 @@ export default function CuratedItineraries() {
             </p>
 
             <h2 className="ci-heading h-primary heading-xl mb-6 text-neutral-900 lg:mb-8">
-              Curated
-              <br />
-              itineraries
+              Curated 
+              <br  className="max-sm:hidden" />
+               itineraries
             </h2>
 
             <p className="ci-copy mb-8 max-w-md lg:mb-10 text-neutral-600">
@@ -132,7 +132,7 @@ export default function CuratedItineraries() {
           </div>
 
           <div className="col-span-12 h-[45vh] w-full lg:col-span-7 lg:h-[75vh] xl:px-20">
-            <div className="relative h-full w-full lg:aspect-[4/5]">
+            <div className="relative h-full w-full sm:w-[91%] sm:ml-auto lg:aspect-[4/5]">
               {IMAGES.map((item, i) => (
                 <div
                   key={item.src}

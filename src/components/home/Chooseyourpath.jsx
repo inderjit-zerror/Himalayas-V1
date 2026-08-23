@@ -5,6 +5,7 @@ import { gsap } from "gsap";
 import { ChevronRight, ChevronDown } from "lucide-react";
 import BTNA from "../common/BTNA";
 import BTNB from "../common/BTNB";
+import Link from "next/link";
 
 const HIMALAYAN_JOURNEYS = [
   { label: "Ladakh", href: "/journeys/ladakh" },
@@ -100,11 +101,17 @@ export default function ChooseYourPath() {
           className="relative mt-8 flex flex-col gap-4  sm:flex-row sm:flex-wrap sm: justify-between w-full sm:py-8 "
         >
           
-
+          <Link href="/journeys">
             <BTNA txt={'EXPLORE JOURNEYS'} />
+          </Link>
 
+          <Link href="/faqs">
             <BTNB txt={'CUSTOMISE JOURNEYS'} />
+          </Link>
+
+          <Link href="/journal">
             <BTNB txt={'READ JOURNALS'} />
+          </Link>
            
 
             

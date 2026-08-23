@@ -1,3 +1,4 @@
+
 import ChooseYourPath from "@/components/home/Chooseyourpath";
 import CuratedItineraries from "@/components/home/Curateditineraries";
 import Hero from "@/components/home/Hero";
@@ -16,6 +17,7 @@ import { createPageMetadata } from "@/lib/seo";
 const HomePage = () => {
   return (
     <>
+    
       <Hero />
       <StorySection />
       <Video />

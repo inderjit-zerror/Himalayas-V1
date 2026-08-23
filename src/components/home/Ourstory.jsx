@@ -230,13 +230,13 @@ export default function OurStory() {
           // Our Story
         </p>
 
-        <div className="grid grid-cols-1 gap-8 sm:gap-10 lg:grid-cols-12 lg:gap-8">
-          <h2 className="ost-heading col-span-12 h-primary text-neutral-900 lg:col-span-7">
+        <div className="flex justify-between items-start  max-sm:flex-col ">
+          <h2 className="ost-heading max-w-xl  h-primary text-neutral-900  max-sm:mb-10">
             More than
             <br className="max-sm:hidden" />a journey
           </h2>
 
-          <div className="ost-copy col-span-12 flex items-center lg:col-span-5">
+          <div className="  sm:w-[44vw]  flex items-center ">
             <p className="">
               
                 <span className="font-extrabold">
