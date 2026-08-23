@@ -313,7 +313,7 @@ function FullScreenMenu({ isOpen, onClose }) {
 
       <div
         ref={panelRef}
-        className="relative flex h-full w-full flex-col overflow-y-auto bg-white sm:w-[95vw] sm:h-[85vh] sm:m-auto px-5 py-6 sm:overflow-hidden"
+        className="relative flex h-full w-full flex-col overflow-y-auto  bg-white sm:w-[95vw] sm:h-[85vh] sm:m-auto px-5 py-6 sm:overflow-hidden"
       >
         {/* Close Button */}
         <button
@@ -353,7 +353,7 @@ function FullScreenMenu({ isOpen, onClose }) {
           </div>
           
           {/* Right Column / Main Content */}
-          <div className="order-1 flex w-full flex-col justify-start items-center gap-6 sm:flex-row lg:order-2 lg:h-[95%] lg:w-[45%] overflow-y-auto">
+          <div className="order-1 flex w-full flex-col justify-start items-center gap-6 sm:flex-row lg:order-2 lg:h-[95%] lg:w-[45%] overflow-y-auto sm:overflow-hidden">
             
             {/* Navigation links */}
             <nav className="w-full lg:w-1/2">
