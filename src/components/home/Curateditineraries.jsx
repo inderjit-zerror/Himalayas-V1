@@ -86,7 +86,7 @@ export default function CuratedItineraries() {
         <div className="mx-auto w-full grid grid-cols-1 items-center gap-10 lg:grid-cols-12 lg:gap-16">
           <div className="col-span-12 lg:col-span-5 relative z-20">
             <p className="ci-eyebrow eyebrow-text mb-4 text-neutral-400 lg:mb-6">
-              [ DESTINATIONS ]
+              // DESTINATIONS 
             </p>
 
             <h2 className="ci-heading h-primary heading-xl mb-6 text-neutral-900 lg:mb-8">
@@ -95,7 +95,7 @@ export default function CuratedItineraries() {
                itineraries
             </h2>
 
-            <p className="ci-copy mb-8 max-w-md lg:mb-10 text-neutral-600">
+            <p className="ci-copy mb-8 max-w-md lg:mb-10 text-neutral-600 max-sm:pr-5">
               From the high-altitude deserts of Ladakh and the timeless
               villages of Spiti to the mountain kingdoms of Nepal and
               Bhutan, the dawn-lit landscapes of Arunachal Pradesh, the

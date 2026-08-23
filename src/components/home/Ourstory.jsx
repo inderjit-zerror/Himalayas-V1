@@ -239,12 +239,12 @@ export default function OurStory() {
       className="w-full bg-white h-fit px-4 py-16 sm:px-20 lg:px-20 lg:pb-10 lg:pt-20 "
     >
       <div className="mx-auto w-full  sm:min-h-[90vh] flex flex-col justify-between ">
-        <p className="ost-eyebrow eyebrow-text mb-6 text-neutral-400">
+        <p className="ost-eyebrow eyebrow-text mb-6 max-sm:mb-2 text-neutral-400">
           // Our Story
         </p>
 
         <div className="flex justify-between items-start  max-sm:flex-col ">
-          <h2 className="ost-heading max-w-xl  h-primary text-neutral-900  max-sm:mb-10">
+          <h2 className="ost-heading max-w-xl  h-primary text-neutral-900  max-sm:mb-5">
             More than
             <br className="max-sm:hidden" />a journey
           </h2>
@@ -298,7 +298,7 @@ export default function OurStory() {
             </span>
           </p>
 
-          <Link href="/our-story">
+          <Link href="/our-story" className="max-sm:w-full">
          
             <BTNB txt={"MEET THE TEAM"} />
           </Link>

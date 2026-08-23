@@ -96,7 +96,6 @@ export default function Header() {
     >
       <div
         ref={bgRef}
-        // Removed translate-y-[-150%] so GSAP controls transforms entirely
         className="pointer-events-none flex absolute inset-0 -z-10 bg-white"
         aria-hidden="true"
       />
@@ -129,7 +128,7 @@ export default function Header() {
         <button
           type="button"
           onClick={() => setIsMenuOpen(true)}
-          className="flex items-center gap-2 btn-text pr-5 text-[1rem] text-neutral-900 sm:text-base"
+          className="flex items-center gap-2 btn-text pr-5 text-[1rem] text-neutral-900 sm:text-base cursor-pointer"
           aria-label="Open menu"
           aria-expanded={isMenuOpen}
         >
@@ -154,7 +153,7 @@ function FullScreenMenu({ isOpen, onClose }) {
   const imagesRef = useRef([]);
   const navItemsRef = useRef([]);
   const listsRef = useRef(null);
-  const contactRef = useRef(null);
+  const mobileListsRef = useRef(null);
 
   const hasMounted = useRef(false);
   const [isJourneysHovered, setIsJourneysHovered] = useState(false);
@@ -182,13 +181,15 @@ function FullScreenMenu({ isOpen, onClose }) {
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, [isOpen, onClose]);
 
-  // Handle Journeys hover state with delay to allow smooth mouse transition
+  // Handle Journeys hover state (Desktop Only)
   const handleMouseEnter = () => {
+    if (window.innerWidth < 1024) return;
     if (hoverTimeoutRef.current) clearTimeout(hoverTimeoutRef.current);
     setIsJourneysHovered(true);
   };
 
   const handleMouseLeave = () => {
+    if (window.innerWidth < 1024) return;
     hoverTimeoutRef.current = setTimeout(() => {
       setIsJourneysHovered(false);
     }, 150);
@@ -201,11 +202,11 @@ function FullScreenMenu({ isOpen, onClose }) {
     }
   };
 
-  // Animate Journeys sub-menu list in/out responsive to screen size
+  // Animate Desktop Sub-menu list in/out
   useEffect(() => {
     if (!isOpen || !listsRef.current) return;
-
     const isMobile = window.innerWidth < 1024;
+    if (isMobile) return; // Managed separately for mobile
 
     if (isJourneysHovered) {
       gsap.to(listsRef.current, {
@@ -219,7 +220,7 @@ function FullScreenMenu({ isOpen, onClose }) {
     } else {
       gsap.to(listsRef.current, {
         autoAlpha: 0,
-        x: isMobile ? 0 : 40,
+        x: 40,
         display: "none",
         duration: 0.3,
         ease: "power2.in",
@@ -244,16 +245,12 @@ function FullScreenMenu({ isOpen, onClose }) {
         gsap.set(overlay, { display: "flex" });
         gsap.set(backdropRef.current, { opacity: 0 });
         gsap.set(panel, { clipPath: "inset(0% 0% 100% 0%)" });
-        gsap.set(
-          [closeBtnRef.current, logoRef.current, socialRef.current, contactRef.current],
-          { opacity: 0, y: 12 }
-        );
+        gsap.set([closeBtnRef.current, logoRef.current, socialRef.current], { opacity: 0, y: 12 });
         gsap.set(images, { opacity: 0, y: 24 });
         gsap.set(navItems, { opacity: 0, y: 24 });
 
-        if (listsRef.current) {
-          const isMobile = window.innerWidth < 1024;
-          gsap.set(listsRef.current, { autoAlpha: 0, x: isMobile ? 0 : 40, display: "none" });
+        if (listsRef.current && window.innerWidth >= 1024) {
+          gsap.set(listsRef.current, { autoAlpha: 0, x: 40, display: "none" });
         }
 
         const tl = gsap.timeline({ defaults: { ease: "power3.out" } });
@@ -266,8 +263,7 @@ function FullScreenMenu({ isOpen, onClose }) {
             "-=0.25"
           )
           .to(images, { opacity: 1, y: 0, duration: 0.5, stagger: 0.1 }, "-=0.2")
-          .to(navItems, { opacity: 1, y: 0, duration: 0.45, stagger: 0.07 }, "-=0.35")
-          .to(contactRef.current, { opacity: 1, y: 0, duration: 0.45 }, "-=0.3");
+          .to(navItems, { opacity: 1, y: 0, duration: 0.45, stagger: 0.07 }, "-=0.35");
       }, overlay);
 
       return () => ctx.revert();
@@ -289,7 +285,6 @@ function FullScreenMenu({ isOpen, onClose }) {
             ...images,
             ...navItems,
             listsRef.current,
-            contactRef.current,
           ],
           { opacity: 0, y: 12, duration: 0.25 }
         )
@@ -318,24 +313,25 @@ function FullScreenMenu({ isOpen, onClose }) {
 
       <div
         ref={panelRef}
-        className="relative flex h-full w-full flex-col overflow-y-auto sm:overflow-hidden bg-white sm:w-[95vw] sm:h-[85vh] sm:m-auto px-5 py-0 "
+        className="relative flex h-full w-full flex-col overflow-y-auto bg-white sm:w-[95vw] sm:h-[85vh] sm:m-auto px-5 py-6 sm:overflow-hidden"
       >
-        <div className="mt-5 flex flex-1 flex-col gap-8 sm:px-5 lg:flex-row lg:items-stretch lg:gap-12 lg:h-[calc(100%-80px)]">
+        {/* Close Button */}
+        <button
+          ref={closeBtnRef}
+          type="button"
+          onClick={onClose}
+          aria-label="Close menu"
+          className="absolute right-6 top-6 z-10 flex h-9 w-9 items-center justify-center text-neutral-700 transition-colors hover:text-neutral-400 cursor-pointer"
+        >
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M4 4L20 20M20 4L4 20" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+          </svg>
+        </button>
+
+        <div className="mt-4 flex flex-1 flex-col gap-8 sm:px-5 lg:flex-row lg:items-stretch lg:gap-12 lg:h-[calc(100%-40px)] overflow-y-auto lg:overflow-hidden">
           
-           <button
-            ref={closeBtnRef}
-            type="button"
-            onClick={onClose}
-            aria-label="Close menu"
-            className="flex h-8 w-8 items-center absolute right-10 justify-center text-neutral-700 transition-colors hover:text-neutral-400 sm:h-9 sm:w-9"
-          >
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true" className="sm:h-[22px] sm:w-[22px]">
-              <path d="M4 4L20 20M20 4L4 20" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
-            </svg>
-          </button>
-          
-          {/* Images container */}
-          <div className="order-2 grid pt-5 w-full shrink-0 grid-cols-2 gap-3 sm:gap-4 max-sm:hidden lg:order-1 lg:h-[95%] lg:w-[55%] lg:gap-5">
+          {/* Images container (Desktop Grid) */}
+          <div className="order-2 grid pt-2 w-full shrink-0 grid-cols-2 gap-3 sm:gap-4 hidden lg:grid lg:order-1 lg:h-[95%] lg:w-[55%] lg:gap-5">
             <div className="flex flex-col gap-3 sm:gap-4 lg:h-full lg:gap-5">
               {MENU_IMAGES.filter((img) => !img.tall).map((img, i) => (
                 <MenuImage
@@ -356,11 +352,11 @@ function FullScreenMenu({ isOpen, onClose }) {
             ))}
           </div>
           
-          {/* Right Column */}
-          <div className="order-1 flex w-full flex-col justify-start items-center gap-6 sm:flex-row lg:order-2 lg:h-[95%] lg:w-[45%]">
+          {/* Right Column / Main Content */}
+          <div className="order-1 flex w-full flex-col justify-start items-center gap-6 sm:flex-row lg:order-2 lg:h-[95%] lg:w-[45%] overflow-y-auto">
             
             {/* Navigation links */}
-            <nav className="w-full sm:w-1/2">
+            <nav className="w-full lg:w-1/2">
               <ul className="flex flex-col gap-1 sm:gap-2">
                 {MENU_LINKS.map((link, i) => {
                   const isJourneys = link.label.toUpperCase() === "JOURNEYS";
@@ -379,16 +375,16 @@ function FullScreenMenu({ isOpen, onClose }) {
                           if (isJourneys) handleJourneysClick(e);
                           else onClose();
                         }}
-                        className={`group flex items-center justify-between border-b border-neutral-200 py-2.5 text-2xl font-normal transition-colors sm:py-3 sm:text-3xl md:text-4xl ${
+                        className={`group flex items-center justify-between border-b border-neutral-200 py-3 text-2xl font-normal transition-colors sm:text-3xl ${
                           isActive ? "text-neutral-800" : "text-neutral-800 hover:text-neutral-400"
                         }`}
                       >
                         <span>{link.label}</span>
                         
                         <div className="flex items-center gap-2">
-                          {/* Active / Hover Arrow */}
+                          {/* Active / Hover Arrow (Desktop) */}
                           <svg 
-                            className={`h-6 w-6 transition-all duration-300 ${
+                            className={`h-6 w-6 transition-all duration-300 hidden lg:block ${
                               isActive
                                 ? "opacity-100 translate-x-0 text-red-500" 
                                 : "opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 group-hover:text-current" 
@@ -400,7 +396,7 @@ function FullScreenMenu({ isOpen, onClose }) {
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 12h14M12 5l7 7-7 7" />
                           </svg>
 
-                          {/* Existing Mobile Dropdown Arrow for Journeys */}
+                          {/* Mobile Dropdown Arrow for Journeys */}
                           {isJourneys && (
                             <svg 
                               className={`h-5 w-5 transition-transform duration-300 lg:hidden ${isJourneysHovered ? "rotate-180" : ""}`} 
@@ -413,25 +409,51 @@ function FullScreenMenu({ isOpen, onClose }) {
                           )}
                         </div>
                       </Link>
+
+                      {/* Mobile Accordion Sub-menu inside Journeys tab */}
+                      {isJourneys && (
+                        <div 
+                          className={`overflow-hidden transition-all duration-300 lg:hidden ${
+                            isJourneysHovered ? "max-h-[500px] opacity-100 py-4" : "max-h-0 opacity-0 py-0"
+                          }`}
+                        >
+                          <div className="flex flex-col gap-5 pl-4 bg-neutral-50/50 py-3 rounded-lg border-l-2 border-neutral-300">
+                            <LinkList title="Himalayan journeys" items={HIMALAYAN_JOURNEYS} onClose={onClose} />
+                            <LinkList title="Beyond Himalayas" items={BEYOND_HIMALAYAS} onClose={onClose} />
+                          </div>
+                        </div>
+                      )}
                     </li>
                   );
                 })}
               </ul>
             </nav>
 
-            {/* Sub-menu */}
+            {/* Desktop Sub-menu Panel */}
             <div
               ref={listsRef}
               onMouseEnter={handleMouseEnter}
               onMouseLeave={handleMouseLeave}
-              className="hidden w-full flex-col gap-6 opacity-0 sm:w-1/2 sm:gap-8"
+              className="hidden lg:flex w-1/2 flex-col gap-8 opacity-0"
             >
               <LinkList title="Himalayan journeys" items={HIMALAYAN_JOURNEYS} onClose={onClose} />
               <LinkList title="Beyond Himalayas" items={BEYOND_HIMALAYAS} onClose={onClose} />
             </div>
           </div>
-          
         </div>
+
+        {/* Mobile Images Container (Appears professionally at the bottom on smaller devices) */}
+        <div className="mt-8 grid grid-cols-3 gap-2.5 lg:hidden pt-4 border-t border-neutral-100">
+          {MENU_IMAGES.map((img, i) => (
+            <div key={img.label} className="relative h-28 w-full overflow-hidden rounded-md bg-neutral-200">
+              <Image src={img.src} alt={img.label} fill className="object-cover" />
+              <span className="absolute bottom-1.5 left-1.5 text-[10px] font-medium text-white drop-shadow">
+                {img.label}
+              </span>
+            </div>
+          ))}
+        </div>
+
       </div>
     </div>
   );
@@ -455,49 +477,19 @@ function MenuImage({ img, setRef, className }) {
 function LinkList({ title, items, onClose }) {
   return (
     <div>
-      <h5 className="border-b border-neutral-300 pb-2 text-sm font-semibold uppercase tracking-wide text-neutral-900">
+      <h5 className="border-b border-neutral-300 pb-2 text-xs sm:text-sm font-semibold uppercase tracking-wide text-neutral-900">
         {title}
       </h5>
-      <ul className="mt-3 flex flex-col gap-2">
+      <ul className="mt-2.5 flex flex-col gap-2">
         {items.map((item) => (
-          <li key={item} className="flex items-center gap-2 text-sm text-neutral-700">
+          <li key={item} className="flex items-center gap-2 text-xs sm:text-sm text-neutral-700">
             <span className="h-1 w-1 shrink-0 rounded-full bg-neutral-500" />
-            <Link href="#" onClick={onClose} className="hover:text-neutral-400">
+            <Link href="#" onClick={onClose} className="hover:text-neutral-400 transition-colors">
               {item}
             </Link>
           </li>
         ))}
       </ul>
     </div>
-  );
-}
-
-function SocialIcon({ name }) {
-  const common = { width: 16, height: 16, viewBox: "0 0 24 24", fill: "none", "aria-hidden": true };
-  if (name === "Instagram") {
-    return (
-      <svg {...common}>
-        <rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" strokeWidth="1.5" />
-        <circle cx="12" cy="12" r="4" stroke="currentColor" strokeWidth="1.5" />
-        <circle cx="17.5" cy="6.5" r="1" fill="currentColor" />
-      </svg>
-    );
-  }
-  if (name === "Facebook") {
-    return (
-      <svg {...common}>
-        <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="1.5" />
-        <path
-          d="M13.5 9h1.5V7h-1.5c-1.4 0-2.5 1.1-2.5 2.5V11H9.5v2H11v4h2v-4h1.5l.5-2H13v-1.3c0-.4.3-.7.5-.7Z"
-          fill="currentColor"
-        />
-      </svg>
-    );
-  }
-  return (
-    <svg {...common}>
-      <rect x="3" y="6" width="18" height="12" rx="3" stroke="currentColor" strokeWidth="1.5" />
-      <path d="M10.5 9.5L15 12L10.5 14.5V9.5Z" fill="currentColor" />
-    </svg>
   );
 }

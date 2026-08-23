@@ -86,7 +86,7 @@ export default function StorySection() {
       </div>
 
       {/* Bottom row: est. date, quote, CTA */}
-      <div className="mx-auto sm:mt-24 flex w-full flex-col items-start justify-between gap-6  sm:border-t sm: border-neutral-200 pt-8 md:flex-row md:items-center md:gap-4">
+      <div className="mx-auto sm:mt-24 flex w-full flex-col items-start justify-between gap-6  sm:border-t  border-neutral-200 pt-8 md:flex-row md:items-center md:gap-4">
         <p className="">
           [ EST. 1994 ]
         </p>
@@ -97,7 +97,7 @@ export default function StorySection() {
         </p>
 
 
-        <Link href="/journeys">
+        <Link href="/journeys" className="max-sm:w-full">
         <BTNA txt={'Explore Journeys'} />
         </Link>
 

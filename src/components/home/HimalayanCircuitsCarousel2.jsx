@@ -172,7 +172,7 @@ export default function HimalayanCircuitsCarousel2() {
         </div>
 
         {/* Footer row */}
-        <div className="mt-10 sm:mt-14 flex flex-col items-start justify-between gap-6 pr-10 md:flex-row md:items-center">
+        <div className="mt-10 sm:mt-14 flex flex-col items-start justify-between gap-6 pr-10 md:flex-row md:items-center max-sm:pr-5">
           <p className="">[ Est. 1994 ]</p>
           <p className=" text-center md:text-left normal-case">
             “Every region has its own landscape, its own rhythm and its own
@@ -180,7 +180,7 @@ export default function HimalayanCircuitsCarousel2() {
           </p>
           
 
-           <Link href="/journeys">
+           <Link href="/journeys" className="max-sm:w-full">
           <BTNB txt={'Explore Destinations'} />
            </Link>
           

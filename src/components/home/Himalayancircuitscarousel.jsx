@@ -272,12 +272,12 @@ export default function HimalayanCircuitsCarousel() {
   return (
     <section id="NEXTSHIFTSECTION" className="w-full bg-white pl-4 py-10 sm:py-24 md:pl-20">
       <div className="mx-auto w-full">
-        <div className="mb-10 flex  justify-between   pr-20">
+        <div className="mb-10 flex  justify-between  max-sm:flex-col  pr-20">
           <h2 className="heading-lg text-neutral-900 text-[3rem]! h-primary uppercase font-medium!">
             Himalayan <br className="hidden sm:block" />Circuits
           </h2> 
 
-          <p className="sm:w-[44vw]  ">
+          <p className="sm:w-[44vw] max-sm:mt-5 ">
            <span  className=" font-semibold!">Every Journey Begins with a Different Dream.</span> Some seek legendary mountain roads. Others are drawn to remote landscapes, living cultures or the joy of travelling slowly through extraordinary places.
           </p>
         </div>
@@ -349,7 +349,7 @@ export default function HimalayanCircuitsCarousel() {
           ))}
         </div>
 
-        <div className="mt-10 sm:mt-14 flex flex-col items-start justify-between gap-6 md:flex-row md:items-center pr-10">
+        <div className="mt-10 sm:mt-14 flex flex-col items-start justify-between gap-6 md:flex-row md:items-center max-sm:pr-5">
           <p className="">
             [ Est. 1994 ]
           </p>
@@ -357,7 +357,7 @@ export default function HimalayanCircuitsCarousel() {
             “Every region has its own landscape, its own rhythm and its own stories”
           </p>
 
-           <Link href="/journeys">
+           <Link href="/journeys" className="max-sm:w-full">
           <BTNA txt={'Explore Destinations'} />
            </Link>
          

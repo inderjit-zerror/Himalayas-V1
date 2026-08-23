@@ -98,7 +98,7 @@ export default function StoriesSection() {
 
           {/* Call to Action Button */}
 
-          <Link href={'/journal'}>
+          <Link href={'/journal'} >
           <div>
           <BTNA txt={'Visit The Journal'} />
             

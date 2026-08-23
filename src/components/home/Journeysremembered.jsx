@@ -537,7 +537,7 @@ export default function JourneysRemembered() {
           own stories&quot;
         </p>
 
-        <Link href={'/our-story'} >
+        <Link href={'/our-story'} className="max-sm:w-full" >
         <BTNB txt={'Read Their Stories'} />
         </Link>
         
