@@ -195,6 +195,7 @@
 import { useRef, useState, useEffect, useCallback } from "react";
 import { gsap } from "gsap";
 import BTNA from "../common/BTNA";
+import Link from "next/link";
 
 const CIRCUITS = [
   {
@@ -356,7 +357,9 @@ export default function HimalayanCircuitsCarousel() {
             “Every region has its own landscape, its own rhythm and its own stories”
           </p>
 
+           <Link href="/journeys">
           <BTNA txt={'Explore Destinations'} />
+           </Link>
          
         </div>
       </div>

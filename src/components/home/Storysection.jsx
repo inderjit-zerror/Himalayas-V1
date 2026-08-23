@@ -5,6 +5,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { MdKeyboardArrowRight } from "react-icons/md";
 import BTNA from "../common/BTNA";
+import Link from "next/link";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -95,7 +96,10 @@ export default function StorySection() {
           becomes experience.&rdquo;
         </p>
 
+
+        <Link href="/journeys">
         <BTNA txt={'Explore Journeys'} />
+        </Link>
 
         
       </div>

@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { Link } from "next-view-transitions";
 import Image from "next/image";
-import { usePathname } from "next/navigation"; // Imported to check active page
+import { usePathname } from "next/navigation";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -53,49 +53,51 @@ export default function Header() {
     const bg = bgRef.current;
     if (!nav || !bg) return;
 
-    gsap.set(bg, { yPercent: -150 });
-    gsap.set(nav, { paddingTop: "1.75rem", paddingBottom: "1.75rem" });
+    // Wrapped in gsap.context() for safe cleanup in Next.js/React Strict Mode
+    const ctx = gsap.context(() => {
+      gsap.set(bg, { yPercent: -150 });
+      gsap.set(nav, { paddingTop: "1.75rem", paddingBottom: "1.75rem" });
 
-    const tl = gsap.timeline({
-      scrollTrigger: {
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: document.body,
+          start: "top top",
+          end: "150 top",
+          scrub: 0.4,
+        },
+      });
+
+      // Using ease: "none" is recommended for scrubbed animations
+      tl.to(bg, { yPercent: 0, duration: 1, ease: "none" }, 0).to(
+        nav,
+        { paddingTop: "0.85rem", paddingBottom: "0.85rem", duration: 1, ease: "none" },
+        0
+      );
+
+      ScrollTrigger.create({
         trigger: document.body,
         start: "top top",
         end: "150 top",
-        scrub: 0.4,
-      },
+        onUpdate: (self) => {
+          if (nav) nav.dataset.scrolled = self.progress > 0.05 ? "true" : "false";
+        },
+      });
     });
 
-    tl.to(bg, { yPercent: 0, duration: 1, ease: "power2.out" }, 0).to(
-      nav,
-      { paddingTop: "0.85rem", paddingBottom: "0.85rem", duration: 1, ease: "power2.out" },
-      0
-    );
-
-    const st = ScrollTrigger.create({
-      trigger: document.body,
-      start: "top top",
-      end: "150 top",
-      onUpdate: (self) => {
-        if (nav) nav.dataset.scrolled = self.progress > 0.05 ? "true" : "false";
-      },
-    });
-
-    return () => {
-      tl.scrollTrigger?.kill();
-      st.kill();
-      tl.kill();
-    };
+    // Clean up all GSAP instances properly
+    return () => ctx.revert();
   }, []);
 
   return (
     <header
       ref={navRef}
       data-scrolled="false"
-      className="fixed top-0 left-0 z-50 w-full px-4 sm:px-6 md:px-20 transition-shadow duration-300 data-[scrolled=true]:shadow-sm"
+      className="fixed top-0 headerOG left-0 z-50 w-full px-4 sm:px-6 md:px-20 transition-shadow duration-300 data-[scrolled=true]:shadow-sm"
     >
       <div
         ref={bgRef}
-        className="pointer-events-none flex translate-y-[-150%] absolute inset-0 -z-10 bg-white"
+        // Removed translate-y-[-150%] so GSAP controls transforms entirely
+        className="pointer-events-none flex absolute inset-0 -z-10 bg-white"
         aria-hidden="true"
       />
 
@@ -141,7 +143,7 @@ export default function Header() {
 }
 
 function FullScreenMenu({ isOpen, onClose }) {
-  const pathname = usePathname(); // Hook to get the current URL path
+  const pathname = usePathname();
 
   const overlayRef = useRef(null);
   const backdropRef = useRef(null);
@@ -362,7 +364,7 @@ function FullScreenMenu({ isOpen, onClose }) {
               <ul className="flex flex-col gap-1 sm:gap-2">
                 {MENU_LINKS.map((link, i) => {
                   const isJourneys = link.label.toUpperCase() === "JOURNEYS";
-                  const isActive = pathname === link.href; // Check if this is the active page
+                  const isActive = pathname === link.href;
 
                   return (
                     <li
@@ -388,8 +390,8 @@ function FullScreenMenu({ isOpen, onClose }) {
                           <svg 
                             className={`h-6 w-6 transition-all duration-300 ${
                               isActive
-                                ? "opacity-100 translate-x-0 text-red-500" // Arrow is always visible and red if active
-                                : "opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 group-hover:text-current" // Hidden, slides in on hover if not active
+                                ? "opacity-100 translate-x-0 text-red-500" 
+                                : "opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 group-hover:text-current" 
                             }`}
                             fill="none" 
                             viewBox="0 0 24 24" 

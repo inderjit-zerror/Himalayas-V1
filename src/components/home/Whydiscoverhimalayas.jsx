@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import BTNB from "../common/BTNB";
+import Link from "next/link";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -172,11 +173,10 @@ export default function WhyDiscoverHimalayas() {
             they decide. If your question isn&apos;t here, let&apos;s
             talk&hellip;
           </p>
-          <a href="/" className="max-sm:hidden">
-
+          <Link href="/faqs" className="max-sm:hidden">
           <BTNB txt={'View All FAQs'} />
             
-          </a>
+          </Link>
         </div>
 
         {/* Right column: accordion */}
@@ -192,9 +192,9 @@ export default function WhyDiscoverHimalayas() {
 
           
 
-          <a href="/faq" className="sm:hidden ">
+          <Link href="/faqs" className="sm:hidden ">
              <BTNB txt={'View All FAQs'} />
-          </a>
+          </Link>
         </div>
       </div>
     </section>

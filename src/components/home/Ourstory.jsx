@@ -161,6 +161,7 @@ import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import BTNB from "../common/BTNB";
+import Link from "next/link";
 
 if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
@@ -168,8 +169,20 @@ if (typeof window !== "undefined") {
 
 const STATS = [
   { label: "Since", end: 1994, format: "plain", suffix: "", duration: 1.6 },
-  { label: "Travellers", end: 15000, format: "number", suffix: "+", duration: 2 },
-  { label: "Countries hosted", end: 40, format: "plain", suffix: "+", duration: 1.2 },
+  {
+    label: "Travellers",
+    end: 15000,
+    format: "number",
+    suffix: "+",
+    duration: 2,
+  },
+  {
+    label: "Countries hosted",
+    end: 40,
+    format: "plain",
+    suffix: "+",
+    duration: 1.2,
+  },
 ];
 
 export default function OurStory() {
@@ -238,17 +251,15 @@ export default function OurStory() {
 
           <div className="  sm:w-[44vw]  flex items-center ">
             <p className="">
-              
-                <span className="font-extrabold">
-                  For over three decades, we&apos;ve explored the Himalayas,
-                returning season after season to the places, people and
-                stories that continue to shape every journey we create, 
-                </span> 
-              
-               sharing not only remarkable landscapes but the stories,
-              cultures and friendships that make these mountains
-              unforgettable. Before we introduced travellers to the
-              Himalayas, the Himalayas were already teaching us.
+              <span className="font-extrabold">
+                For over three decades, we&apos;ve explored the Himalayas,
+                returning season after season to the places, people and stories
+                that continue to shape every journey we create,
+              </span>
+              sharing not only remarkable landscapes but the stories, cultures
+              and friendships that make these mountains unforgettable. Before we
+              introduced travellers to the Himalayas, the Himalayas were already
+              teaching us.
             </p>
           </div>
         </div>
@@ -287,9 +298,10 @@ export default function OurStory() {
             </span>
           </p>
 
-          <BTNB txt={'MEET THE TEAM'} />
-
+          <Link href="/our-story">
          
+            <BTNB txt={"MEET THE TEAM"} />
+          </Link>
         </div>
       </div>
     </section>

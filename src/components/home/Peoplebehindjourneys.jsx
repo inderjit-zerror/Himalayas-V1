@@ -136,6 +136,7 @@ import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import BTNA from "../common/BTNA";
+import Link from "next/link";
 
 if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
@@ -172,21 +173,18 @@ export default function PeopleBehindJourneys() {
         },
       });
 
-      gsap.from(
-        ".pbj-eyebrow, .pbj-heading, .pbj-bio, .pbj-cta",
-        {
-          opacity: 0,
-          y: 24,
-          duration: 0.8,
-          stagger: 0.1,
-          ease: "power3.out",
-          scrollTrigger: {
-            trigger: sectionRef.current,
-            start: "top 75%",
-            toggleActions: "play none none none",
-          },
-        }
-      );
+      gsap.from(".pbj-eyebrow, .pbj-heading, .pbj-bio, .pbj-cta", {
+        opacity: 0,
+        y: 24,
+        duration: 0.8,
+        stagger: 0.1,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: sectionRef.current,
+          start: "top 75%",
+          toggleActions: "play none none none",
+        },
+      });
     }, sectionRef);
 
     return () => ctx.revert();
@@ -208,14 +206,14 @@ export default function PeopleBehindJourneys() {
               className="pbj-polaroid w-full max-w-[280px] mx-auto sm:max-w-[400px] lg:max-w-[500px] aspect-4/5 -rotate-3 bg-[#dfdfdf] p-3 pb-16 sm:p-4 sm:pb-20 shadow-[0_10px_40px_-15px_rgba(0,0,0,0.15)] border border-neutral-100"
               style={{ transformOrigin: "center" }}
             >
-             <div className="w-[100%] h-[100%] overflow-hidden">
-               <img
-    src="/img/9.jpg"
-    alt="Vinod and Nadia"
-    className="h-full w-full object-cover object-[50%_-20%] scale-[1.6] flex translate-y-[15%]"
-    draggable={false}
-  />
-             </div>
+              <div className="w-[100%] h-[100%] overflow-hidden">
+                <img
+                  src="/img/9.jpg"
+                  alt="Vinod and Nadia"
+                  className="h-full w-full object-cover object-[50%_-20%] scale-[1.6] flex translate-y-[15%]"
+                  draggable={false}
+                />
+              </div>
             </div>
           </div>
 
@@ -236,18 +234,22 @@ export default function PeopleBehindJourneys() {
                   </h5>
                   <p className="">
                     <p className=" ">
-                    <span className="text-[#e14032]! font-semibold">  {member.tag} </span> {member.text}
+                      <span className="text-[#e14032]! font-semibold">
+                        {" "}
+                        {member.tag}{" "}
+                      </span>{" "}
+                      {member.text}
                     </p>{" "}
-                    
                   </p>
                 </div>
               ))}
             </div>
 
-            <div className="pbj-cta mt-10 sm:mt-14 flex max-w-lg justify-start ">
-              <BTNA txt={'MEET THE TEAM'} />
-              
-            </div>
+            <Link href="/journeys">
+              <div className="pbj-cta mt-10 sm:mt-14 flex max-w-lg justify-start ">
+                <BTNA txt={"MEET THE TEAM"} />
+              </div>
+            </Link>
           </div>
         </div>
       </div>

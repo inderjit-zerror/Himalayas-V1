@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import BTNA from '../common/BTNA';
+import Link from 'next/link';
 
 export default function StoriesSection() {
   const journalLinks = [
@@ -97,10 +98,12 @@ export default function StoriesSection() {
 
           {/* Call to Action Button */}
 
+          <Link href={'/journal'}>
           <div>
           <BTNA txt={'Visit The Journal'} />
             
           </div>
+          </Link>
 
         </div>
 
