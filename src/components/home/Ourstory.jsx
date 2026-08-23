@@ -246,7 +246,7 @@ export default function OurStory() {
         <div className="flex justify-between items-start  max-sm:flex-col ">
           <h2 className="ost-heading max-w-xl  h-primary text-neutral-900  max-sm:mb-5">
             More than
-            <br className="max-sm:hidden" />a journey
+            <br className="max-sm:hidden" /> a journey
           </h2>
 
           <div className="  sm:w-[44vw]  flex items-center ">

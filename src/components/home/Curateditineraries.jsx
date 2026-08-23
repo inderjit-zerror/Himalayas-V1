@@ -92,7 +92,10 @@ export default function CuratedItineraries() {
             <h2 className="ci-heading h-primary heading-xl mb-6 text-neutral-900 lg:mb-8">
               Curated 
               <br  className="max-sm:hidden" />
-               itineraries
+              <span className="max-sm:ml-2">
+
+               Itineraries
+              </span>
             </h2>
 
             <p className="ci-copy mb-8 max-w-md lg:mb-10 text-neutral-600 max-sm:pr-5">

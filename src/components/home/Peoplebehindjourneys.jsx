@@ -223,7 +223,10 @@ export default function PeopleBehindJourneys() {
               <br className="hidden sm:block" />
               behind the
               <br className="hidden sm:block" />
+              <span className="max-sm:ml-2">
+
               journeys
+              </span>
             </h2>
 
             <div className="max-w-lg space-y-6 sm:space-y-8">
