@@ -1,10 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import url("https://use.typekit.net/sgc6ndu.css");
 
 html,
 body {
   font-size: 14px;
-  font-family: Inter, sans-serif;
-  font-display: swap;
+  font-family: "inter-variable", sans-serif;
+  /* font-variation-settings: "slnt" 0, "wght" 400; */
 }
 
 h1,
@@ -44,7 +44,7 @@ h6 {
 
 p {
   font-size: 1rem;
-  font-weight:100;
+  font-weight: 100;
   line-height: 1.7rem;
   color: #202020;
 }
