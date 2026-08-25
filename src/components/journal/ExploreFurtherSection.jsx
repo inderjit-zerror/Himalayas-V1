@@ -65,7 +65,12 @@ export default function ExploreFurtherSection() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="w-full bg-white text-black py-16 px-6 md:px-12 lg:px-16 overflow-x-hidden ">
+    <section ref={sectionRef} className="w-full  text-black py-16 px-6 md:px-12 lg:px-16 overflow-x-hidden  relative">
+
+        <div className="absolute top-0 w-full h-full left-0 z-[-1] overflow-hidden opacity-10 ">
+                <img src="/img/BGOVER.png" alt="IMG" className="w-full h-full " />
+              </div>
+
       <div className=" mx-auto">
         
         {/* Header Section */}
@@ -95,10 +100,10 @@ export default function ExploreFurtherSection() {
                 />
               </div>
 
-              {/* Tag
+              {/* Tag */}
               <p className="text-xs text-gray-700 font-medium mb-3">
                 [ {item.category} ]
-              </p> */}
+              </p>
 
               {/* Title */}
               <h5 className="text-base font-bold capitalize! text-black leading-snug mb-2 group-hover:underline underline-offset-2">
@@ -111,11 +116,11 @@ export default function ExploreFurtherSection() {
               </p>
 
               {/* Call to Action */}
-              <div className="flex items-center gap-1.5 text-xs font-bold text-black mt-5">
+              <div className="flex items-center gap-1.5 text-xs font-bold! text-black mt-5">
                 <span className="inline-block transition-transform duration-300 group-hover:translate-x-1">
                   &rarr;
                 </span>
-                <span>{item.action}</span>
+                <span className=' font-bold!'>{item.action}</span>
               </div>
             </article>
           ))}

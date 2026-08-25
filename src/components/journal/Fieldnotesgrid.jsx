@@ -101,8 +101,11 @@ export default function FieldNotesGrid() {
   return (
     <section
       ref={sectionRef}
-      className="mx-auto  px-6 py-16 sm:py-20 md:px-20 overflow-x-hidden"
+      className="mx-auto  px-6 py-16 sm:py-20 md:px-20 overflow-x-hidden relative"
     >
+
+  
+
       <div className="grid grid-cols-1 gap-x-12 gap-y-12 sm:grid-cols-2">
         {NOTES.map((note, i) => (
           <a

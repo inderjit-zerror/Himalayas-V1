@@ -99,8 +99,13 @@ export default function StoryWithPolaroid() {
   return (
     <section
       ref={sectionRef}
-      className="mx-auto grid  grid-cols-1 gap-16 px-6 py-20 md:grid-cols-2 md:gap-20 md:px-20 md:py-28 overflow-x-hidden"
+      className="mx-auto grid  grid-cols-1 gap-16 px-6 py-20 md:grid-cols-2 md:gap-20 md:px-20 md:py-28 overflow-x-hidden  relative"
     >
+
+      <div className="absolute top-0 w-full h-full left-0 z-[-1] overflow-hidden">
+      <img src="/img/BBG2.png" alt="IMG" className="w-full h-full " />
+      </div>
+
       {/* ---------------------------------------------------------- */}
       {/* LEFT: body copy                                             */}
       {/* ---------------------------------------------------------- */}
