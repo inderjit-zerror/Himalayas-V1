@@ -157,17 +157,17 @@ export default function Filmstripgallery() {
           style={{ touchAction: 'pan-y' }}
         >
           {/* Image 1: Tents */}
-          <FilmFrame src="https://images.unsplash.com/photo-1523987355523-c7b5b0dd90a7?q=80&w=800&auto=format&fit=crop" alt="Camping by the lake" />
+          <FilmFrame src="/img/CD1.jpeg" alt="Camping by the lake" />
 
           {/* Image 2: Goats */}
-          <FilmFrame src="https://images.unsplash.com/photo-1510525009512-ad7fc13eefab?q=80&w=800&auto=format&fit=crop" alt="Goats in the mountains" />
+          <FilmFrame src="/img/CD2.jpeg" alt="Goats in the mountains" />
 
           {/* Image 3: Stupa (Featured/Larger) */}
-          <FilmFrame src="/pic/16.jpg" alt="Mountain Stupa" isLarge={true} />
+          <FilmFrame src="/img/CD3.jpeg" alt="Mountain Stupa" isLarge={true} />
 
           {/* Image 4: Portrait with metadata below */}
           <div className="flex flex-col">
-            <FilmFrame src="https://images.unsplash.com/photo-1532012197267-da84d127e765?q=80&w=800&auto=format&fit=crop" alt="Portrait of an older man" />
+            <FilmFrame src="/img/CD4.jpeg" alt="Portrait of an older man" />
             <div className="mt-3 sm:mt-4 text-xs sm:text-sm leading-relaxed text-gray-800">
               <p><span className="font-semibold">Subject:</span> Itsuki Takahashi</p>
               <p><span className="font-semibold">Project: </span> Feature in Yaraeleon Mag</p>

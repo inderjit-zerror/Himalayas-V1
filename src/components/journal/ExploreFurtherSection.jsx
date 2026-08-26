@@ -10,7 +10,7 @@ const articles = [
     title: "The Morning Pangong Stood Completely Still",
     description: "Why the lake never looks the same twice, no matter how often you return.",
     action: "Read Article",
-    image: "/pic/15.jpg"
+    image: "/img/CD1.jpeg"
   },
   {
     id: 2,
@@ -18,7 +18,7 @@ const articles = [
     title: "Why We Always Spend Two Nights in Leh",
     description: "The mountains reward patience long before they reward altitude.",
     action: "Read Article",
-    image: "/pic/16.jpg"
+    image: "/img/CD1.jpeg"
   },
   {
     id: 3,
@@ -26,7 +26,7 @@ const articles = [
     title: "A Crossing I'll Never Forget",
     description: "One rider's first experience of crossing Umling La.",
     action: "Read Article",
-    image: "/pic/11.jpg"
+    image: "/img/CD1.jpeg"
   },
   {
     id: 4,
@@ -34,7 +34,7 @@ const articles = [
     title: "To the Highest Road on Earth",
     description: "Explore the complete itinerary through the Indus Valley, Changthang and Umling La.",
     action: "View Journey",
-    image: "/pic/13.jpg"
+    image: "/img/CD1.jpeg"
   }
 ];
 

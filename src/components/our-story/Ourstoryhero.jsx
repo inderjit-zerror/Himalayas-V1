@@ -65,8 +65,9 @@ export default function OurStoryHero() {
 
       {/* Background photo */}
       <div className="absolute inset-0 w-full h-full">
-        <img
-          src="https://images.unsplash.com/photo-1721046547874-f62a19e8ee38?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        <video
+         muted loop autoPlay
+          src="/videos/OSV.mp4"
           alt="Aerial view of a motorcyclist riding a mountain road through the Himalayan foothills"
           className="h-full w-full object-cover"
         />

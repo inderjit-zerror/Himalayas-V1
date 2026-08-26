@@ -1,8 +1,8 @@
-'use client';
+"use client";
 
-import React, { useEffect, useRef } from 'react';
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import React, { useEffect, useRef } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -15,46 +15,52 @@ export default function NotebookHeroSection() {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
+      const tl = gsap.timeline({ defaults: { ease: "power3.out" } });
 
       // Background subtle zoom out
       tl.fromTo(
         bgRef.current,
         { scale: 1.1, opacity: 0.8 },
-        { scale: 1, opacity: 1, duration: 1.4 }
+        { scale: 1, opacity: 1, duration: 1.4 },
       )
-      // Main title slide & fade in
-      .fromTo(
-        titleRef.current,
-        { y: 30, opacity: 0 },
-        { y: 0, opacity: 1, duration: 1 },
-        '-=1.0'
-      )
-      // Notebook paper slide in from right
-      .fromTo(
-        notePaperRef.current,
-        { x: 50, opacity: 0 },
-        { x: 0, opacity: 1, duration: 0.9 },
-        '-=0.7'
-      )
-      // Polaroid image pop & rotate entrance
-      .fromTo(
-        polaroidRef.current,
-        { scale: 0.8, opacity: 0, rotate: 12 },
-        { scale: 1, opacity: 1, rotate: 4, duration: 0.8, ease: 'back.out(1.5)' },
-        '-=0.4'
-      );
+        // Main title slide & fade in
+        .fromTo(
+          titleRef.current,
+          { y: 30, opacity: 0 },
+          { y: 0, opacity: 1, duration: 1 },
+          "-=1.0",
+        )
+        // Notebook paper slide in from right
+        .fromTo(
+          notePaperRef.current,
+          { x: 50, opacity: 0 },
+          { x: 0, opacity: 1, duration: 0.9 },
+          "-=0.7",
+        )
+        // Polaroid image pop & rotate entrance
+        .fromTo(
+          polaroidRef.current,
+          { scale: 0.8, opacity: 0, rotate: 12 },
+          {
+            scale: 1,
+            opacity: 1,
+            rotate: 4,
+            duration: 0.8,
+            ease: "back.out(1.5)",
+          },
+          "-=0.4",
+        );
 
       // --- PARALLAX ON SCROLL ---
 
       // Background image drifts slower than scroll (classic parallax)
       gsap.to(bgRef.current, {
         yPercent: 15,
-        ease: 'none',
+        ease: "none",
         scrollTrigger: {
           trigger: containerRef.current,
-          start: 'top top',
-          end: 'bottom top',
+          start: "top top",
+          end: "bottom top",
           scrub: true,
         },
       });
@@ -62,11 +68,11 @@ export default function NotebookHeroSection() {
       // Notebook paper drifts slightly, opposite-ish direction for depth
       gsap.to(notePaperRef.current, {
         yPercent: -6,
-        ease: 'none',
+        ease: "none",
         scrollTrigger: {
           trigger: containerRef.current,
-          start: 'top top',
-          end: 'bottom top',
+          start: "top top",
+          end: "bottom top",
           scrub: true,
         },
       });
@@ -74,11 +80,11 @@ export default function NotebookHeroSection() {
       // Polaroid drifts faster, creating a "closer to camera" feel
       gsap.to(polaroidRef.current, {
         yPercent: -18,
-        ease: 'none',
+        ease: "none",
         scrollTrigger: {
           trigger: containerRef.current,
-          start: 'top top',
-          end: 'bottom top',
+          start: "top top",
+          end: "bottom top",
           scrub: true,
         },
       });
@@ -88,8 +94,8 @@ export default function NotebookHeroSection() {
   }, []);
 
   return (
-    <section 
-      ref={containerRef} 
+    <section
+      ref={containerRef}
       className="relative w-full max-sm:h-[100svh] sm:min-h-[300vh] bg-stone-900 text-stone-900 overflow-hidden flex flex-col justify-between p-6 md:p-12 lg:p-16 overflow-x-hidden"
     >
       {/* Background Image Container */}
@@ -106,23 +112,63 @@ export default function NotebookHeroSection() {
 
       {/* Main Content Layout */}
       <div className="relative z-10  w-full mx-auto flex flex-col h-full gap-8 items-start pt-20">
-        
         {/* Left Column: Category & Hero Headline */}
-        <div ref={titleRef} className="lg:col-span-7 flex flex-col justify-start pt-4 z-20">
+        <div
+          ref={titleRef}
+          className="lg:col-span-7 flex flex-col justify-start pt-4 z-20"
+        >
           <p className="text-xs md:text-sm font-bold tracking-widest text-stone-800 max-sm:text-white! uppercase mb-4 drop-shadow-sm">
             // VINOD'S NOTEBOOK / LADAKH / OCTOBER 2024
           </p>
           <h1 className="text-[8vw]! font-black uppercase tracking-tight text-stone-800 max-sm:text-white! leading-[0.88]  drop-shadow-sm">
-            The Road 
-            <br/>
-            I Never
-            
-             Grow <br/> Tired Of
+            The Road
+            <br />
+            I Never Grow <br /> Tired Of
           </h1>
         </div>
 
-        <div className=' h-fit absolute w-[60%] max-sm:w-[70%]  right-[-8%]  top-[40%] z-10'>
-        <img src="/img/BBG.png" alt="IMg" className='  w-full sm:h-full object-cover object-center' />
+        <div className=" h-fit absolute w-[60%] max-sm:w-[70%]  right-[-8%]  max-sm:top-[40%] sm:top-[100%] z-10">
+          <img
+            src="/img/32.jpeg"
+            alt="IMg"
+            className="  w-full sm:h-full rotate-90 object-cover object-center"
+          />
+
+          <img src="/img/IGB.jpeg" alt="img" className="w-1/3 h-fit absolute max-sm:-bottom-25 sm:-bottom-70 left-[40%] -translate-x-1/2 -rotate-15" />
+
+          <div class="w-[320px] p-6  absolute max-sm:-top-[80%] sm:top-0 max-sm:-left-[25%] sm:left-[20%] max-sm:scale-[0.4] ">
+            {/* <!-- Title --> */}
+            <p class="text-[14px] font-extrabold! uppercase leading-[1.35] tracking-wide mb-5">
+              AFTER THIRTY YEARS OF RIDING THROUGH LADAKH, PEOPLE STILL ASK ME
+              WHICH ROAD IS MY FAVOURITE. THE ANSWER HAS NEVER STAYED THE SAME.
+            </p>
+
+            {/* <!-- Read Time --> */}
+            <p class="text-[12px] font-extrabold! uppercase tracking-wide mb-5">
+              12 MIN READ
+            </p>
+
+            {/* <!-- Tag --> */}
+            <p class="text-[13px] font-semibold tracking-wide mb-2">
+              [ NOTEBOOK ENTRY ]
+            </p>
+
+            {/* <!-- Hand-drawn underline effect --> */}
+            <div class="w-28 h-2 bg-neutral-900 rounded-full mb-4 -rotate-1"></div>
+
+            {/* <!-- Location Heading --> */}
+            <h4 class="text-[13px] font-bold! leading-snug mb-1">
+              Somewhere between Leh and Hanle
+            </h4>
+
+            {/* <!-- Body Text --> */}
+            <p class="text-[13px] leading-[1.45] font-normal text-neutral-800">
+              People often ask how many times I've ridden these roads. I stopped
+              counting years ago. The number isn't important. What matters is
+              that every journey still gives me a reason to stop, look around
+              and stay a little longer than I planned.
+            </p>
+          </div>
         </div>
       </div>
     </section>
