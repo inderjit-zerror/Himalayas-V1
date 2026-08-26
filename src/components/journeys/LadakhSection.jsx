@@ -8,15 +8,16 @@ export default function LadakhSection() {
           
           {/* Section 1: Why Ride Ladakh? */}
           <div className="space-y-4 ">
-            <h3 className=" ">
+            <h3 className=" capitalize! ">
               Why Ride Ladakh?
             </h3>
             <div className="space-y-3 leading-relaxed text-base md:text-lg">
-              <p className=" ">
-                Ladakh is Discover Himalayas' signature high-altitude expedition.
-              </p>
+              
               <p className=" sm:max-w-[40vw]">
-                Beyond the Great Himalayan Range lies a landscape shaped by the ancient
+                <span className=" font-semibold!">
+                Ladakh is Discover Himalayas' signature high-altitude expedition. 
+              </span> 
+                 Beyond the Great Himalayan Range lies a landscape shaped by the ancient
                 Silk Route, where the Indus Valley, remote communities and Tibetan
                 Buddhist culture come together. For over three decades, Discover
                 Himalayas has explored and refined these roads, creating a journey that
@@ -27,7 +28,7 @@ export default function LadakhSection() {
 
           {/* Section 2: The Route */}
           <div className="space-y-4 pt-2 w-fit">
-            <h3 className="text-3xl md:text-4xl font-extrabold text-black tracking-tight">
+            <h3 className="text-3xl md:text-4xl capitalize! font-extrabold text-black tracking-tight">
               The Route
             </h3>
             <p className="leading-relaxed sm:max-w-[40vw] ">

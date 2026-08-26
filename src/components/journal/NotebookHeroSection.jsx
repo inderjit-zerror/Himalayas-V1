@@ -90,7 +90,7 @@ export default function NotebookHeroSection() {
   return (
     <section 
       ref={containerRef} 
-      className="relative w-full min-h-[200vh] bg-stone-900 text-stone-900 overflow-hidden flex flex-col justify-between p-6 md:p-12 lg:p-16 overflow-x-hidden"
+      className="relative w-full max-sm:h-[100svh] sm:min-h-[300vh] bg-stone-900 text-stone-900 overflow-hidden flex flex-col justify-between p-6 md:p-12 lg:p-16 overflow-x-hidden"
     >
       {/* Background Image Container */}
       <div className="absolute inset-0 z-0 overflow-hidden">
@@ -98,10 +98,10 @@ export default function NotebookHeroSection() {
           // ref={bgRef}
           src="/img/BBG1.png"
           alt="Motorcycle on mountain road in Ladakh"
-          className="w-full h-full object-cover object-bottom will-change-transform"
+          className="w-full h-full object-cover object-center will-change-transform"
         />
         {/* Soft gradient overlay for text readability */}
-        <div className="absolute inset-0 bg-gradient-to-r from-black/30 via-transparent to-black/20 pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/30 via-transparent to-black/20 max-sm:text-white! pointer-events-none" />
       </div>
 
       {/* Main Content Layout */}
@@ -109,10 +109,10 @@ export default function NotebookHeroSection() {
         
         {/* Left Column: Category & Hero Headline */}
         <div ref={titleRef} className="lg:col-span-7 flex flex-col justify-start pt-4 z-20">
-          <p className="text-xs md:text-sm font-bold tracking-widest text-stone-800 uppercase mb-4 drop-shadow-sm">
+          <p className="text-xs md:text-sm font-bold tracking-widest text-stone-800 max-sm:text-white! uppercase mb-4 drop-shadow-sm">
             // VINOD'S NOTEBOOK / LADAKH / OCTOBER 2024
           </p>
-          <h1 className="text-[8vw]! font-black uppercase tracking-tight text-stone-800 leading-[0.88]  drop-shadow-sm">
+          <h1 className="text-[8vw]! font-black uppercase tracking-tight text-stone-800 max-sm:text-white! leading-[0.88]  drop-shadow-sm">
             The Road 
             <br/>
             I Never
@@ -121,8 +121,8 @@ export default function NotebookHeroSection() {
           </h1>
         </div>
 
-        <div className=' h-fit absolute w-[50%]  right-[-8%]  top-[40%] z-10'>
-        <img src="/img/BBG.png" alt="IMg" className='  w-full h-full object-cover object-center' />
+        <div className=' h-fit absolute w-[60%] max-sm:w-[70%]  right-[-8%]  top-[40%] z-10'>
+        <img src="/img/BBG.png" alt="IMg" className='  w-full sm:h-full object-cover object-center' />
         </div>
       </div>
     </section>

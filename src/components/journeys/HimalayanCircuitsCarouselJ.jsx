@@ -9,33 +9,28 @@ import { gsap } from "gsap";
 const CIRCUITS = [
   {
     title: "Hidden Monasteries",
-    description:
-      "A retreat into silent ancient stone sanctuaries and spiritual chants.",
-    image: "https://images.unsplash.com/photo-1780584523947-14ebc50723c7?q=80&w=1632&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    description: "5 MIN READ",
+    image: "/img/L1.png",
   },
   {
     title: "The Sacred Passes",
-    description:
-      "High-altitude motorcycle passes and timeless geological lines.",
-    image: "https://images.unsplash.com/photo-1780584523960-30c59e847629?q=80&w=1632&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    description: "5 MIN READ",
+    image: "/img/L2.png",
   },
   {
     title: "The Sacred Passes",
-    description:
-      "High-altitude motorcycle passes and timeless geological lines.",
-    image: "https://images.unsplash.com/photo-1647143351654-d8c9c2f26e1b?q=80&w=1528&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    description: "5 MIN READ",
+    image: "/img/L3.png",
   },
   {
     title: "Living Cultures",
-    description:
-      "Villages, prayer flags and the rhythms of everyday mountain life.",
-    image: "https://images.unsplash.com/photo-1544735716-87fa59a45b4e?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    description: "5 MIN READ",
+    image: "/img/L1.png",
   },
   {
     title: "Remote Valleys",
-    description:
-      "Wide, silent landscapes carved by rivers and centuries of wind.",
-    image: "https://images.unsplash.com/photo-1600700753517-07561297dc34?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    description: "5 MIN READ",
+    image: "/img/L2.png",
   },
 ];
 
@@ -87,18 +82,13 @@ export default function HimalayanCircuitsCarouselJ() {
     <section className="w-full bg-white pl-4 py-5 sm:py-16 sm:py-24 md:pl-20 overflow-x-hidden">
       <div className="mx-auto w-full">
         {/* Header row */}
-        <div className="mb-10 flex flex-col justify-between  gap-6 sm:gap-8 md:flex-row md:items-start pr-10">
-          <h3 className="uppercase">
-           Stories from Ladakh
+        <div className="mb-10 flex flex-col justify-between gap-6 sm:gap-8 md:flex-row md:items-start pr-10">
+          <h3 className="capitalize!">
+            Stories from Ladakh
           </h3>
 
           <p className="max-w-xl ">
-            
-              Every Journey Begins with a Different Dream.{" "}
-            
-            Some seek legendary mountain roads. Others are drawn to remote
-            landscapes, living cultures or the joy of travelling slowly
-            through extraordinary places.
+            <span className="font-semibold"> Go beyond the route </span> with travel notes, photography and stories from years of exploring Ladakh.
           </p>
         </div>
 
@@ -150,44 +140,42 @@ export default function HimalayanCircuitsCarouselJ() {
             <article
               key={i}
               ref={(el) => (cardRefs.current[i] = el)}
-              className="w-[85%] flex-none sm:w-[46%] lg:w-[31%]"
+              className="w-[85%] flex-none sm:w-[46%] lg:w-[31%] group cursor-pointer"
               style={{ scrollSnapAlign: "start" }}
             >
-              <div className="aspect-[5/3] w-full overflow-hidden bg-neutral-100">
+              {/* Added relative positioning for absolute centering of play button */}
+              <div className="relative aspect-[5/4] w-full overflow-hidden bg-neutral-100">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src={circuit.image}
                   alt={circuit.title}
-                  className="h-full w-full object-cover"
+                  className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
                   loading="lazy"
                 />
+                
+                {/* Video Play Icon Overlay */}
+                <div className="absolute inset-0 flex items-center justify-center  transition-opacity duration-300 group-hover:bg-black/30">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-full border-2 border-white text-white backdrop-blur-sm transition-transform duration-300 group-hover:scale-110 sm:h-14 sm:w-14">
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                      className="h-5 w-5 translate-x-0.5 sm:h-8 sm:w-8"
+                    >
+                      <path d="M8 5v14l11-7z" />
+                    </svg>
+                  </div>
+                </div>
               </div>
-              <h5 className="mt-4 uppercase">
+              
+              <h5 className="mt-4 uppercase pb-2">
                 {circuit.title}
               </h5>
-              <p className="mt-1 ">
+              <span className="mt-5 ">
                 {circuit.description}
-              </p>
+              </span>
             </article>
           ))}
         </div>
-
-        {/* Footer row */}
-        {/* <div className="mt-10 sm:mt-14 flex flex-col items-start justify-between gap-6 md:flex-row md:items-center">
-          <p className="caption-text text-neutral-500">
-            [ Est. 1994 ]
-          </p>
-          <p className="caption-text text-neutral-500 text-center md:text-left normal-case">
-            “Every region has its own landscape, its own rhythm and its own stories”
-          </p>
-          <a
-            href="/destinations"
-            className="inline-flex w-full sm:w-auto justify-center items-center gap-2 bg-neutral-900 px-6 py-4 sm:py-3 btn-text text-white transition-colors hover:bg-neutral-700"
-          >
-            Explore Destinations
-            <span aria-hidden="true">&rsaquo;</span>
-          </a>
-        </div> */}
       </div>
     </section>
   );

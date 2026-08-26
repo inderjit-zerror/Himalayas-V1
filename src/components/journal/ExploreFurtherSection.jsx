@@ -101,7 +101,7 @@ export default function ExploreFurtherSection() {
               </div>
 
               {/* Tag */}
-              <p className="text-xs text-gray-700 font-medium mb-3">
+              <p className="text-xs text-gray-700 font-medium! my-5">
                 [ {item.category} ]
               </p>
 
@@ -120,7 +120,7 @@ export default function ExploreFurtherSection() {
                 <span className="inline-block transition-transform duration-300 group-hover:translate-x-1">
                   &rarr;
                 </span>
-                <span className=' font-bold!'>{item.action}</span>
+                <p className=' font-bold!'>{item.action}</p>
               </div>
             </article>
           ))}

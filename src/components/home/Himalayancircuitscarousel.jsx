@@ -349,7 +349,7 @@ export default function HimalayanCircuitsCarousel() {
           ))}
         </div>
 
-        <div className="mt-5 sm:mt-14 flex flex-col items-start justify-between gap-6 md:flex-row md:items-center max-sm:pr-5">
+        <div className="mt-5 sm:mt-14 flex flex-col items-start justify-between gap-6 md:flex-row md:items-center max-sm:pr-5 sm:pr-10">
           <p className="">
             [ Est. 1994 ]
           </p>

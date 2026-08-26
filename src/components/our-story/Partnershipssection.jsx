@@ -106,9 +106,7 @@ export default function PartnershipsSection() {
               <span className="inline-block sm:hidden ml-2"> LASTING</span>
               
             </span>
-            <span className="block overflow-hidden">
-              <span className="inline-block max-sm:hidden">LASTING</span>
-            </span>
+       
             <span className="block overflow-hidden">
               <span className="inline-block">FRIENDSHIPS</span>
             </span>

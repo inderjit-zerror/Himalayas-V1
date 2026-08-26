@@ -38,15 +38,15 @@ export default function ImageSlider({
       <div className="flex flex-col md:flex-row justify-between items-start md:items-start gap-4 mb-6">
 
         {/* Left Header Tag */}
-        <div className="  text-sm md:text-base tracking-wide uppercase">
+        <div className="  text-sm md:text-base tracking-wide uppercase pt-2.5">
           <h5>{tag} </h5>
-          <p className=" mt-3">{location}</p>
+          {/* <p className=" mt-3">{location}</p> */}
         </div>
 
         {/* Right Header Text / Quote */}
         <div className="max-w-md text-xs md:text-sm text-neutral-800 leading-relaxed">
-          <h5 className="font-bold">{title}: </h5>
-          <p className="mt-2">"{quote}"</p>
+          
+          <p className="mt-2"> <span className="font-bold">{title}: </span>"{quote}"</p>
         </div>
       </div>
 

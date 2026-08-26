@@ -6,40 +6,36 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-/**
- * ------------------------------------------------------------------
- *  CONTENT
- *  Add as many notes as you like — the grid and animations adapt.
- * ------------------------------------------------------------------
- */
 const NOTES = [
   {
+    category: "Field Notes",
     title: "Altitude Is Earned, Not Rushed.",
     body: "One of the most common mistakes first-time travellers make is trying to cover too much ground too quickly. In the Himalayas, every thousand metres changes how your body responds. Spending an extra day acclimatising often means enjoying the rest of the journey rather than simply enduring it. The mountains reward patience far more than speed.",
     href: "/field-notes/altitude",
   },
   {
-    title: "Altitude Is Earned, Not Rushed.",
-    body: "One of the most common mistakes first-time travellers make is trying to cover too much ground too quickly. In the Himalayas, every thousand metres changes how your body responds. Spending an extra day acclimatising often means enjoying the rest of the journey rather than simply enduring it. The mountains reward patience far more than speed.",
-    href: "/field-notes/altitude",
+    category: "Local Insight",
+    title: "Tea Before Altitude",
+    body: "Before asking about the road ahead, locals usually ask if you've had tea. It's more than hospitality—it's a reminder that every journey begins by slowing down.",
+    href: "/field-notes/tea-before-altitude",
   },
 ];
 
 function ArrowIcon() {
   return (
     <svg
-      width="18"
-      height="18"
-      viewBox="0 0 24 24"
+      width="20"
+      height="12"
+      viewBox="0 0 24 12"
       fill="none"
       stroke="currentColor"
-      strokeWidth="2"
+      strokeWidth="2.5"
       strokeLinecap="round"
       strokeLinejoin="round"
-      className="field-note-arrow shrink-0 transition-transform duration-300 ease-out"
+      className="field-note-arrow shrink-0 text-black transition-transform duration-300 ease-out"
     >
-      <path d="M5 12h14" />
-      <path d="m13 6 6 6-6 6" />
+      <path d="M2 6h18" />
+      <path d="m14 1 6 5-6 5" />
     </svg>
   );
 }
@@ -73,7 +69,7 @@ export default function FieldNotesGrid() {
   const handleEnter = (e) => {
     const card = e.currentTarget;
     gsap.to(card.querySelector(".field-note-arrow"), {
-      x: 4,
+      x: 5,
       duration: 0.3,
       ease: "power2.out",
     });
@@ -101,12 +97,10 @@ export default function FieldNotesGrid() {
   return (
     <section
       ref={sectionRef}
-      className="mx-auto  px-6 py-16 sm:py-20 md:px-20 overflow-x-hidden relative"
+      className="relative  w-full  px-6 py-16 sm:py-24 md:px-20 overflow-x-hidden text-neutral-800"
+     
     >
-
-  
-
-      <div className="grid grid-cols-1 gap-x-12 gap-y-12 sm:grid-cols-2">
+      <div className="mx-auto  grid grid-cols-1 gap-x-16 gap-y-12 sm:grid-cols-2">
         {NOTES.map((note, i) => (
           <a
             key={i}
@@ -115,21 +109,22 @@ export default function FieldNotesGrid() {
             onMouseLeave={handleLeave}
             className="field-note-card group block"
           >
-            {/* label row */}
-            <div className="flex items-center gap-2 text-neutral-800">
+            {/* Header / Category row */}
+            <div className="flex items-center gap-3">
               <ArrowIcon />
-              <span className="font-mono text-xs font-medium uppercase tracking-[0.2em]">
-                [ Field Notes ]
-              </span>
+              <h5 className="font-mono text-xs font-semibold tracking-widest text-neutral-800 uppercase">
+                [ {note.category} ]
+              </h5>
             </div>
 
-            {/* title with animated underline */}
-            <p className="relative mt-4 inline-block text-[15px]  text-neutral-900 sm:text-base font-extrabold! ">
+            {/* Title */}
+            <h5 className="relative mt-8 text-base sm:text-lg font-bold text-black tracking-tight leading-snug inline-block">
               {note.title}
-              <span className="field-note-underline absolute -bottom-1 left-0 h-[1.5px] w-full origin-left scale-x-0 bg-neutral-900" />
-            </p>
+              
+            </h5>
 
-            <p className="mt-3 max-w-md ">
+            {/* Body */}
+            <p className="mt-3 text-sm sm:text-[15px] leading-relaxed text-neutral-700 font-normal">
               {note.body}
             </p>
           </a>

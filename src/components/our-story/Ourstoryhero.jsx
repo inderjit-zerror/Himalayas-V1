@@ -93,7 +93,7 @@ export default function OurStoryHero() {
         <div>
           {/* Middle: headline */}
           <div className="flex items-center gap-[1.25rem] sm:gap-[2rem] py-12 h-primary">
-            <h2 className="heading-hero sm:max-w-[40vw]">
+            <h2 className="heading-hero sm:max-w-[40vw] text-[#D9D9D9]">
               {HEADLINE_LINES.map((line) => (
                 <span key={line} className="block">
                   {line}

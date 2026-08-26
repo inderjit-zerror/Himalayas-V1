@@ -174,18 +174,18 @@ export default function TeamSection() {
               />
             </div>
 
-            <h5 data-card-detail className="mt-[1rem] text-neutral-900">
+            <h5 data-card-detail className="mt-[1rem] capitalize! text-neutral-900">
               {member.name}
             </h5>
             <p
               data-card-detail
-              className="mt-[0.25rem] text-[0.9rem]! leading-[1.1rem]! text-[#202020]!"
+              className="mt-[0.25rem] text-[0.9rem]! leading-[1.1rem]! text-[#202020]! font-medium!"
             >
               {member.role}
             </p>
             <p
               data-card-detail
-              className="mt-[0.6rem] text-[0.9rem]! leading-[1.1rem]! text-[#202020]!"
+              className="mt-[0.6rem] text-[0.9rem]! leading-[1.1rem]! text-[#202020]! font-medium!"
             >
               {member.bio}
             </p>

@@ -47,11 +47,12 @@ export default function RidersSection() {
         <div className="max-w-[30rem]">
           <h2
             ref={headlineRef}
-            className="heading-xl text-neutral-900  sm:mb-20 max-sm:flex"
+            className="heading-xl text-neutral-900  sm:mb-10 max-sm:flex "
           >
             <span className="block overflow-hidden">
               <span className="inline-block">OUR</span>
             </span>
+            <br className="max-sm:hidden" />
             <span className="block overflow-hidden">
               <span className="inline-block max-sm:ml-3">RIDERS</span>
             </span>

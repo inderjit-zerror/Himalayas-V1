@@ -44,9 +44,9 @@ h6 {
 
 p {
   font-size: 1rem;
-  font-weight: 100;
+  font-weight: 300;
   line-height: 1.7rem;
-  color: #202020;
+  color: black;
 }
 
 @media (min-width: 750px) {

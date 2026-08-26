@@ -81,7 +81,7 @@ function AccordionItem({ item, isOpen, onToggle }) {
         className="flex w-full items-center justify-between gap-6 text-left"
       >
         <p
-          className={`heading-sm transition-colors ${
+          className={`heading-sm transition-colors font-semibold!  ${
             isOpen ? "text-red-600!" : "text-neutral-800!"
           }`}
         >

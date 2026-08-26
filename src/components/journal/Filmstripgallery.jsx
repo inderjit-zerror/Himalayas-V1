@@ -138,7 +138,7 @@ export default function Filmstripgallery() {
       {/* Fix 3: Changed justify-center to justify-start here so x: 0 aligns perfectly with the left edge */}
       <div
         ref={viewportRef}
-        className="w-full mx-auto overflow-visible flex justify-start items-center"
+        className="w-full mx-auto overflow-visible   flex max-sm:justify-start sm:justify-center items-center"
       >
         <div
           ref={trackRef}
@@ -153,7 +153,7 @@ export default function Filmstripgallery() {
               e.stopPropagation();
             }
           }}
-          className="flex items-start gap-3 sm:gap-4 md:gap-6 w-max cursor-grab active:cursor-grabbing select-none"
+          className="flex items-start gap-3 sm:gap-4 md:gap-6  w-max cursor-grab active:cursor-grabbing select-none"
           style={{ touchAction: 'pan-y' }}
         >
           {/* Image 1: Tents */}
