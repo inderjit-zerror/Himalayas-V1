@@ -88,7 +88,7 @@ export default function StorySection() {
       {/* Bottom row: est. date, quote, CTA */}
       <div className="mx-auto sm:mt-24 flex w-full flex-col items-start justify-between gap-6  sm:border-t  border-neutral-200 pt-8 md:flex-row md:items-center md:gap-4">
         <p className="">
-          [ EST. 1994 ]
+          [ Est. 1994 ]
         </p>
 
         <p className="  md:text-center">

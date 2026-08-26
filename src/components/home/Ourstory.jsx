@@ -288,7 +288,7 @@ export default function OurStory() {
         <div className="border-t border-neutral-200 " />
 
         <div className="flex flex-col items-center   justify-between  gap-6 pt-8 sm:pt-10 sm:flex-row">
-          <p className=" uppercase max-sm:mr-auto ">[ Est. 1994 ]</p>
+          <p className="  max-sm:mr-auto ">[ Est. 1994 ]</p>
 
           <p className="text-cente sm:text-start p-small ">
             &ldquo;The mountains were home before Discover Himalayas
