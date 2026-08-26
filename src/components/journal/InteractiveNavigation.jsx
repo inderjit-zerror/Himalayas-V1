@@ -71,7 +71,7 @@ export default function InteractiveNavigation() {
   };
 
   return (
-    <div className="w-full h-fit bg-gray-50 flex flex-col items-center pt-20 mt-10 px-4 md:px-8 max-sm:mb-5">
+    <div className="w-full h-fit bg-white flex flex-col items-center pt-20 mt-10 px-4 md:px-8 max-sm:mb-5">
       
       {/* Navigation Container */}
       <div className="w-full max-w-6xl flex flex-col md:flex-row border border-[#2a2a2a] shadow-sm bg-white">

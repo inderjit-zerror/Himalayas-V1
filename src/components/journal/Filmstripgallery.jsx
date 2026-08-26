@@ -166,8 +166,8 @@ export default function Filmstripgallery() {
           <FilmFrame src="/img/CD3.jpeg" alt="Mountain Stupa" isLarge={true} />
 
           {/* Image 4: Portrait with metadata below */}
-          <div className="flex flex-col">
-            <FilmFrame src="/img/CD4.jpeg" alt="Portrait of an older man" />
+          <div className="flex flex-col w-full">
+            <FilmFrame ed={1} src="/img/CD4.jpeg" alt="Portrait of an older man" />
             <div className="mt-3 sm:mt-4 text-xs sm:text-sm leading-relaxed text-gray-800">
               <p><span className="font-semibold">Subject:</span> Itsuki Takahashi</p>
               <p><span className="font-semibold">Project: </span> Feature in Yaraeleon Mag</p>
@@ -187,13 +187,13 @@ export default function Filmstripgallery() {
   );
 }
 
-function FilmFrame({ src, alt, isLarge = false }) {
+function FilmFrame({ src, alt, isLarge = false, ed }) {
   return (
     <div
       className={`relative shrink-0 bg-black p-2.5 sm:p-3 md:p-4 shadow-sm flex ${
         isLarge
-          ? 'w-[220px] h-[310px] sm:w-[320px] sm:h-[450px] md:w-[420px] md:h-[600px]'
-          : 'w-[180px] h-[250px] sm:w-[260px] sm:h-[360px] md:w-[320px] md:h-[480px]'
+          ? `w-[220px] h-[310px] sm:w-[320px] sm:h-[450px] ${ed ===1 ? 'max-w:w-full':'md:w-1/4'}  md:h-[600px]`
+          : `w-[180px] h-[250px] sm:w-[260px] sm:h-[360px] ${ed ===1 ? 'max-w:w-full':'md:w-1/4'}  md:h-[480px]`
       }`}
     >
       <div className="relative w-full h-full overflow-hidden bg-gray-900">

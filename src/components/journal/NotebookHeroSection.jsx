@@ -120,7 +120,7 @@ export default function NotebookHeroSection() {
           <p className="text-xs md:text-sm font-bold tracking-widest text-stone-800 max-sm:text-white! uppercase mb-4 drop-shadow-sm">
             // VINOD'S NOTEBOOK / LADAKH / OCTOBER 2024
           </p>
-          <h1 className="text-[8vw]! font-black uppercase tracking-tight text-stone-800 max-sm:text-white! leading-[0.88]  drop-shadow-sm">
+          <h1 className="text-[8vw]!  font-extrabold! uppercase tracking-tight text-stone-800 max-sm:text-white! leading-[0.88]  drop-shadow-sm">
             The Road
             <br />
             I Never Grow <br /> Tired Of
