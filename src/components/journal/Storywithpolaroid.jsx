@@ -278,28 +278,7 @@ export default function StoryWithPolaroid() {
       {/* RIGHT: taped polaroid photo                                 */}
       {/* ---------------------------------------------------------- */}
       <div className="relative flex sm:h-[50vh] items-start justify-center md:justify-end">
-        <div
-          ref={polaroidRef}
-          onMouseEnter={handleEnter}
-          onMouseLeave={handleLeave}
-          className="relative h-full rotate-[-3deg] shadow-[0_20px_35px_-15px_rgba(0,0,0,0.3)] bg-white p-2"
-        >
-          {/* Tape pieces */}
-          <span
-            ref={tapeLeftRef}
-            className="absolute -top-3 left-4 h-6 w-14 -rotate-12 bg-white/70 shadow-sm"
-          />
-          <span
-            ref={tapeRightRef}
-            className="absolute -top-3 right-4 h-6 w-14 rotate-12 bg-white/70 shadow-sm"
-          />
-
-          <img
-            src={PHOTO_SRC}
-            alt={PHOTO_ALT}
-            className="w-full h-full object-cover object-center"
-          />
-        </div>
+       <img src="/img/BGCO.png" alt="IMG" className="w-full h-full object-cover object-center rotate-12" />
       </div>
     </section>
   );
