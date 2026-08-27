@@ -127,42 +127,42 @@ export default function NotebookHeroSection() {
           </h1>
         </div>
 
-        <div className=" h-fit absolute w-[60%] max-sm:w-[70%]  right-[-8%]  max-sm:top-[40%] sm:top-[100%] z-10">
+        <div className=" h-fit absolute w-[60%] max-sm:w-[70%]  right-[-18%]  max-sm:top-[40%] sm:top-[100%] z-10">
           <img
             src="/img/32.jpeg"
             alt="IMg"
             className="  w-full sm:h-full rotate-90 object-cover object-center"
           />
 
-          <img src="/img/IGB.jpeg" alt="img" className="w-1/3 h-fit absolute max-sm:-bottom-25 sm:-bottom-70 left-[40%] -translate-x-1/2 -rotate-15" />
+          <img src="/img/IGB.jpeg" alt="img" className="w-1/3 h-fit absolute max-sm:-bottom-25 sm:-bottom-80 left-[40%] -translate-x-1/2 -rotate-15" />
 
-          <div class="w-[320px] p-6  absolute max-sm:-top-[80%] sm:top-0 max-sm:-left-[25%] sm:left-[20%] max-sm:scale-[0.4] ">
+          <div className="w-[320px] p-6  absolute max-sm:-top-[85%] sm:top-0 max-sm:-left-[25%] sm:left-[20%] max-sm:scale-[0.4] ">
             {/* <!-- Title --> */}
-            <p class="text-[14px] font-extrabold! uppercase leading-[1.35] tracking-wide mb-5">
+            <p className="text-[14px] font-extrabold! uppercase leading-[1.35] tracking-wide mb-5">
               AFTER THIRTY YEARS OF RIDING THROUGH LADAKH, PEOPLE STILL ASK ME
               WHICH ROAD IS MY FAVOURITE. THE ANSWER HAS NEVER STAYED THE SAME.
             </p>
 
             {/* <!-- Read Time --> */}
-            <p class="text-[12px] font-extrabold! uppercase tracking-wide mb-5">
+            <p className="text-[12px] font-extrabold! uppercase tracking-wide mb-5">
               12 MIN READ
             </p>
 
             {/* <!-- Tag --> */}
-            <p class="text-[13px] font-semibold tracking-wide mb-2">
+            <p className="text-[13px] font-semibold tracking-wide mb-2">
               [ NOTEBOOK ENTRY ]
             </p>
 
             {/* <!-- Hand-drawn underline effect --> */}
-            <div class="w-28 h-2 bg-neutral-900 rounded-full mb-4 -rotate-1"></div>
+            <div className="w-28 h-2 bg-neutral-900 rounded-full mb-4 -rotate-1"></div>
 
             {/* <!-- Location Heading --> */}
-            <h4 class="text-[13px] font-bold! leading-snug mb-1">
+            <h4 className="text-[13px] font-bold! leading-snug mb-1">
               Somewhere between Leh and Hanle
             </h4>
 
             {/* <!-- Body Text --> */}
-            <p class="text-[13px] leading-[1.45] font-normal text-neutral-800">
+            <p className="text-[13px] leading-[1.45] font-normal text-neutral-800">
               People often ask how many times I've ridden these roads. I stopped
               counting years ago. The number isn't important. What matters is
               that every journey still gives me a reason to stop, look around

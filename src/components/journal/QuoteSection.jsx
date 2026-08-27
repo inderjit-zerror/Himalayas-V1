@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function QuoteSection() {
   return (
-    <section className="flex items-center justify-center w-full min-h-[300px] bg-white px-4 py-16 overflow-x-hidden">
+    <section className="flex items-center justify-center w-full min-h-[300px] px-4 py-16 overflow-x-hidden relative">
       <div className=" mx-auto flex flex-col items-center text-center px-[10vw]">
         {/* Quote Text */}
         <h3 className="text-3xl md:text-4xl lg:text-5xl font-semibold! text-black uppercase leading-snug tracking-tight">
@@ -14,6 +14,10 @@ export default function QuoteSection() {
           — Vinod
         </h5>
       </div>
+
+      <div className="absolute top-[60%] w-full h-[60vh] left-0 z-[-1] overflow-hidden ">
+                <img src="/img/BBG2.png" alt="IMG" className="w-full h-full rotate-180 " />
+              </div>
     </section>
   );
 }
