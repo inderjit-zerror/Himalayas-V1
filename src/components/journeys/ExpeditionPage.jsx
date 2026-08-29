@@ -140,7 +140,7 @@ const dropdownRef2 = useRef(null);
             {glanceData.map((item, index) => (
               <div key={index} className="text-[17px] leading-relaxed">
                 <p className="font-bold!  block ">{item.label}</p>
-                <p className=" mb-1 mt-1">{item.value}</p>
+                <p className="">{item.value}</p>
               </div>
             ))}
           </div>
