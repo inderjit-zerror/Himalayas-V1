@@ -102,9 +102,9 @@ export default function NotebookHeroSection() {
       <div className="absolute inset-0 z-0 overflow-hidden">
         <img
           // ref={bgRef}
-          src="/img/BBG1.png"
+          src="/img/AZ3.jpeg"
           alt="Motorcycle on mountain road in Ladakh"
-          className="w-full h-full object-cover object-center will-change-transform"
+          className="w-full h-full object-cover object-center rotate-180 will-change-transform"
         />
         {/* Soft gradient overlay for text readability */}
         <div className="absolute inset-0 bg-gradient-to-r from-black/30 via-transparent to-black/20 max-sm:text-white! pointer-events-none" />
