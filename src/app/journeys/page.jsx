@@ -28,7 +28,7 @@ const page = () => {
     "https://images.unsplash.com/photo-1581793745862-99fde7fa73d2?q=80&w=1920&auto=format&fit=crop", // High altitude pass & valley
   ];
   const myImages4 = [
-    "/pic/15.jpg", // Ladakh mountain road
+    "/img/CD2.jpeg", // Ladakh mountain road
     "https://images.unsplash.com/photo-1581793745862-99fde7fa73d2?q=80&w=1920&auto=format&fit=crop", // High altitude pass & valley
     "https://images.unsplash.com/photo-1544735716-392fe2489ffa?q=80&w=1920&auto=format&fit=crop", // Himalayan peaks
     "https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?q=80&w=1920&auto=format&fit=crop", // High-altitude lake landscape
