@@ -124,10 +124,10 @@ export default function FAQContactSection() {
           <p className="text-xs font-bold text-white! tracking-wider uppercase mb-3 z-10">
             // FREQUENTLY ASKED QUESTIONS
           </p>
-          <h4 className="text-xl z-10 text-white! md:text-2xl uppercase text-[1.3rem]! font-semibold! tracking-tight mb-2 h-secondary">
+          <h5 className="text-xl z-10 text-white! md:text-2xl text-[1.3rem]! font-semibold! tracking-tight mb-2 sm:mt-10 h-secondary">
             Three decades of questions. Three decades of answers.
-          </h4>
-          <p className="text-xs md:text-sm text-white! leading-relaxed z-10">
+          </h5>
+          <p className="text-xs md:text-sm text-white! leading-relaxed z-10 sm:max-w-xl">
             From first-time riders to seasoned overlanders, we've answered
             thousands of questions before journeys began. These are the ones
             that come up most often.
@@ -232,7 +232,7 @@ export default function FAQContactSection() {
 
                       {/* Bottom-left triangular fold/notch effect */}
                       <div
-                        className={`absolute left-[0.6%] -bottom-2 w-0 h-0 scale-[2] border-t-[6px] border-r-[6px] ${
+                        className={`absolute left-[0.6%] -bottom-[17%]  w-0 h-0 scale-[2] border-t-[6px] border-r-[6px] ${
                           isOpen
                             ? "border-t-[#383838] border-r-transparent"
                             : "border-t-[#e0e0e0] border-r-transparent"

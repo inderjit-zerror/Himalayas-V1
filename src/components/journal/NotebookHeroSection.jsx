@@ -127,16 +127,16 @@ export default function NotebookHeroSection() {
           </h1>
         </div>
 
-        <div className=" h-fit absolute w-[60%] max-sm:w-[70%]  right-[-18%]  max-sm:top-[40%] sm:top-[100%] z-10">
+        <div className=" h-fit absolute w-[60%] max-sm:w-[70%]  right-[-8%]  max-sm:top-[30%] sm:top-[50%] z-10">
           <img
-            src="/img/32.jpeg"
+            src="/img/Image110.png"
             alt="IMg"
-            className="  w-full sm:h-full rotate-90 object-cover object-center"
+            className="  w-full sm:h-full  object-cover object-center"
           />
 
-          <img src="/img/IGB.jpeg" alt="img" className="w-1/3 h-fit absolute max-sm:-bottom-25 sm:-bottom-80 left-[40%] -translate-x-1/2 -rotate-15" />
+          <img src="/img/IGB.jpeg" alt="img" className="w-1/2 h-fit absolute max-sm:-bottom-25 sm:-bottom-30 left-[45%] -translate-x-1/2 -rotate-15" />
 
-          <div className="w-[320px] p-6  absolute max-sm:-top-[85%] sm:top-0 max-sm:-left-[25%] sm:left-[20%] max-sm:scale-[0.4] ">
+          <div className="w-[320px] p-6  absolute max-sm:top-[-25%] sm:top-[20%] max-sm:-left-[25%] sm:left-[20%] max-sm:scale-[0.4] ">
             {/* <!-- Title --> */}
             <p className="text-[14px] font-extrabold! uppercase leading-[1.35] tracking-wide mb-5">
               AFTER THIRTY YEARS OF RIDING THROUGH LADAKH, PEOPLE STILL ASK ME

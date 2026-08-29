@@ -18,7 +18,7 @@ const page = () => {
       <QuoteSection />
 
       <div className=" relative w-full overflow-x-hidden">
-        <div className="absolute top-0 w-full h-[100vh] left-0 z-[-1] overflow-hidden ">
+        <div className="absolute top-0 w-full h-[110vh] left-0 z-[-1] overflow-hidden ">
           <img src="/img/BBG2.png" alt="IMG" className="w-full h-full " />
         </div>
         

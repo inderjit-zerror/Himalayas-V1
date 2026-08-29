@@ -261,7 +261,7 @@ export default function StoryWithPolaroid() {
       {/* ---------------------------------------------------------- */}
       {/* LEFT: body copy                                             */}
       {/* ---------------------------------------------------------- */}
-      <div className="space-y-6 text-[15px] leading-relaxed sm:text-base max-sm:text-black!">
+      <div className="space-y-6 text-[15px] leading-relaxed sm:text-base my-auto max-sm:text-black!">
         {PARAGRAPHS.map((p, i) => (
           <p key={i} className="story-paragraph max-sm:text-black!">
             {p.lead && (
@@ -277,7 +277,7 @@ export default function StoryWithPolaroid() {
       {/* ---------------------------------------------------------- */}
       {/* RIGHT: taped polaroid photo                                 */}
       {/* ---------------------------------------------------------- */}
-      <div className="relative flex sm:h-[50vh] items-start justify-center md:justify-end">
+      <div className="relative flex sm:h-[70vh] items-start justify-center md:justify-end">
        <img src="/img/BGCO.png" alt="IMG" className="w-full h-full object-cover object-center rotate-12" />
       </div>
     </section>

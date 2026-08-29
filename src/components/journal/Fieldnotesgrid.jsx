@@ -23,20 +23,7 @@ const NOTES = [
 
 function ArrowIcon() {
   return (
-    <svg
-      width="20"
-      height="12"
-      viewBox="0 0 24 12"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2.5"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      className="field-note-arrow shrink-0 text-black transition-transform duration-300 ease-out"
-    >
-      <path d="M2 6h18" />
-      <path d="m14 1 6 5-6 5" />
-    </svg>
+    <img src="/img/img1.png" alt="img" className="w-[20px] rotate-90" />
   );
 }
 
