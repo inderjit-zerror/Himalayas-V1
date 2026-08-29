@@ -134,7 +134,7 @@ export default function NotebookHeroSection() {
             className="  w-full sm:h-full  object-cover object-center"
           />
 
-          <img src="/img/IGB.jpeg" alt="img" className="w-1/2 h-fit absolute max-sm:-bottom-25 sm:-bottom-30 left-[45%] -translate-x-1/2 -rotate-15" />
+          <img src="/img/IGB.jpeg" alt="img" className="w-[55%] h-fit absolute max-sm:-bottom-25 sm:-bottom-50 left-[45%] -translate-x-1/2 -rotate-5" />
 
           <div className="w-[320px] p-6  absolute max-sm:top-[-25%] sm:top-[20%] max-sm:-left-[25%] sm:left-[20%] max-sm:scale-[0.4] ">
             {/* <!-- Title --> */}
