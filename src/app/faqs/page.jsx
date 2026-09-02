@@ -120,7 +120,7 @@ export default function FAQContactSection() {
 
         {/* Header Title Section */}
         <div className="mb-20 w-full bg-[#f5f5f5] h-[40vh] max-sm:h-[60vh] px-5 sm:px-20 flex flex-col justify-center relative overflow-hidden">
-        <div className="w-full sm:hidden h-full absolute top-0 left-0 bg-black/20 z-10" />
+          <div className="w-full sm:hidden h-full absolute top-0 left-0 bg-black/20 z-10" />
           <p className="text-xs font-bold text-white! tracking-wider uppercase mb-3 z-10">
             // FREQUENTLY ASKED QUESTIONS
           </p>
@@ -180,19 +180,17 @@ export default function FAQContactSection() {
                 <button
                   key={category}
                   onClick={() => setActiveCategory(category)}
-                  className={`flex items-center justify-between py-2.5 text-xs text-left transition-colors group ${
-                    activeCategory === category
-                      ? "text-black font-semibold"
-                      : "text-gray-600 hover:text-black"
-                  }`}
+                  className={`flex items-center justify-between py-2.5 text-xs text-left transition-colors group ${activeCategory === category
+                    ? "text-black font-semibold"
+                    : "text-gray-600 hover:text-black"
+                    }`}
                 >
                   <p>{category}</p>
                   <svg
-                    className={`w-3 h-3 shrink-0 transition-colors ${
-                      activeCategory === category
-                        ? "text-black"
-                        : "text-gray-400 group-hover:text-black"
-                    }`}
+                    className={`w-3 h-3 shrink-0 transition-colors ${activeCategory === category
+                      ? "text-black"
+                      : "text-gray-400 group-hover:text-black"
+                      }`}
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -220,23 +218,21 @@ export default function FAQContactSection() {
                   <div className="flex items-center gap-3">
                     <div
                       onClick={() => toggleFaq(index)}
-                      className={`relative flex-1 cursor-pointer px-4 py-3 text-xs font-semibold transition-colors duration-200 ${
-                        isOpen
-                          ? "bg-[#383838] text-white!"
-                          : "bg-[#e0e0e0] text-gray-800 hover:bg-gray-300"
-                      }`}
+                      className={`group relative flex-1 cursor-pointer px-4 py-3 text-xs font-semibold transition-colors duration-200 ${isOpen
+                        ? "bg-[#383838] text-white!"
+                        : "bg-[#e0e0e0] text-gray-800 hover:bg-gray-300"
+                        }`}
                     >
-                      <p className={isOpen ? "text-white!" : "text-gray-800"}>
+                      <p className={`transition-colors duration-200 ${isOpen ? "text-white!" : "text-gray-800"}`}>
                         {faq.question}
                       </p>
 
                       {/* Bottom-left triangular fold/notch effect */}
                       <div
-                        className={`absolute left-[0.6%] -bottom-[17%]  w-0 h-0 scale-[2] border-t-[6px] border-r-[6px] ${
-                          isOpen
-                            ? "border-t-[#383838] border-r-transparent"
-                            : "border-t-[#e0e0e0] border-r-transparent"
-                        }`}
+                        className={`absolute left-0 top-full w-0 h-0 border-t-[12px] border-r-[12px] border-r-transparent transition-colors duration-200 ${isOpen
+                          ? "border-t-[#383838]"
+                          : "border-t-[#e0e0e0] group-hover:border-t-gray-300"
+                          }`}
                       />
                     </div>
 
@@ -350,7 +346,7 @@ export default function FAQContactSection() {
 
               <BTNB txt={'Send'} />
 
-             
+
             </form>
           </div>
         </div>
