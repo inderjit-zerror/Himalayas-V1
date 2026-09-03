@@ -122,10 +122,14 @@ export default function Header() {
               <li key={link.href}>
                 <Link
                   href={link.href}
-                  className={`relative py-1 transition-colors hover:text-neutral-500 ${isActive ? "border-b-2 border-neutral-900 font-semibold text-neutral-900" : ""
+                  className={`group relative py-1 transition-colors hover:text-neutral-900 ${isActive ? "font-semibold text-neutral-900" : "text-neutral-800"
                     }`}
                 >
                   {link.label}
+                  <span
+                    className={`absolute left-0 bottom-0 block h-[2px] bg-neutral-900 transition-all duration-300 ${isActive ? "w-full" : "w-0 group-hover:w-full"
+                      }`}
+                  />
                 </Link>
               </li>
             );

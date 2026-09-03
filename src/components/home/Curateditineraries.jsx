@@ -24,7 +24,7 @@ export default function CuratedItineraries() {
   useEffect(() => {
     const ctx = gsap.context(() => {
       const images = imageRefs.current.filter(Boolean);
-      
+
       // Initialize states: All images hidden below screen except the first one
       gsap.set(images, { y: "100vh" });
       gsap.set(images[0], { y: 0 });
@@ -81,24 +81,23 @@ export default function CuratedItineraries() {
     <div ref={wrapperRef} className="relative h-[500vh] bg-white ">
       <div
         ref={stickyRef}
-        className="sticky top-0 flex min-h-[100dvh] w-full items-center overflow-hidden px-4 sm:py-20 sm:px-20 lg:px-20"
+        className="sticky top-0 flex min-h-[100dvh] w-full items-center justify-center overflow-hidden px-4 pt-24 pb-8 sm:py-20 sm:px-20 lg:px-20"
       >
-        <div className="mx-auto w-full grid grid-cols-1 items-center gap-10 lg:grid-cols-12 lg:gap-16">
+        <div className="mx-auto w-full grid grid-cols-1 items-center gap-8 sm:gap-10 lg:grid-cols-12 lg:gap-16">
           <div className="col-span-12 lg:col-span-5 relative z-20">
-            <p className="ci-eyebrow eyebrow-text mb-4 text-neutral-400 lg:mb-6">
-              // DESTINATIONS 
+            <p className="ci-eyebrow eyebrow-text mb-3 sm:mb-4 text-neutral-400 lg:mb-6">
+              // DESTINATIONS
             </p>
 
-            <h2 className="ci-heading h-primary heading-xl mb-6 text-neutral-900 lg:mb-8">
-              Curated 
-              <br  className="max-sm:hidden" />
+            <h2 className="ci-heading h-primary heading-xl mb-4 sm:mb-6 text-neutral-900 lg:mb-8">
+              Curated
+              <br className="max-sm:hidden" />
               <span className="max-sm:ml-2">
-
-               Itineraries
+                Itineraries
               </span>
             </h2>
 
-            <p className="ci-copy mb-8 max-w-md lg:mb-10 text-neutral-600 max-sm:pr-5">
+            <p className="ci-copy mb-6 sm:mb-8 max-w-md lg:mb-10 text-neutral-600 text-sm sm:text-base">
               From the high-altitude deserts of Ladakh and the timeless
               villages of Spiti to the mountain kingdoms of Nepal and
               Bhutan, the dawn-lit landscapes of Arunachal Pradesh, the
@@ -111,7 +110,7 @@ export default function CuratedItineraries() {
 
             <a href="#NEXTSHIFTSECTION" onClick={handleScrollToNext}>
               <div className="ci-cta flex items-center gap-4 cursor-pointer">
-                <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-neutral-300 text-neutral-500">
+                <span className="flex h-10 w-10 sm:h-11 sm:w-11 shrink-0 items-center justify-center rounded-full border border-neutral-300 text-neutral-500">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
@@ -127,14 +126,14 @@ export default function CuratedItineraries() {
                     />
                   </svg>
                 </span>
-                <span className="btn-text font-medium text-neutral-700">
+                <span className="btn-text font-medium text-neutral-700 text-sm sm:text-base">
                   EXPLORE JOURNEYS
                 </span>
               </div>
             </a>
           </div>
 
-          <div className="col-span-12 h-[45vh] w-full max-sm:pr-5 lg:col-span-7 lg:h-[75vh] xl:px-20">
+          <div className="col-span-12 h-[40vh] sm:h-[45vh] w-full lg:col-span-7 lg:h-[75vh] xl:px-20">
             <div className="relative h-full w-full sm:w-[91%] sm:ml-auto lg:aspect-[4/5]">
               {IMAGES.map((item, i) => (
                 <div

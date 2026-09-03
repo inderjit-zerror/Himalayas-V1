@@ -17,7 +17,7 @@ import { createPageMetadata } from "@/lib/seo";
 const HomePage = () => {
   return (
     < >
-    
+
       <Hero />
       <StorySection />
       <Video />
@@ -25,7 +25,7 @@ const HomePage = () => {
       <CuratedItineraries />
       <HimalayanCircuitsCarousel />
       <HimalayanCircuitsCarousel2 />
-      <PeopleBehindJourneys  />
+      <PeopleBehindJourneys />
       <JourneysRemembered />
       <StoriesSection />
       <WhyDiscoverHimalayas />
