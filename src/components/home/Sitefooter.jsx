@@ -83,7 +83,7 @@ export default function SiteFooter() {
         }}
         aria-hidden="true"
       />
-      <div className="absolute inset-0 bg-neutral-900/60" aria-hidden="true" />
+      <div className="absolute inset-0 bg-neutral-900/20" aria-hidden="true" />
 
       <div className="relative z-10 mx-auto w-full">
         {FLORUP.map((col) => (
@@ -148,20 +148,20 @@ export default function SiteFooter() {
             </div>
 
             <div className="mb-5 flex items-center gap-3 max-sm:hidden absolute top-[-35%] left-[-0%]">
-          {SOCIALS.map(({ icon: Icon, href, label }) => (
-            <a
-              key={label}
-              href={href}
-              aria-label={label}
-              target="_blank"
-              rel="noreferrer"
-              className="flex h-9 w-9 items-center justify-center rounded-full border border-white/70 text-white transition-colors hover:bg-white hover:text-neutral-900"
-            >
-              {/* 3. REMOVED strokeWidth AS REACT-ICONS (FA) DOESN'T NEED IT */}
-              <Icon size={16} />
-            </a>
-          ))}
-        </div>
+              {SOCIALS.map(({ icon: Icon, href, label }) => (
+                <a
+                  key={label}
+                  href={href}
+                  aria-label={label}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="flex h-9 w-9 items-center justify-center rounded-full border border-white/70 text-white transition-colors hover:bg-white hover:text-neutral-900"
+                >
+                  {/* 3. REMOVED strokeWidth AS REACT-ICONS (FA) DOESN'T NEED IT */}
+                  <Icon size={16} />
+                </a>
+              ))}
+            </div>
 
             <div className="mt-6 sm:mt-0">
               <h5 className="heading-sm font-semibold leading-snug">
@@ -176,7 +176,7 @@ export default function SiteFooter() {
           </div>
         </div>
 
-        
+
 
         <div className="footer-reveal mt-12 sm:mt-14 flex flex-col items-start justify-between gap-3 border-t border-white/20 pt-6 caption-text text-white sm:flex-row sm:items-center">
           <p className="text-center sm:text-left text-[0.9rem]! w-full sm:w-auto text-white!">

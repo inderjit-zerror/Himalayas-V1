@@ -95,7 +95,7 @@ export default function Hero() {
           autoPlay
           playsInline
           ref={parallaxImgRef}
-          src="/videos/HomeHero.mp4"
+          src="/video/HH.mp4"
           className="h-full w-full object-cover"
         />
       </div>
