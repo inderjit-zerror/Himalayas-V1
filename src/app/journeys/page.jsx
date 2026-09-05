@@ -21,10 +21,10 @@ const page = () => {
     "https://images.unsplash.com/photo-1581793745862-99fde7fa73d2?q=80&w=1920&auto=format&fit=crop", // High altitude pass & valley
   ];
   const myImages3 = [
-     "/pic/16.jpg", // High-altitude lake landscape
-    "https://images.unsplash.com/photo-1605649487212-47bdab064df7?q=80&w=1920&auto=format&fit=crop", 
+    "/pic/16.jpg", // High-altitude lake landscape
+    "https://images.unsplash.com/photo-1605649487212-47bdab064df7?q=80&w=1920&auto=format&fit=crop",
     "https://images.unsplash.com/photo-1544735716-392fe2489ffa?q=80&w=1920&auto=format&fit=crop", // Himalayan peaks
-   // Ladakh mountain road
+    // Ladakh mountain road
     "https://images.unsplash.com/photo-1581793745862-99fde7fa73d2?q=80&w=1920&auto=format&fit=crop", // High altitude pass & valley
   ];
   const myImages4 = [
@@ -42,10 +42,10 @@ const page = () => {
       <ScreenDiv2 />
       <ImageSlider images={myImages1} />
       <ImageSlider images={myImages2} />
-      <PullQuote/>
+      <PullQuote />
       <ImageSlider images={myImages3} />
       <ImageSlider images={myImages4} />
-      <HimalayanCircuitsCarouselJ/>
+      <HimalayanCircuitsCarouselJ />
     </>
   );
 };

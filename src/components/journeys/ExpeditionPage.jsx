@@ -40,8 +40,8 @@ export default function ExpeditionPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-white text-black   selection:bg-gray-800 selection:text-white pt-[10vh] px-5 max-sm:pb-0  sm:px-20 overflow-x-hidden">
-    
+    <div className="min-h-screen bg-white text-black   selection:bg-gray-800 selection:text-white  sm:pt-[10vh] px-5 max-sm:pb-0  sm:px-20 overflow-x-hidden">
+
 
       <ExtNav />
 
