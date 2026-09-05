@@ -277,7 +277,7 @@ export default function StoryWithPolaroid() {
       {/* ---------------------------------------------------------- */}
       {/* RIGHT: taped polaroid photo                                 */}
       {/* ---------------------------------------------------------- */}
-      <div className="relative flex sm:h-[80vh] items-start justify-center md:justify-end">
+      <div className="relative flex max-sm:h-[90vw] sm:h-[80vh]  items-start justify-center md:justify-end">
        <img src="/img/BGCO.png" alt="IMG" className="w-full h-full object-cover object-center rotate-12" />
       </div>
     </section>

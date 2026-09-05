@@ -67,7 +67,7 @@ export default function StorySection() {
     >
       <div className="mx-auto grid grid-cols-1 h-auto my-auto  gap-10 md:grid-cols-2 md:gap-16 items-start">
         {/* Left: big headline */}
-        <h2 className="h-primary max-w-xl text-neutral-900  ">
+        <h2 className="h-primary max-w-xl text-neutral-900 uppercase  ">
           The best journeys are shaped over time
         </h2>
 

@@ -187,7 +187,7 @@ export default function Filmstripgallery() {
           <FilmFrame src="/img/CD2.jpeg" alt="Goats in the mountains" />
 
           {/* Image 3: Stupa (Featured/Larger) */}
-          <FilmFrame src="/img/CD3.jpeg" alt="Mountain Stupa" isLarge={true} />
+          <FilmFrame src="/img/CD3.jpeg" alt="Mountain Stupa" isLarge={false} />
 
           {/* Image 4: Portrait with metadata below */}
           {/* <div className="flex flex-col w-full"> */}

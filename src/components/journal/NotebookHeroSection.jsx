@@ -127,7 +127,7 @@ export default function NotebookHeroSection() {
           </h1>
         </div>
 
-        <div className=" h-fit absolute w-[60%] max-sm:w-[70%]  right-[-8%]  max-sm:top-[30%] sm:top-[50%] z-10">
+        <div className=" h-fit absolute w-[60%] max-sm:w-[75%]  max-sm:right-[-9%] sm:right-[-8%]  max-sm:top-[30%] sm:top-[50%] z-10">
           <img
             src="/img/Image110.png"
             alt="IMg"
@@ -136,7 +136,7 @@ export default function NotebookHeroSection() {
 
           <img src="/img/IGB.jpeg" alt="img" className="w-[55%] h-fit absolute max-sm:-bottom-25 sm:-bottom-50 left-[45%] -translate-x-1/2 -rotate-5" />
 
-          <div className="w-[320px] p-6  absolute max-sm:top-[-25%] sm:top-[20%] max-sm:-left-[25%] sm:left-[20%] max-sm:scale-[0.4] ">
+          <div className="w-[320px] p-6  absolute max-sm:top-[-10%] sm:top-[20%] max-sm:-left-[8%] sm:left-[20%] max-sm:scale-[0.6] ">
             {/* <!-- Title --> */}
             <p className="text-[14px] font-extrabold! uppercase leading-[1.35] tracking-wide mb-5">
               AFTER THIRTY YEARS OF RIDING THROUGH LADAKH, PEOPLE STILL ASK ME
